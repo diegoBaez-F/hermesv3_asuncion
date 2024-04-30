@@ -33,7 +33,7 @@ class IoShapefile(IoServer):
         :rtype: bool
         """
         if not os.path.exists(os.path.dirname(path)):
-            os.makedirs(os.path.dirname(path))
+            os.makedirs(os.path.dirname(path), exist_ok=True)
         data.to_file(path)
 
         return True
@@ -52,7 +52,7 @@ class IoShapefile(IoServer):
         data = self.comm.gather(data, root=rank)
         if self.comm.Get_rank() == rank:
             if not os.path.exists(os.path.dirname(path)):
-                os.makedirs(os.path.dirname(path))
+                os.makedirs(os.path.dirname(path), exist_ok=True)
             data = pd.concat(data)
             data.to_file(path)
 

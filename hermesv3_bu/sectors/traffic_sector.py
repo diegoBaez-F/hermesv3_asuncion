@@ -110,7 +110,7 @@ class TrafficSector(Sector):
         self.link_to_grid_csv = os.path.join(auxiliary_dir, 'traffic', 'link_grid.csv')
         if self.comm.Get_rank() == 0:
             if not os.path.exists(os.path.dirname(self.link_to_grid_csv)):
-                os.makedirs(os.path.dirname(self.link_to_grid_csv))
+                os.makedirs(os.path.dirname(self.link_to_grid_csv), exist_ok=True)
         self.comm.Barrier()
         self.crs = None   # crs is the projection of the road links and it is set on the read_road_links function.
         self.write_rline = write_rline
@@ -1512,7 +1512,7 @@ class TrafficSector(Sector):
             data = self.comm.gather(link_grid, root=0)
             if self.comm.Get_rank() == 0:
                 if not os.path.exists(os.path.dirname(self.link_to_grid_csv)):
-                    os.makedirs(os.path.dirname(self.link_to_grid_csv))
+                    os.makedirs(os.path.dirname(self.link_to_grid_csv), exist_ok=True)
                 data = pd.concat(data)
                 data.to_csv(self.link_to_grid_csv)
 

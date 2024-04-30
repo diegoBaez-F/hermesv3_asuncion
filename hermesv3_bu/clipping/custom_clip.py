@@ -44,7 +44,7 @@ class CustomClip(Clip):
         spent_time = timeit.default_timer()
         if not os.path.exists(self.shapefile_path):
             if not os.path.exists(os.path.dirname(self.shapefile_path)):
-                os.makedirs(os.path.dirname(self.shapefile_path))
+                os.makedirs(os.path.dirname(self.shapefile_path), exist_ok=True)
             str_clip = re.split(' , | ,|, |,', points_str)
             lon_list = []
             lat_list = []

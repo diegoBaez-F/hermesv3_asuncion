@@ -50,7 +50,7 @@ setup(
     ],
     package_data={'': [
         'README.md',
-        'CHANGELOG',
+        'CHANGELOG.rst',
         'LICENSE',
     ]
     },

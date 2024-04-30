@@ -723,6 +723,7 @@ class Config(ArgParser):
             if is_str:
                 arguments.__dict__[item] = arguments.__dict__[item].replace('<data_path>', arguments.data_path)
                 arguments.__dict__[item] = arguments.__dict__[item].replace('<input_dir>', arguments.input_dir)
+                arguments.__dict__[item] = arguments.__dict__[item].replace('<version>', "v" + __version__)
                 arguments.__dict__[item] = arguments.__dict__[item].replace('<domain_type>', arguments.domain_type)
 
                 if arguments.domain_type == 'regular':
@@ -881,7 +882,7 @@ class Config(ArgParser):
 
         if rank == 0:
             if not os.path.exists(path):
-                os.makedirs(path)
+                os.makedirs(path, exist_ok=True)
 
         comm.Barrier()
 

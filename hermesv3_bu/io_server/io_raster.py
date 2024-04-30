@@ -68,7 +68,7 @@ class IoRaster(IoServer):
             "transform": out_transform,
             "crs": data.crs})
         if not os.path.exists(os.path.dirname(clipped_raster_path)):
-            os.makedirs(os.path.dirname(clipped_raster_path))
+            os.makedirs(os.path.dirname(clipped_raster_path), exist_ok=True)
         dst = rasterio.open(clipped_raster_path, "w", **out_meta)
         dst.write(out_img)
 
@@ -126,7 +126,7 @@ class IoRaster(IoServer):
                 "crs": data.crs
             })
         if not os.path.exists(os.path.dirname(clipped_raster_path)):
-            os.makedirs(os.path.dirname(clipped_raster_path))
+            os.makedirs(os.path.dirname(clipped_raster_path), exist_ok=True)
         dst = rasterio.open(clipped_raster_path, "w", **out_meta)
         dst.write(out_img)
 
@@ -259,7 +259,7 @@ class IoRaster(IoServer):
 
             if write:
                 if not os.path.exists(os.path.dirname(out_path)):
-                    os.makedirs(os.path.dirname(out_path))
+                    os.makedirs(os.path.dirname(out_path), exist_ok=True)
                 gdf.to_file(out_path)
 
         else:
@@ -306,7 +306,7 @@ class IoRaster(IoServer):
 
             if write:
                 if not os.path.exists(os.path.dirname(out_path)):
-                    os.makedirs(os.path.dirname(out_path))
+                    os.makedirs(os.path.dirname(out_path), exist_ok=True)
                 gdf.to_file(out_path)
 
         else:

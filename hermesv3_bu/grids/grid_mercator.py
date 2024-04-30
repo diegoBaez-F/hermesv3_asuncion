@@ -79,7 +79,7 @@ class MercatorGrid(Grid):
         spent_time = timeit.default_timer()
         if not os.path.exists(self.netcdf_path):
             if not os.path.exists(os.path.dirname(self.netcdf_path)):
-                os.makedirs(os.path.dirname(self.netcdf_path))
+                os.makedirs(os.path.dirname(self.netcdf_path), exist_ok=True)
 
             # Writes an auxiliary empty NetCDF only with the coordinates and an empty variable.
             write_coords_netcdf(self.netcdf_path, self.center_latitudes, self.center_longitudes,
