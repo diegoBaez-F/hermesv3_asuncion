@@ -7,7 +7,7 @@ class TestImports(unittest.TestCase):
             'sys', 'os', 'time', 'timeit', 'math', 'calendar', 'datetime',
             'warnings', 'geopandas', 'pandas', 'numpy', 'shapely',
             'mpi4py', 'netCDF4', 'rasterio', 'pyproj', 'configargparse',
-            'pytz', 'timezonefinder'
+            'pytz', 'timezonefinder', 'traceback'
         ]
         for module_name in imports_to_test:
             with self.subTest(module=module_name):
