@@ -37,6 +37,7 @@ Contact persons
 Code developed by `Barcelona Supercomputing Centre <https://www.bsc.es/>`__ (BSC-CNS).
 
 Developers:
+
 * `marc.guevara@bsc.es <https://www.bsc.es/guevara-marc>`
 * `carles.tena@bsc.es <https://www.bsc.es/tena-carles>`
 
@@ -45,9 +46,11 @@ Support
 
 Due to our limited time and resources, the developing team cannot guarantee regular support. Nevertheless, we will be happy to provide advice for new users.
 Questions should be sent to the HERMESv3 mailing list:
+
 * <hermesv3@bsc.es>
 
 To join the mailing list, send an email to hermesv3-join@bsc.es (also include marc.guevara@bsc.es) with the following information:
+
 * Name
 * Organization
 * Country.
