@@ -8,7 +8,7 @@ from hermesv3_bu import __version__
 # Get the version number from the relevant file
 version = __version__
 
-with open("README.md", "r") as f:
+with open("README.rst", "r") as f:
     long_description = f.read()
 
 setup(
@@ -49,7 +49,7 @@ setup(
         "Topic :: Scientific/Engineering :: Atmospheric Science"
     ],
     package_data={'': [
-        'README.md',
+        'README.rst',
         'CHANGELOG.rst',
         'LICENSE',
     ]
