@@ -4,7 +4,7 @@ CHANGELOG
 
 .. start-here
 
-1.1.0b
+1.1.1b
 ============
 * Release date: Unknown
 * Changes and new features:

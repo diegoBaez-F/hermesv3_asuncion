@@ -1,6 +1,6 @@
 ---
 
-name: HERMESv3_BU_v1.0.0b
+name: HERMESv3_BU_v1.1.1b
 
 channels:
   - conda-forge
