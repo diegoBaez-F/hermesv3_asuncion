@@ -25,7 +25,7 @@ class Log(object):
         self.time_log_refresh = self.refresh_rate[1]
 
         self.log_level = arguments.log_level
-        self.log_path = os.path.join(arguments.output_dir, 'logs', 'Log_r{0:04d}_p{1:04d}_{2}.log'.format(
+        self.log_path = os.path.join(arguments.output_dir, 'logs', 'log_HERMESv3_BU_r{0:04d}_p{1:04d}_{2}.log'.format(
             COMM.Get_rank(), COMM.Get_size(), os.path.basename(arguments.output_name).replace('.nc', '')))
         self.time_log_path = os.path.join(arguments.output_dir, 'logs', 'Times_p{0:04d}_{1}.csv'.format(
             COMM.Get_size(), os.path.basename(arguments.output_name).replace('.nc', '')))
