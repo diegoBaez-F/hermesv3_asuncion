@@ -38,8 +38,8 @@ Code developed by `Barcelona Supercomputing Centre <https://www.bsc.es/>`__ (BSC
 
 Developers:
 
-* `marc.guevara@bsc.es <https://www.bsc.es/guevara-marc>`
-* `carles.tena@bsc.es <https://www.bsc.es/tena-carles>`
+* `marc.guevara@bsc.es <https://www.bsc.es/guevara-marc>`__
+* `carles.tena@bsc.es <https://www.bsc.es/tena-carles>`__
 
 Support
 ------------
