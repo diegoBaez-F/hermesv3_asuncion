@@ -161,11 +161,13 @@ class IoShapefile(IoServer):
                 data = None
         return data
 
-    def balance(self, data, rank=0):
+    def balance(self, data, rank=0, reset_index=False):
 
         data = self.comm.gather(data, root=rank)
         if self.comm.Get_rank() == rank:
             data = pd.concat(data)
+            if reset_index:
+                data.reset_index(drop=True, inplace=True)
             data = np.array_split(data, self.comm.Get_size())
         else:
             data = None

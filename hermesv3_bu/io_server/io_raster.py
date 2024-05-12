@@ -8,6 +8,8 @@ from rasterio.mask import mask
 import geopandas as gpd
 import numpy as np
 from shapely.geometry import Polygon
+from rasterio.features import shapes
+from shapely.geometry import shape
 
 from hermesv3_bu.io_server.io_server import IoServer
 from hermesv3_bu.io_server.io_shapefile import IoShapefile
@@ -350,8 +352,11 @@ class IoRaster(IoServer):
 
             gdf = gpd.GeoDataFrame(ds.read(1).flatten(), columns=['data'], index=range(b_lons.shape[0]), crs=ds.crs)
             # Error on to_crs function of geopandas that flip lat with lon in the non dict form
-            if gdf.crs == 'EPSG:4326':
-                gdf.crs = {'init': 'epsg:4326'}
+            # if gdf.crs == 'EPSG:4326':
+            #     gdf.crs = {'init': 'epsg:4326'}
+            if str(gdf.crs).startswith('EPSG:'):
+                # Error on to_crs function of geopandas that flips lat with lon in the non-dict form
+                gdf.crs = {'init': 'epsg:{0}'.format(str(gdf.crs)[-4:])}
             gdf['geometry'] = None
         else:
             gdf = None
@@ -383,3 +388,66 @@ class IoRaster(IoServer):
         elif gather and bcast:
             gdf = IoShapefile(self.comm).gather_bcast_shapefile(gdf)
         return gdf
+
+    def to_shapefile_parallel_not_working(self, raster_path, gather=False, bcast=False, crs=None, nodata=0):
+        with rasterio.open(raster_path) as src:
+            # Reading data and mask
+            data = src.read(1, masked=True)
+
+            # Distribute data among processes
+            data = np.array_split(data, self.comm.Get_size())[self.comm.Get_rank()]
+
+            # Parsing the data
+            data = np.floor(data).astype(np.float32)  # Get the integer part
+            data += np.random.uniform(size=data.shape).astype(np.float32)  # Add a random decimal part
+            data[data < 1] = 0  # Keep old zeros as zeros
+            my_mask = data > 0
+
+            # Use a generator instead of a list
+            shape_gen = ((shape(s), v)
+                         for s, v in shapes(data, mask=my_mask, transform=src.transform))
+            aux = dict(zip(["geometry", "data"], zip(*shape_gen)))
+            #print(f"PHASE 0: Rank {self.comm.Get_rank()}, aux: {aux}")
+            if len(aux) == 0:
+                raster_shp = gpd.GeoDataFrame(columns=['data'], geometry=[], crs=src.crs)
+            else:
+                # Convert the list of geometries to GeoSeries
+                geometry_series = gpd.GeoSeries(aux['geometry'])
+                # Build a local GeoDataFrame
+                raster_shp = gpd.GeoDataFrame(columns=['data'], data=aux['data'], geometry=geometry_series, crs=src.crs)
+                # print(f"PHASE 0: Rank {self.comm.Get_rank()}, raster shape: {raster_shp}")
+                raster_shp = raster_shp.loc[raster_shp['data'] != nodata]
+                # raster_shp['CELL_ID'] = raster_shp.index
+
+                # Removing decimal part
+                raster_shp["data"] = np.floor(raster_shp["data"]).astype(np.int32)
+
+                # print(f"PHASE 1: Rank {self.comm.Get_rank()}, raster shape: {raster_shp}")
+
+                # # Weight as integer and filtering
+                # if len(raster_shp) == 0:
+                #     raster_shp = gpd.GeoDataFrame(columns=['data'], geometry=[], crs=src.crs)
+                # else:
+                #     raster_shp = raster_shp.dropna(subset=['data'])
+                #     raster_shp = raster_shp.loc[raster_shp['data'] != nodata]
+                #     #raster_shp['CELL_ID'] = raster_shp.index
+                #
+                #     # Removing decimal part
+                #     raster_shp["data"] = np.floor(raster_shp["data"]).astype(np.int32)
+                print(f"PHASE 1: Rank {self.comm.Get_rank()}, raster shape: {raster_shp}")
+
+        raster_shp = IoShapefile(self.comm).balance(raster_shp, reset_index=True)
+        raster_shp["CELL_ID"] = raster_shp.index
+
+        if str(raster_shp.crs).startswith('EPSG:'):
+            # Error on to_crs function of geopandas that flips lat with lon in the non-dict form
+            raster_shp.crs = {'init': 'epsg:{0}'.format(str(raster_shp.crs)[-4:])}
+        if crs is not None:
+            raster_shp = raster_shp.to_crs(crs)
+
+        if gather and not bcast:
+            raster_shp = IoShapefile(self.comm).gather_shapefile(raster_shp)
+        elif gather and bcast:
+            raster_shp = IoShapefile(self.comm).gather_bcast_shapefile(raster_shp)
+        print(f"PHASE END: Rank {self.comm.Get_rank()}, raster shape: {raster_shp}")
+        return raster_shp
