@@ -93,24 +93,32 @@ def run():
     sys.exit(0)
 
 
-def mpiabort_excepthook(error_type, error_value, error_traceback):
-    """
-    Override sys.excepthookand call explicitly MPI.COMM_WORLD.Abort in it.
-
-    https://stackoverflow.com/questions/49868333/fail-fast-with-mpi4py
-    """
-    msg = "{orange}Rank {rank:03d} has raised a {end_c}{red}{type}{end_c}: {value}\n".format(
-        red='\033[91m', orange='\033[93m', end_c='\033[0m', value=error_value,
-        rank=MPI.COMM_WORLD.Get_rank(), type=str(error_type).replace("<class '", "").replace("'>", ""))
-    msg += ''.join(format_exception(error_type, error_value, error_traceback))
-
-    print(msg)
-    MPI.COMM_WORLD.Abort()
-    # noinspection PyUnreachableCode
-    sys.__excepthook__(error_type, error_value, error_traceback)
-
-
 if __name__ == '__main__':
-    sys.excepthook = mpiabort_excepthook
-    run()
-    sys.excepthook = sys.__excepthook__
+    try:
+        run()
+    except Exception as e:
+        sys.stderr.write(str(e) + '\\n')
+        sys.stdout.write(str(e) + '\\n')
+        MPI.COMM_WORLD.Abort(1)
+
+# def mpiabort_excepthook(error_type, error_value, error_traceback):
+#     """
+#     Override sys.excepthookand call explicitly MPI.COMM_WORLD.Abort in it.
+#
+#     https://stackoverflow.com/questions/49868333/fail-fast-with-mpi4py
+#     """
+#     msg = "{orange}Rank {rank:03d} has raised a {end_c}{red}{type}{end_c}: {value}\n".format(
+#         red='\033[91m', orange='\033[93m', end_c='\033[0m', value=error_value,
+#         rank=MPI.COMM_WORLD.Get_rank(), type=str(error_type).replace("<class '", "").replace("'>", ""))
+#     msg += ''.join(format_exception(error_type, error_value, error_traceback))
+#
+#     print(msg)
+#     MPI.COMM_WORLD.Abort()
+#     # noinspection PyUnreachableCode
+#     sys.__excepthook__(error_type, error_value, error_traceback)
+#
+#
+# if __name__ == '__main__':
+#     sys.excepthook = mpiabort_excepthook
+#     run()
+#     sys.excepthook = sys.__excepthook__
