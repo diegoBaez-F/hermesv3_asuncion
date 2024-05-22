@@ -94,12 +94,7 @@ def run():
 
 
 if __name__ == '__main__':
-    try:
-        run()
-    except Exception as e:
-        sys.stderr.write(str(e) + '\\n')
-        sys.stdout.write(str(e) + '\\n')
-        MPI.COMM_WORLD.Abort(1)
+    run()
 
 # def mpiabort_excepthook(error_type, error_value, error_traceback):
 #     """
