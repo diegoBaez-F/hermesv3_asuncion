@@ -6,13 +6,14 @@ CHANGELOG
 
 1.1.1
 ============
-* Release date: Unknown
+* Release date: 2024/05/31
 * Changes and new features:
 
   * Porting to MareNostrum5 (`#97 <https://earth.bsc.es/gitlab/es/hermesv3_bu/-/issues/97>`_)
   * Removed cf_units python library dependence
   * Bugfix with random deadlocks when creating a directory
   * Rank 0 log now in the sys.stdout with prints.
+  * Bugfix on shipping emissions when only one output layer is selected.
 
 1.1.0
 ============
