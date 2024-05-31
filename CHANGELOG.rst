@@ -4,7 +4,7 @@ CHANGELOG
 
 .. start-here
 
-1.1.1b
+1.1.1
 ============
 * Release date: Unknown
 * Changes and new features:
@@ -13,7 +13,6 @@ CHANGELOG
   * Removed cf_units python library dependence
   * Bugfix with random deadlocks when creating a directory
   * Rank 0 log now in the sys.stdout with prints.
-  * MPI Abort when some process fails. It stops the execution now.
 
 1.1.0
 ============
