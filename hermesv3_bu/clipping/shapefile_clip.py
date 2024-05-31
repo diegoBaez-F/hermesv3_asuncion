@@ -44,7 +44,7 @@ class ShapefileClip(Clip):
         if not os.path.exists(self.shapefile_path):
             if os.path.exists(clip_path):
                 if not os.path.exists(os.path.dirname(self.shapefile_path)):
-                    os.makedirs(os.path.dirname(self.shapefile_path))
+                    os.makedirs(os.path.dirname(self.shapefile_path), exist_ok=True)
                 clip = gpd.read_file(clip_path)
                 border = gpd.GeoDataFrame(geometry=[self.grid.shapefile.unary_union], crs=self.grid.shapefile.crs)
                 geom = gpd.overlay(clip, border.to_crs(clip.crs), how='intersection').unary_union

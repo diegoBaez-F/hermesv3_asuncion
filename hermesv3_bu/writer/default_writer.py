@@ -85,7 +85,6 @@ class DefaultWriter(Writer):
             columns.
         :type emissions: DataFrame
         """
-        from cf_units import Unit
         spent_time = timeit.default_timer()
 
         if self.comm_write.Get_size() > 1:
@@ -135,7 +134,7 @@ class DefaultWriter(Writer):
 
         self.logger.write_log('\t\tCreating lev variable', message_level=3)
         lev = netcdf.createVariable('lev', np.float64, ('lev',))
-        lev.units = Unit("m").symbol
+        lev.units = "m"
         lev.positive = 'up'
         lev[:] = self.grid.vertical_desctiption
 
@@ -164,14 +163,14 @@ class DefaultWriter(Writer):
         if self.grid.grid_type in ['Lambert Conformal Conic', 'Mercator']:
             self.logger.write_log('\t\tCreating x variable', message_level=3)
             x_var = netcdf.createVariable('x', np.float64, ('x',))
-            x_var.units = Unit("km").symbol
+            x_var.units = "km"
             x_var.long_name = "x coordinate of projection"
             x_var.standard_name = "projection_x_coordinate"
             x_var[:] = self.grid.x
 
             self.logger.write_log('\t\tCreating y variable', message_level=3)
             y_var = netcdf.createVariable('y', np.float64, ('y',))
-            y_var.units = Unit("km").symbol
+            y_var.units = U"km"
             y_var.long_name = "y coordinate of projection"
             y_var.standard_name = "projection_y_coordinate"
             y_var[:] = self.grid.y
@@ -180,7 +179,7 @@ class DefaultWriter(Writer):
             self.logger.write_log('\t\tCreating rlat variable', message_level=3)
             rlat = netcdf.createVariable('rlat', np.float64, ('rlat',))
             rlat.long_name = "latitude in rotated pole grid"
-            rlat.units = Unit("degrees").symbol
+            rlat.units = "degrees"
             rlat.standard_name = "grid_latitude"
             rlat[:] = self.grid.rlat
 
@@ -188,7 +187,7 @@ class DefaultWriter(Writer):
             self.logger.write_log('\t\tCreating rlon variable', message_level=3)
             rlon = netcdf.createVariable('rlon', np.float64, ('rlon',))
             rlon.long_name = "longitude in rotated pole grid"
-            rlon.units = Unit("degrees").symbol
+            rlon.units = "degrees"
             rlon.standard_name = "grid_longitude"
             rlon[:] = self.grid.rlon
 

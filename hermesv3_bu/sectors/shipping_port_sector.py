@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from warnings import warn
 from hermesv3_bu.sectors.sector import Sector
 import pandas as pd
 import geopandas as gpd
@@ -561,7 +562,7 @@ class ShippingPortSector(Sector):
         dataframe.reset_index(inplace=True)
         dataframe.set_index('code', inplace=True)
 
-        dataframe = shapefile.join(dataframe, how='outer')
+        dataframe = shapefile.join(dataframe, how='inner')
 
         dataframe[self.source_pollutants] = dataframe[self.source_pollutants].multiply(dataframe['Weight'], axis=0)
         dataframe.drop(columns=['Weight'], inplace=True)
@@ -594,7 +595,11 @@ class ShippingPortSector(Sector):
         dataframe.rename(columns={'idx2': 'FID'}, inplace=True)
 
         dataframe.drop(columns=['src_inter_fraction', 'idx1', 'geometry'], inplace=True)
-        dataframe['layer'] = 1
+        if len(self.vertical_levels) == 1:
+            warn("WARNING! Only one layer. Shipping port emissions to layer 0.")
+            dataframe['layer'] = 0
+        else:
+            dataframe['layer'] = 1
         dataframe = dataframe.loc[:, ~dataframe.columns.duplicated()]
         dataframe = dataframe.groupby(['FID', 'layer', 'tstep']).sum()
         self.logger.write_time_log('ShippingPortSector', 'to_grid_geometry', timeit.default_timer() - spent_time)

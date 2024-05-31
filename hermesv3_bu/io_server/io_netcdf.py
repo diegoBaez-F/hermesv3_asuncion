@@ -6,12 +6,11 @@ from mpi4py import MPI
 from warnings import warn
 import numpy as np
 import geopandas as gpd
-from netCDF4 import Dataset
+from netCDF4 import Dataset, num2date
 from shapely.geometry import Point
-from cf_units import num2date, CALENDAR_STANDARD
 from geopandas import GeoDataFrame
 from calendar import isleap
-
+from datetime import datetime
 from hermesv3_bu.io_server.io_server import IoServer
 from hermesv3_bu.tools.checker import check_files, error_exit
 
@@ -82,7 +81,9 @@ class IoNetcdf(IoServer):
             except KeyError as e:
                 error_exit("{0} variable not found in {1} file.".format(str(e), netcdf_path))
             # From time array to list of dates.
-            time_array = num2date(time[:], time.units, CALENDAR_STANDARD)
+            time_array = num2date(time[:], time.units, time.calendar)
+            time_array = [datetime(year=dt.year, month=dt.month, day=dt.day, hour=dt.hour, minute=dt.minute) for dt in time_array]
+
 
             if climatology:
                 if not isleap(year=date.year) and date.month == 2:
@@ -91,6 +92,7 @@ class IoNetcdf(IoServer):
             else:
                 time_array = np.array([aux.date() for aux in time_array])
             i_time = np.where(time_array == date)[0][0]
+
         elif date_type == 'yearly':
             i_time = 0
 
@@ -187,7 +189,10 @@ class IoNetcdf(IoServer):
         except KeyError as e:
             error_exit("{0} variable not found in {1} file.".format(str(e), path))
         # From time array to list of dates.
-        time_array = num2date(time[:], time.units,  CALENDAR_STANDARD)
+        time_array = num2date(time[:], time.units, time.calendar)
+        time_array = np.array(
+            [datetime(year=dt.year, month=dt.month, day=dt.day, hour=dt.hour, minute=dt.minute) for dt in
+             time_array])
 
         if climatology:
             if not isleap(year=date_array[0].year) and date_array[0].month == 2:
@@ -314,7 +319,6 @@ def write_coords_netcdf(netcdf_path, center_latitudes, center_longitudes, data_l
                         mercator=False, lat_ts=None):
 
     from netCDF4 import Dataset
-    from cf_units import Unit, encode_time
 
     if not (regular_latlon or lcc or rotated or mercator):
         regular_latlon = True
@@ -399,10 +403,7 @@ def write_coords_netcdf(netcdf_path, center_latitudes, center_longitudes, data_l
         time[:] = [0.]
     else:
         time = netcdf.createVariable('time', 'd', ('time',), zlib=True)
-        u = Unit('hours')
-        # Unit('hour since 1970-01-01 00:00:00.0000000 UTC')
-        time.units = str(u.offset_by_time(encode_time(date.year, date.month, date.day, date.hour, date.minute,
-                                                      date.second)))
+        time.units = 'hours since {0}'.format(date.strftime('%Y-%m-%d %H:%M:%S'))
         time.standard_name = "time"
         time.calendar = "gregorian"
         time.long_name = "time"
@@ -438,25 +439,25 @@ def write_coords_netcdf(netcdf_path, center_latitudes, center_longitudes, data_l
         # Rotated Latitude
         rlat = netcdf.createVariable('rlat', 'f', ('rlat',), zlib=True)
         rlat.long_name = "latitude in rotated pole grid"
-        rlat.units = Unit("degrees").symbol
+        rlat.units = "degrees"
         rlat.standard_name = "grid_latitude"
         rlat[:] = rotated_lats
 
         # Rotated Longitude
         rlon = netcdf.createVariable('rlon', 'f', ('rlon',), zlib=True)
         rlon.long_name = "longitude in rotated pole grid"
-        rlon.units = Unit("degrees").symbol
+        rlon.units = "degrees"
         rlon.standard_name = "grid_longitude"
         rlon[:] = rotated_lons
     if lcc or mercator:
         x = netcdf.createVariable('x', 'd', ('x',), zlib=True)
-        x.units = Unit("km").symbol
+        x.units = "km"
         x.long_name = "x coordinate of projection"
         x.standard_name = "projection_x_coordinate"
         x[:] = lcc_x
 
         y = netcdf.createVariable('y', 'd', ('y',), zlib=True)
-        y.units = Unit("km").symbol
+        y.units = "km"
         y.long_name = "y coordinate of projection"
         y.standard_name = "projection_y_coordinate"
         y[:] = lcc_y
@@ -466,7 +467,7 @@ def write_coords_netcdf(netcdf_path, center_latitudes, center_longitudes, data_l
     if levels is not None:
         var_dim = ('lev',) + var_dim
         lev = netcdf.createVariable('lev', 'f', ('lev',), zlib=True)
-        lev.units = Unit("m").symbol
+        lev.units = "m"
         lev.positive = 'up'
         lev[:] = levels
 
@@ -476,7 +477,7 @@ def write_coords_netcdf(netcdf_path, center_latitudes, center_longitudes, data_l
         var[:] = 0
     for variable in data_list:
         var = netcdf.createVariable(variable['name'], 'f', ('time',) + var_dim, zlib=True)
-        var.units = Unit(variable['units']).symbol
+        var.units = variable['units']
         if 'long_name' in variable:
             var.long_name = str(variable['long_name'])
         if 'standard_name' in variable:
@@ -531,7 +532,7 @@ def write_coords_netcdf(netcdf_path, center_latitudes, center_longitudes, data_l
         c_area = netcdf.createVariable('cell_area', 'f', cell_area_dim)
         c_area.long_name = "area of the grid cell"
         c_area.standard_name = "cell_area"
-        c_area.units = Unit("m2").symbol
+        c_area.units = "m2"
         c_area[:] = cell_area
 
     if global_attributes is not None:

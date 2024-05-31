@@ -435,7 +435,7 @@ class PointSourceSector(Sector):
                 meteo_xy_aux = self.comm.gather(meteo_xy, root=0)
                 if self.comm.Get_rank() == 0:
                     if not os.path.exists(os.path.dirname(meteo_xy_aux_path)):
-                        os.makedirs(os.path.dirname(meteo_xy_aux_path))
+                        os.makedirs(os.path.dirname(meteo_xy_aux_path), exist_ok=True)
                     meteo_xy_aux = pd.concat(meteo_xy_aux)
                     meteo_xy_aux.to_csv(meteo_xy_aux_path)
             else:

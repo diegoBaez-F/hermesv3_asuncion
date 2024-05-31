@@ -42,7 +42,7 @@ class DefaultClip(Clip):
         spent_time = timeit.default_timer()
         if not os.path.exists(self.shapefile_path):
             if not os.path.exists(os.path.dirname(self.shapefile_path)):
-                os.makedirs(os.path.dirname(self.shapefile_path))
+                os.makedirs(os.path.dirname(self.shapefile_path), exist_ok=True)
 
             clip = gpd.GeoDataFrame(geometry=[grid.shapefile.unary_union], crs=grid.shapefile.crs)
 

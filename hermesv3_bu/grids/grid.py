@@ -193,7 +193,7 @@ class Grid(object):
 
         if not os.path.exists(self.shapefile_path):
             if not os.path.exists(os.path.dirname(self.shapefile_path)):
-                os.makedirs(os.path.dirname(self.shapefile_path))
+                os.makedirs(os.path.dirname(self.shapefile_path), exist_ok=True)
 
             y = self.boundary_latitudes
             x = self.boundary_longitudes

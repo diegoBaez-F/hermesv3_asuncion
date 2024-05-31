@@ -431,7 +431,7 @@ class AviationSector(Sector):
             if self.comm.rank == 0:
                 airport_shapefile = airport_shapefile.loc[self.airport_list_full, :].copy()
                 if not os.path.exists(os.path.dirname(airport_distribution_path)):
-                    os.makedirs(os.path.dirname(airport_distribution_path))
+                    os.makedirs(os.path.dirname(airport_distribution_path), exist_ok=True)
                 airport_shapefile.to_crs(self.grid.shapefile.crs, inplace=True)
                 airport_shapefile['area'] = airport_shapefile.area
                 airport_distribution = self.spatial_overlays(airport_shapefile, self.grid.shapefile.reset_index(),
@@ -512,7 +512,7 @@ class AviationSector(Sector):
                 runway_shapefile = runway_shapefile.groupby(['airport_id', 'FID', 'layer']).sum()
                 # runway_shapefile.set_index(['airport_id', 'FID', 'layer'], inplace=True)
                 if not os.path.exists(os.path.dirname(runway_distribution_path)):
-                    os.makedirs(os.path.dirname(runway_distribution_path))
+                    os.makedirs(os.path.dirname(runway_distribution_path), exist_ok=True)
                 runway_shapefile.to_csv(runway_distribution_path)
             else:
                 runway_shapefile = None
@@ -573,7 +573,7 @@ class AviationSector(Sector):
         if not os.path.exists(trajectories_distribution_path):
             if self.comm.rank == 0:
                 if not os.path.exists(os.path.dirname(trajectories_distribution_path)):
-                    os.makedirs(os.path.dirname(trajectories_distribution_path))
+                    os.makedirs(os.path.dirname(trajectories_distribution_path), exist_ok=True)
                 # Filtering shapefile
                 airport_trajectories_shapefile = airport_trajectories_shapefile.xs(phase_type, level='operation').copy()
                 airport_trajectories_shapefile = airport_trajectories_shapefile.loc[

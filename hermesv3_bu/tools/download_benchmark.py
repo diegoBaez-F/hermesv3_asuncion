@@ -41,7 +41,7 @@ def check_args(args, exe_str):
 
     if not os.path.exists(dir_path):
         if query_yes_no("'{0}' does not exist. Do you want to create it? ".format(dir_path)):
-            os.makedirs(dir_path)
+            os.makedirs(dir_path, exist_ok=True)
         else:
             sys.exit(0)
 

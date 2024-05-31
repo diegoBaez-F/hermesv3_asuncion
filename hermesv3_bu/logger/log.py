@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 
 import os
+import sys
 import numpy as np
 import pandas as pd
 
 from mpi4py import MPI
-comm = MPI.COMM_WORLD
+COMM = MPI.COMM_WORLD
 
 
 class Log(object):
@@ -24,14 +25,14 @@ class Log(object):
         self.time_log_refresh = self.refresh_rate[1]
 
         self.log_level = arguments.log_level
-        self.log_path = os.path.join(arguments.output_dir, 'logs', 'Log_r{0:04d}_p{1:04d}_{2}.log'.format(
-            comm.Get_rank(), comm.Get_size(), os.path.basename(arguments.output_name).replace('.nc', '')))
+        self.log_path = os.path.join(arguments.output_dir, 'logs', 'log_HERMESv3_BU_r{0:04d}_p{1:04d}_{2}.log'.format(
+            COMM.Get_rank(), COMM.Get_size(), os.path.basename(arguments.output_name).replace('.nc', '')))
         self.time_log_path = os.path.join(arguments.output_dir, 'logs', 'Times_p{0:04d}_{1}.csv'.format(
-            comm.Get_size(), os.path.basename(arguments.output_name).replace('.nc', '')))
+            COMM.Get_size(), os.path.basename(arguments.output_name).replace('.nc', '')))
 
-        if comm.Get_rank() == 0:
+        if COMM.Get_rank() == 0:
             if not os.path.exists(os.path.dirname(self.log_path)):
-                os.makedirs(os.path.dirname(self.log_path))
+                os.makedirs(os.path.dirname(self.log_path), exist_ok=True)
             else:
                 if os.path.exists(self.time_log_path):
                     os.remove(self.time_log_path)
@@ -39,20 +40,20 @@ class Log(object):
         else:
             # Time log only writed by master process
             self.time_log = None
-        comm.Barrier()
+        COMM.Barrier()
 
         if os.path.exists(self.log_path):
             os.remove(self.log_path)
 
         # self.log = open(self.log_path, mode='w')
 
-        self.df_times = pd.DataFrame(columns=['Class', 'Function', comm.Get_rank()])
+        self.df_times = pd.DataFrame(columns=['Class', 'Function', COMM.Get_rank()])
 
     def write_log(self, message, message_level=1):
         """
         Write the log message.
 
-        The log will be refresh every log_refresh value messages.
+        The log will be refreshed every log_refresh value messages.
 
         :param message: Message to write.
         :type message: str
@@ -68,6 +69,10 @@ class Log(object):
                 log_file.write("{0}\n".format(message))
                 log_file.close()
 
+            if COMM.Get_rank() == 0:
+                print(message)
+                sys.stdout.flush()
+
         return True
 
     def _write_csv_times_log_file(self, rank=0):
@@ -82,19 +87,19 @@ class Log(object):
         """
         from functools import reduce
         self.df_times = self.df_times.groupby(['Class', 'Function']).sum().reset_index()
-        data_frames = comm.gather(self.df_times, root=0)
-        if comm.Get_rank() == rank:
+        data_frames = COMM.gather(self.df_times, root=0)
+        if COMM.Get_rank() == rank:
             df_merged = reduce(lambda left, right: pd.merge(left, right, on=['Class', 'Function'], how='outer'),
                                data_frames)
             df_merged = df_merged.groupby(['Class', 'Function']).sum()
-            df_merged['min'] = df_merged.loc[:, range(comm.Get_size())].min(axis=1)
-            df_merged['max'] = df_merged.loc[:, range(comm.Get_size())].max(axis=1)
-            df_merged['mean'] = df_merged.loc[:, range(comm.Get_size())].mean(axis=1)
+            df_merged['min'] = df_merged.loc[:, range(COMM.Get_size())].min(axis=1)
+            df_merged['max'] = df_merged.loc[:, range(COMM.Get_size())].max(axis=1)
+            df_merged['mean'] = df_merged.loc[:, range(COMM.Get_size())].mean(axis=1)
 
             df_merged = df_merged.replace(0.0, np.NaN)
             df_merged.to_csv(self.time_log_path)
 
-        comm.Barrier()
+        COMM.Barrier()
         return True
 
     def write_time_log(self, class_name, function_name, spent_time, message_level=1):
@@ -118,7 +123,7 @@ class Log(object):
         """
         if message_level <= self.log_level:
             self.df_times = self.df_times.append(
-                {'Class': class_name, 'Function': function_name, comm.Get_rank(): spent_time}, ignore_index=True)
+                {'Class': class_name, 'Function': function_name, COMM.Get_rank(): spent_time}, ignore_index=True)
             # if self.time_log_refresh > 0:
             #     self.time_log_refresh -= 1
             # if self.time_log_refresh == 0:

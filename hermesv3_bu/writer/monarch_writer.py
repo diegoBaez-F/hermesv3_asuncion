@@ -115,7 +115,6 @@ class MonarchWriter(Writer):
             columns.
         :type emissions: DataFrame
         """
-        from cf_units import Unit
         spent_time = timeit.default_timer()
         if self.comm_write.Get_size() > 1:
             netcdf = Dataset(self.netcdf_path, format="NETCDF4", mode='w', parallel=True, comm=self.comm_write,
@@ -149,7 +148,7 @@ class MonarchWriter(Writer):
 
         self.logger.write_log('\t\tCreating lev variable', message_level=3)
         lev = netcdf.createVariable('lev', 'f', ('lev',))
-        lev.units = Unit("m").symbol
+        lev.units = "m"
         lev.positive = 'up'
         lev[:] = self.grid.vertical_desctiption
 
@@ -178,7 +177,7 @@ class MonarchWriter(Writer):
         self.logger.write_log('\t\tCreating rlat variable', message_level=3)
         rlat = netcdf.createVariable('rlat', 'f', ('rlat',))
         rlat.long_name = "latitude in rotated pole grid"
-        rlat.units = Unit("degrees").symbol
+        rlat.units = "degrees"
         rlat.standard_name = "grid_latitude"
         rlat[:] = self.grid.rlat
 
@@ -186,7 +185,7 @@ class MonarchWriter(Writer):
         self.logger.write_log('\t\tCreating rlon variable', message_level=3)
         rlon = netcdf.createVariable('rlon', 'f', ('rlon',))
         rlon.long_name = "longitude in rotated pole grid"
-        rlon.units = Unit("degrees").symbol
+        rlon.units = "degrees"
         rlon.standard_name = "grid_longitude"
         rlon[:] = self.grid.rlon
 
