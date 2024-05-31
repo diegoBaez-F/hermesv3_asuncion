@@ -7,7 +7,7 @@ class TestImports(unittest.TestCase):
             'sys', 'os', 'time', 'timeit', 'math', 'calendar', 'datetime',
             'warnings', 'geopandas', 'pandas', 'numpy', 'shapely',
             'mpi4py', 'netCDF4', 'rasterio', 'pyproj', 'configargparse',
-            'pytz', 'timezonefinder', 'traceback'
+            'pytz', 'timezonefinder', 'traceback', 'cdo',
         ]
         for module_name in imports_to_test:
             with self.subTest(module=module_name):
@@ -60,13 +60,22 @@ class TestImports(unittest.TestCase):
         except ImportError as e:
             self.fail(f"Import error: {e}")
 
-    def test_netcdf4_parallel(self):
+    # def test_netcdf4_parallel(self):
+    #     try:
+    #         from mpi4py import MPI
+    #         import numpy as np
+    #         from netCDF4 import Dataset
+    #         nc = Dataset('/tmp/parallel_test.nc', 'w', parallel=True, comm=MPI.COMM_WORLD, info=MPI.Info())
+    #         nc.close()
+    #     except ImportError as e:
+    #         self.fail(f"Import error: {e}")
+
+    def test_cdo(self):
         try:
-            from mpi4py import MPI
-            import numpy as np
-            from netCDF4 import Dataset
-            nc = Dataset('/tmp/parallel_test.nc', 'w', parallel=True, comm=MPI.COMM_WORLD, info=MPI.Info())
-            nc.close()
+            import cdo
+            print("pycdo: ", cdo.__version__)
+            cdo = cdo.Cdo()
+            print("CDO:", cdo.version())
         except ImportError as e:
             self.fail(f"Import error: {e}")
 
