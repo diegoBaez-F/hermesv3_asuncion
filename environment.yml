@@ -1,10 +1,6 @@
 ---
-
-name: HERMESv3_BU_v1.1.1
-
 channels:
   - conda-forge
-  - bioconda
   - defaults
 
 dependencies:
