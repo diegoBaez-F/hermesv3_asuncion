@@ -24,7 +24,7 @@ class DefaultClip(Clip):
         """
         spent_time = timeit.default_timer()
         logger.write_log('Default clip selected')
-        super(DefaultClip, self).__init__(logger, auxiliary_path, grid)
+        super().__init__(logger, auxiliary_path, grid)
         self.clip_type = 'Default clip'
         self.shapefile = self.create_clip(grid)
         self.logger.write_time_log('DefaultClip', '__init__', timeit.default_timer() - spent_time)
@@ -41,8 +41,9 @@ class DefaultClip(Clip):
         """
         spent_time = timeit.default_timer()
         if not os.path.exists(self.shapefile_path):
-            if not os.path.exists(os.path.dirname(self.shapefile_path)):
-                os.makedirs(os.path.dirname(self.shapefile_path))
+            shapefile_dir = os.path.dirname(self.shapefile_path)
+            if shapefile_dir and not os.path.exists(shapefile_dir):
+                os.makedirs(shapefile_dir, exist_ok=True)
 
             clip = gpd.GeoDataFrame(geometry=[grid.shapefile.unary_union], crs=grid.shapefile.crs)
 
