@@ -113,7 +113,12 @@ class WrfChemWriter(Writer):
 
         emissions = emissions.reset_index().groupby(['FID', 'layer', 'tstep']).sum()
         # From mol/h or g/h to mol/m2.h or g/m2.h
-        emissions = emissions.divide(cell_area['cell_area'], axis=0, level='FID')
+        cell_area_series = cell_area['cell_area']
+        aligned_cell_area = cell_area_series.reindex(
+            emissions.index.get_level_values('FID')
+        ).copy()
+        aligned_cell_area.index = emissions.index
+        emissions = emissions.divide(aligned_cell_area, axis=0)
         print(emissions.columns)
         for pollutant, info in self.pollutant_info.iterrows():
             if pollutant in emissions.columns:
