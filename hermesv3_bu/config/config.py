@@ -25,7 +25,7 @@ class Config(ArgParser):
 
         self.new_date = new_date
 
-        super(Config, self).__init__()
+        super().__init__()
         self.arguments = self.read_arguments()
 
     def read_arguments(self):
@@ -899,9 +899,8 @@ class Config(ArgParser):
         elif str_bool in false_options:
             return False
         else:
-            print('WARNING: Boolean value not contemplated use {0} for True values and {1} for the False ones'.format(
-                true_options, false_options))
-            print('/t Using False as default')
+            warn('Boolean value not contemplated use {0} for True values and {1} for the False ones. Using False as '
+                 'default'.format(true_options, false_options), stacklevel=2)
             return False
 
     def _parse_start_date(self, str_date, new_date=None):
