@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import sys
 import os
 import timeit
 import geopandas as gpd
@@ -357,7 +356,7 @@ class SolventsSector(Sector):
         # 2nd Raster to shapefile
         self.logger.write_log("\t\tRaster to shapefile", message_level=3)
         pop_shp = IoRaster(self.comm).to_shapefile_parallel(
-            pop_raster_path, gather=False, bcast=False, crs={'init': 'epsg:4326'})
+            pop_raster_path, gather=False, bcast=False, crs='EPSG:4326')
 
         # 3rd Add NUT code
         self.logger.write_log("\t\tAdding nut codes to the shapefile", message_level=3)
@@ -642,22 +641,16 @@ class SolventsSector(Sector):
         """
         def get_mf(df):
             month_factor = self.monthly_profiles.loc[df.name[1], df.name[0]]
-
-            df['MF'] = month_factor
-            return df.loc[:, ['MF']]
+            return pd.Series(month_factor, index=df.index, name='MF')
 
         def get_wf(df):
-            weekly_profile = self.calculate_rebalanced_weekly_profile(self.weekly_profiles.loc[df.name[1], :].to_dict(),
-                                                                      df.name[0])
-            df['WF'] = weekly_profile[df.name[0].weekday()]
-            return df.loc[:, ['WF']]
+            weekly_profile = self.calculate_rebalanced_weekly_profile(
+                self.weekly_profiles.loc[df.name[1], :].to_dict(), df.name[0])
+            return pd.Series(weekly_profile[df.name[0].weekday()], index=df.index, name='WF')
 
         def get_hf(df):
-            hourly_profile = self.hourly_profiles.loc[df.name[1], :].to_dict()
-            hour_factor = hourly_profile[df.name[0]]
-
-            df['HF'] = hour_factor
-            return df.loc[:, ['HF']]
+            hourly_profile = self.hourly_profiles.loc[df.name[1], :]
+            return pd.Series(hourly_profile[df.name[0]], index=df.index, name='HF')
 
         spent_time = timeit.default_timer()
 
@@ -669,9 +662,15 @@ class SolventsSector(Sector):
         emissions['hour'] = emissions['date'].dt.hour
         emissions['date_as_date'] = emissions['date'].dt.date
 
-        emissions['MF'] = emissions.groupby(['month', 'P_month']).apply(get_mf)
-        emissions['WF'] = emissions.groupby(['date_as_date', 'P_week']).apply(get_wf)
-        emissions['HF'] = emissions.groupby(['hour', 'P_hour']).apply(get_hf)
+        emissions['MF'] = (
+            emissions.groupby(['month', 'P_month']).apply(get_mf).droplevel([0, 1])
+        )
+        emissions['WF'] = (
+            emissions.groupby(['date_as_date', 'P_week']).apply(get_wf).droplevel([0, 1])
+        )
+        emissions['HF'] = (
+            emissions.groupby(['hour', 'P_hour']).apply(get_hf).droplevel([0, 1])
+        )
 
         emissions['temp_factor'] = emissions['MF'] * emissions['WF'] * emissions['HF']
         emissions.drop(columns=['MF', 'P_month', 'month', 'WF', 'P_week', 'weekday', 'HF', 'P_hour', 'hour', 'date',
@@ -735,21 +734,22 @@ class SolventsSector(Sector):
         :rtype: DataFrame
         """
 
-        def calculate_new_pollutant(x, out_p):
-            sys.stdout.flush()
-            profile = self.speciation_profile.loc[x.name, ['VOCtoTOG', out_p]]
-            x[out_p] = x['nmvoc'] * (profile['VOCtoTOG'] * profile[out_p])
-            return x[[out_p]]
-
         spent_time = timeit.default_timer()
         self.logger.write_log('\tSpeciation emissions', message_level=2)
 
-        new_dataframe = gpd.GeoDataFrame(index=dataframe.index, data=None, crs=dataframe.crs,
-                                         geometry=dataframe.geometry)
+        new_dataframe = gpd.GeoDataFrame(
+            dataframe[['geometry']].copy(), geometry='geometry', crs=dataframe.crs
+        )
+        profiles = self.speciation_profile.loc[
+            dataframe['P_spec'], ['VOCtoTOG'] + self.output_pollutants
+        ]
+        voc_to_tog = profiles['VOCtoTOG'].to_numpy(copy=False)
+        nmvoc_values = dataframe['nmvoc'].to_numpy(copy=False)
+
         for out_pollutant in self.output_pollutants:
             self.logger.write_log('\t\tSpeciating {0}'.format(out_pollutant), message_level=3)
-            new_dataframe[out_pollutant] = dataframe.groupby('P_spec').apply(
-                lambda x: calculate_new_pollutant(x, out_pollutant))
+            pollutant_profile = profiles[out_pollutant].to_numpy(copy=False)
+            new_dataframe[out_pollutant] = nmvoc_values * (voc_to_tog * pollutant_profile)
         new_dataframe.reset_index(inplace=True)
 
         new_dataframe.drop(columns=['snap', 'geometry'], inplace=True)

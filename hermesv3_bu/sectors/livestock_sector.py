@@ -525,7 +525,7 @@ class LivestockSector(Sector):
         import math
         spent_time = timeit.default_timer()
         # Extract the points where we want meteorological parameters
-        geometry_shp = animal_shp.loc[:, ['FID', 'geometry']].to_crs({'init': 'epsg:4326'})
+        geometry_shp = animal_shp.loc[:, ['FID', 'geometry']].to_crs('EPSG:4326')
         geometry_shp['c_lat'] = geometry_shp.centroid.y
         geometry_shp['c_lon'] = geometry_shp.centroid.x
         geometry_shp['centroid'] = geometry_shp.centroid
@@ -686,7 +686,7 @@ class LivestockSector(Sector):
         :rtype: GeoDataFrame
         """
         spent_time = timeit.default_timer()
-        animals_df = animals_df.to_crs({'init': 'epsg:4326'})
+        animals_df = animals_df.to_crs('EPSG:4326')
         animals_df['centroid'] = animals_df.centroid
 
         animals_df['REC'] = animals_df.apply(self.nearest, geom_union=daily_factors.unary_union, df1=animals_df,
@@ -1007,13 +1007,11 @@ class LivestockSector(Sector):
         spent_time = timeit.default_timer()
 
         def distribute_weekly(df):
-            import datetime
-            date_np = df.head(1)['date'].values[0]
-            date = datetime.datetime.utcfromtimestamp(date_np.astype(int) * 1e-9)
-            profile = self.calculate_rebalanced_weekly_profile(self.weekly_profiles.loc[in_p, :].to_dict(), date)
-
-            df[out_p] = df[out_p].multiply(profile[df.name[1]])
-            return df.loc[:, [out_p]]
+            first_date = pd.Timestamp(df['date'].iloc[0]).to_pydatetime()
+            profile = self.calculate_rebalanced_weekly_profile(
+                self.weekly_profiles.loc[in_p, :].to_dict(), first_date)
+            factor = profile[df.name[1]]
+            return pd.Series(df[out_p] * factor, index=df.index, name=out_p)
 
         # Create unique dataframe
         distribution = self.add_dates(dict_by_day)
@@ -1031,18 +1029,20 @@ class LivestockSector(Sector):
             if in_p.lower() not in ['nh3', 'nox_no']:
                 # Monthly distribution
                 distribution['month'] = distribution['date'].dt.month
-                distribution[out_p] = distribution.groupby('month')[out_p].apply(lambda x: x.multiply(
-                    self.monthly_profiles.loc[in_p, x.name]))
+                distribution[out_p] = distribution.groupby('month')[out_p].transform(
+                    lambda values: values * self.monthly_profiles.loc[in_p, values.name])
 
                 # Weekday distribution
                 distribution['weekday'] = distribution['date'].dt.weekday
 
-                distribution[out_p] = distribution.groupby(['month', 'weekday'])['date', out_p].apply(distribute_weekly)
+                distribution[out_p] = (
+                    distribution.groupby(['month', 'weekday']).apply(distribute_weekly).droplevel([0, 1])
+                )
 
                 distribution.drop(columns=['month', 'weekday'], axis=1, inplace=True)
             # Hourly distribution
-            distribution[out_p] = distribution.groupby('hour')[out_p].apply(lambda x: x.multiply(
-                self.hourly_profiles.loc[in_p, x.name]))
+            distribution[out_p] = distribution.groupby('hour')[out_p].transform(
+                lambda values: values * self.hourly_profiles.loc[in_p, values.name])
 
         distribution['date'] = distribution['date_utc']
         distribution.drop(columns=['hour', 'date_utc'], axis=1, inplace=True)

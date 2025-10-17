@@ -286,7 +286,7 @@ class ResidentialSector(Sector):
         else:
             num_days = 365
 
-        geometry_shp = self.fuel_distribution.loc[:, ['FID', 'geometry']].to_crs({'init': 'epsg:4326'})
+        geometry_shp = self.fuel_distribution.loc[:, ['FID', 'geometry']].to_crs('EPSG:4326')
         geometry_shp['c_lat'] = geometry_shp.centroid.y
         geometry_shp['c_lon'] = geometry_shp.centroid.x
         geometry_shp['centroid'] = geometry_shp.centroid
@@ -307,7 +307,7 @@ class ResidentialSector(Sector):
 
         daily_distribution = self.fuel_distribution.copy()
 
-        daily_distribution = daily_distribution.to_crs({'init': 'epsg:4326'})
+        daily_distribution = daily_distribution.to_crs('EPSG:4326')
         daily_distribution['centroid'] = daily_distribution.centroid
 
         daily_distribution['REC'] = daily_distribution.apply(
@@ -355,12 +355,12 @@ class ResidentialSector(Sector):
         fuel_distribution['hour'] = fuel_distribution['date'].dt.hour
         for fuel in self.fuel_list:
             if fuel.startswith('B_'):
-                fuel_distribution.loc[:, fuel] = fuel_distribution.groupby('hour')[fuel].apply(
-                    lambda x: x.multiply(self.hourly_profiles.loc['biomass', x.name])
+                fuel_distribution.loc[:, fuel] = fuel_distribution.groupby('hour')[fuel].transform(
+                    lambda values: values * self.hourly_profiles.loc['biomass', values.name]
                 )
             else:
-                fuel_distribution.loc[:, fuel] = fuel_distribution.groupby('hour')[fuel].apply(
-                    lambda x: x.multiply(self.hourly_profiles.loc['others', x.name])
+                fuel_distribution.loc[:, fuel] = fuel_distribution.groupby('hour')[fuel].transform(
+                    lambda values: values * self.hourly_profiles.loc['others', values.name]
                 )
         fuel_distribution.drop('hour', axis=1, inplace=True)
 
