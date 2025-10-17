@@ -1,9 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from mpi4py import MPI
 
 
-class IoServer(object):
+class IoServer:
     """
     :param comm: Communicator object
     :type comm: MPI.Comm
