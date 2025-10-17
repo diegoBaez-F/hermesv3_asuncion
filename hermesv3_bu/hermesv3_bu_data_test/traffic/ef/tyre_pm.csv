@@ -1,0 +1,417 @@
+Code,Copert_V_name,EFbase
+PCG_44,Passenger Cars_Petrol_Mini_Euro 4,0.0107
+PCG_45,Passenger Cars_Petrol_Mini_Euro 5,0.0107
+PCG_46,Passenger Cars_Petrol_Mini_Euro 6 up to 2016,0.0107
+PCG_47,Passenger Cars_Petrol_Mini_Euro 6 2017-2019,0.0107
+PCG_48,Passenger Cars_Petrol_Mini_Euro 6 2020+,0.0107
+PCG_1,Passenger Cars_Petrol_Small_PRE ECE,0.0107
+PCG_2,Passenger Cars_Petrol_Small_ECE 15/00-01,0.0107
+PCG_3,Passenger Cars_Petrol_Small_ECE 15/02,0.0107
+PCG_4,Passenger Cars_Petrol_Small_ECE 15/03,0.0107
+PCG_5,Passenger Cars_Petrol_Small_ECE 15/04,0.0107
+PCG_6,Passenger Cars_Petrol_Small_Improved Conventional,0.0107
+PCG_7,Passenger Cars_Petrol_Small_Open Loop,0.0107
+PCG_8,Passenger Cars_Petrol_Small_Euro 1,0.0107
+PCG_9,Passenger Cars_Petrol_Small_Euro 2,0.0107
+PCG_10,Passenger Cars_Petrol_Small_Euro 3,0.0107
+PCG_11,Passenger Cars_Petrol_Small_Euro 4,0.0107
+PCG_12,Passenger Cars_Petrol_Small_Euro 5,0.0107
+PCG_13,Passenger Cars_Petrol_Small_Euro 6 up to 2016,0.0107
+PCG_14,Passenger Cars_Petrol_Small_Euro 6 2017-2019,0.0107
+PCG_15,Passenger Cars_Petrol_Small_Euro 6 2020+,0.0107
+PCG_16,Passenger Cars_Petrol_Medium_PRE ECE,0.0107
+PCG_17,Passenger Cars_Petrol_Medium_ECE 15/00-01,0.0107
+PCG_18,Passenger Cars_Petrol_Medium_ECE 15/02,0.0107
+PCG_19,Passenger Cars_Petrol_Medium_ECE 15/03,0.0107
+PCG_20,Passenger Cars_Petrol_Medium_ECE 15/04,0.0107
+PCG_21,Passenger Cars_Petrol_Medium_Improved Conventional,0.0107
+PCG_22,Passenger Cars_Petrol_Medium_Open Loop,0.0107
+PCG_23,Passenger Cars_Petrol_Medium_Euro 1,0.0107
+PCG_24,Passenger Cars_Petrol_Medium_Euro 2,0.0107
+PCG_25,Passenger Cars_Petrol_Medium_Euro 3,0.0107
+PCG_26,Passenger Cars_Petrol_Medium_Euro 4,0.0107
+PCG_27,Passenger Cars_Petrol_Medium_Euro 5,0.0107
+PCG_28,Passenger Cars_Petrol_Medium_Euro 6 up to 2016,0.0107
+PCG_29,Passenger Cars_Petrol_Medium_Euro 6 2017-2019,0.0107
+PCG_30,Passenger Cars_Petrol_Medium_Euro 6 2020+,0.0107
+PCG_31,Passenger Cars_Petrol_Large-SUV-Executive_PRE ECE,0.0107
+PCG_32,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/00-01,0.0107
+PCG_33,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/02,0.0107
+PCG_34,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/03,0.0107
+PCG_35,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/04,0.0107
+PCG_36,Passenger Cars_Petrol_Large-SUV-Executive_Euro 1,0.0107
+PCG_37,Passenger Cars_Petrol_Large-SUV-Executive_Euro 2,0.0107
+PCG_38,Passenger Cars_Petrol_Large-SUV-Executive_Euro 3,0.0107
+PCG_39,Passenger Cars_Petrol_Large-SUV-Executive_Euro 4,0.0107
+PCG_40,Passenger Cars_Petrol_Large-SUV-Executive_Euro 5,0.0107
+PCG_41,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 up to 2016,0.0107
+PCG_42,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 2017-2019,0.0107
+PCG_43,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 2020+,0.0107
+PCD_28,Passenger Cars_Diesel_Mini_Euro 4,0.0107
+PCD_29,Passenger Cars_Diesel_Mini_Euro 5,0.0107
+PCD_30,Passenger Cars_Diesel_Mini_Euro 6 up to 2016,0.0107
+PCD_31,Passenger Cars_Diesel_Mini_Euro 6 2017-2019,0.0107
+PCD_32,Passenger Cars_Diesel_Mini_Euro 6 2020+,0.0107
+PCD_1,Passenger Cars_Diesel_Small_Conventional,0.0107
+PCD_2,Passenger Cars_Diesel_Small_Euro 1,0.0107
+PCD_3,Passenger Cars_Diesel_Small_Euro 2,0.0107
+PCD_4,Passenger Cars_Diesel_Small_Euro 3,0.0107
+PCD_5,Passenger Cars_Diesel_Small_Euro 4,0.0107
+PCD_6,Passenger Cars_Diesel_Small_Euro 5,0.0107
+PCD_7,Passenger Cars_Diesel_Small_Euro 6 up to 2016,0.0107
+PCD_8,Passenger Cars_Diesel_Small_Euro 6 2017-2019,0.0107
+PCD_9,Passenger Cars_Diesel_Small_Euro 6 2020+,0.0107
+PCD_10,Passenger Cars_Diesel_Medium_Conventional,0.0107
+PCD_11,Passenger Cars_Diesel_Medium_Euro 1,0.0107
+PCD_12,Passenger Cars_Diesel_Medium_Euro 2,0.0107
+PCD_13,Passenger Cars_Diesel_Medium_Euro 3,0.0107
+PCD_14,Passenger Cars_Diesel_Medium_Euro 4,0.0107
+PCD_15,Passenger Cars_Diesel_Medium_Euro 5,0.0107
+PCD_16,Passenger Cars_Diesel_Medium_Euro 6 up to 2016,0.0107
+PCD_17,Passenger Cars_Diesel_Medium_Euro 6 2017-2019,0.0107
+PCD_18,Passenger Cars_Diesel_Medium_Euro 6 2020+,0.0107
+PCD_19,Passenger Cars_Diesel_Large-SUV-Executive_Conventional,0.0107
+PCD_20,Passenger Cars_Diesel_Large-SUV-Executive_Euro 1,0.0107
+PCD_21,Passenger Cars_Diesel_Large-SUV-Executive_Euro 2,0.0107
+PCD_22,Passenger Cars_Diesel_Large-SUV-Executive_Euro 3,0.0107
+PCD_23,Passenger Cars_Diesel_Large-SUV-Executive_Euro 4,0.0107
+PCD_24,Passenger Cars_Diesel_Large-SUV-Executive_Euro 5,0.0107
+PCD_25,Passenger Cars_Diesel_Large-SUV-Executive_Euro 6 up to 2016,0.0107
+PCD_26,Passenger Cars_Diesel_Large-SUV-Executive_Euro 6 2017-2019,0.0107
+PCD_27,Passenger Cars_Diesel_Large-SUV-Executive_Euro 6 2020+,0.0107
+PCH_1,Passenger Cars_Petrol Hybrid_Mini_Euro 4,0.0162
+PCH_2,Passenger Cars_Petrol Hybrid_Mini_Euro 5,0.0162
+PCH_3,Passenger Cars_Petrol Hybrid_Mini_Euro 6 up to 2016,0.0162
+PCH_4,Passenger Cars_Petrol Hybrid_Mini_Euro 6 2017-2019,0.0162
+PCH_5,Passenger Cars_Petrol Hybrid_Mini_Euro 6 2020+,0.0162
+PCH_6,Passenger Cars_Petrol Hybrid_Small_Euro 4,0.0162
+PCH_7,Passenger Cars_Petrol Hybrid_Small_Euro 5,0.0162
+PCH_8,Passenger Cars_Petrol Hybrid_Small_Euro 6 up to 2016,0.0162
+PCH_9,Passenger Cars_Petrol Hybrid_Small_Euro 6 2017-2019,0.0162
+PCH_10,Passenger Cars_Petrol Hybrid_Small_Euro 6 2020+,0.0162
+PCH_11,Passenger Cars_Petrol Hybrid_Medium_Euro 4,0.0162
+PCH_12,Passenger Cars_Petrol Hybrid_Medium_Euro 5,0.0162
+PCH_13,Passenger Cars_Petrol Hybrid_Medium_Euro 6 up to 2016,0.0162
+PCH_14,Passenger Cars_Petrol Hybrid_Medium_Euro 6 2017-2019,0.0162
+PCH_15,Passenger Cars_Petrol Hybrid_Medium_Euro 6 2020+,0.0162
+PCH_16,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 4,0.0162
+PCH_17,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 5,0.0162
+PCH_18,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 up to 2016,0.0162
+PCH_19,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 2017-2019,0.0162
+PCH_20,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 2020+,0.0162
+PCLPG_1,Passenger Cars_LPG Bifuel ~ LPG_Mini_Euro 4,0.0107
+PCB_1,Passenger Cars_LPG Bifuel ~ Petrol_Mini_Euro 4,0.0107
+PCLPG_2,Passenger Cars_LPG Bifuel ~ LPG_Mini_Euro 5,0.0107
+PCB_2,Passenger Cars_LPG Bifuel ~ Petrol_Mini_Euro 5,0.0107
+PCLPG_3,Passenger Cars_LPG Bifuel ~ LPG_Mini_Euro 6,0.0107
+PCB_3,Passenger Cars_LPG Bifuel ~ Petrol_Mini_Euro 6,0.0107
+PCLPG_4,Passenger Cars_LPG Bifuel ~ LPG_Small_Conventional,0.0107
+PCB_4,Passenger Cars_LPG Bifuel ~ Petrol_Small_Conventional,0.0107
+PCLPG_5,Passenger Cars_LPG Bifuel ~ LPG_Small_Euro 1,0.0107
+PCB_5,Passenger Cars_LPG Bifuel ~ Petrol_Small_Euro 1,0.0107
+PCLPG_6,Passenger Cars_LPG Bifuel ~ LPG_Small_Euro 2,0.0107
+PCB_6,Passenger Cars_LPG Bifuel ~ Petrol_Small_Euro 2,0.0107
+PCLPG_7,Passenger Cars_LPG Bifuel ~ LPG_Small_Euro 3,0.0107
+PCB_7,Passenger Cars_LPG Bifuel ~ Petrol_Small_Euro 3,0.0107
+PCLPG_8,Passenger Cars_LPG Bifuel ~ LPG_Small_Euro 4,0.0107
+PCB_8,Passenger Cars_LPG Bifuel ~ Petrol_Small_Euro 4,0.0107
+PCLPG_9,Passenger Cars_LPG Bifuel ~ LPG_Small_Euro 5,0.0107
+PCB_9,Passenger Cars_LPG Bifuel ~ Petrol_Small_Euro 5,0.0107
+PCLPG_10,Passenger Cars_LPG Bifuel ~ LPG_Small_Euro 6,0.0107
+PCB_10,Passenger Cars_LPG Bifuel ~ Petrol_Small_Euro 6,0.0107
+PCLPG_11,Passenger Cars_LPG Bifuel ~ LPG_Medium_Conventional,0.0107
+PCB_11,Passenger Cars_LPG Bifuel ~ Petrol_Medium_Conventional,0.0107
+PCLPG_12,Passenger Cars_LPG Bifuel ~ LPG_Medium_Euro 1,0.0107
+PCB_12,Passenger Cars_LPG Bifuel ~ Petrol_Medium_Euro 1,0.0107
+PCLPG_13,Passenger Cars_LPG Bifuel ~ LPG_Medium_Euro 2,0.0107
+PCB_13,Passenger Cars_LPG Bifuel ~ Petrol_Medium_Euro 2,0.0107
+PCLPG_14,Passenger Cars_LPG Bifuel ~ LPG_Medium_Euro 3,0.0107
+PCB_14,Passenger Cars_LPG Bifuel ~ Petrol_Medium_Euro 3,0.0107
+PCLPG_15,Passenger Cars_LPG Bifuel ~ LPG_Medium_Euro 4,0.0107
+PCB_15,Passenger Cars_LPG Bifuel ~ Petrol_Medium_Euro 4,0.0107
+PCLPG_16,Passenger Cars_LPG Bifuel ~ LPG_Medium_Euro 5,0.0107
+PCB_16,Passenger Cars_LPG Bifuel ~ Petrol_Medium_Euro 5,0.0107
+PCLPG_17,Passenger Cars_LPG Bifuel ~ LPG_Medium_Euro 6,0.0107
+PCB_17,Passenger Cars_LPG Bifuel ~ Petrol_Medium_Euro 6,0.0107
+PCLPG_18,Passenger Cars_LPG Bifuel ~ LPG_Large-SUV-Executive_Conventional,0.0107
+PCB_18,Passenger Cars_LPG Bifuel ~ Petrol_Large-SUV-Executive_Conventional,0.0107
+PCLPG_19,Passenger Cars_LPG Bifuel ~ LPG_Large-SUV-Executive_Euro 1,0.0107
+PCB_19,Passenger Cars_LPG Bifuel ~ Petrol_Large-SUV-Executive_Euro 1,0.0107
+PCLPG_20,Passenger Cars_LPG Bifuel ~ LPG_Large-SUV-Executive_Euro 2,0.0107
+PCB_20,Passenger Cars_LPG Bifuel ~ Petrol_Large-SUV-Executive_Euro 2,0.0107
+PCLPG_21,Passenger Cars_LPG Bifuel ~ LPG_Large-SUV-Executive_Euro 3,0.0107
+PCB_21,Passenger Cars_LPG Bifuel ~ Petrol_Large-SUV-Executive_Euro 3,0.0107
+PCLPG_22,Passenger Cars_LPG Bifuel ~ LPG_Large-SUV-Executive_Euro 4,0.0107
+PCB_22,Passenger Cars_LPG Bifuel ~ Petrol_Large-SUV-Executive_Euro 4,0.0107
+PCLPG_23,Passenger Cars_LPG Bifuel ~ LPG_Large-SUV-Executive_Euro 5,0.0107
+PCB_23,Passenger Cars_LPG Bifuel ~ Petrol_Large-SUV-Executive_Euro 5,0.0107
+PCLPG_24,Passenger Cars_LPG Bifuel ~ LPG_Large-SUV-Executive_Euro 6,0.0107
+PCB_24,Passenger Cars_LPG Bifuel ~ Petrol_Large-SUV-Executive_Euro 6,0.0107
+PCCNG_1,Passenger Cars_CNG Bifuel ~ CNG_Mini_Euro 4,0.0107
+PCB_25,Passenger Cars_CNG Bifuel ~ Petrol_Mini_Euro 4,0.0107
+PCCNG_2,Passenger Cars_CNG Bifuel ~ CNG_Mini_Euro 5,0.0107
+PCB_26,Passenger Cars_CNG Bifuel ~ Petrol_Mini_Euro 5,0.0107
+PCCNG_3,Passenger Cars_CNG Bifuel ~ CNG_Mini_Euro 6,0.0107
+PCB_27,Passenger Cars_CNG Bifuel ~ Petrol_Mini_Euro 6,0.0107
+PCCNG_4,Passenger Cars_CNG Bifuel ~ CNG_Small_Euro 4,0.0107
+PCB_28,Passenger Cars_CNG Bifuel ~ Petrol_Small_Euro 4,0.0107
+PCCNG_5,Passenger Cars_CNG Bifuel ~ CNG_Small_Euro 5,0.0107
+PCB_29,Passenger Cars_CNG Bifuel ~ Petrol_Small_Euro 5,0.0107
+PCCNG_6,Passenger Cars_CNG Bifuel ~ CNG_Small_Euro 6,0.0107
+PCB_30,Passenger Cars_CNG Bifuel ~ Petrol_Small_Euro 6,0.0107
+PCCNG_7,Passenger Cars_CNG Bifuel ~ CNG_Medium_Euro 4,0.0107
+PCB_31,Passenger Cars_CNG Bifuel ~ Petrol_Medium_Euro 4,0.0107
+PCCNG_8,Passenger Cars_CNG Bifuel ~ CNG_Medium_Euro 5,0.0107
+PCB_32,Passenger Cars_CNG Bifuel ~ Petrol_Medium_Euro 5,0.0107
+PCCNG_9,Passenger Cars_CNG Bifuel ~ CNG_Medium_Euro 6,0.0107
+PCB_33,Passenger Cars_CNG Bifuel ~ Petrol_Medium_Euro 6,0.0107
+PCCNG_10,Passenger Cars_CNG Bifuel ~ CNG_Large-SUV-Executive_Euro 4,0.0107
+PCB_34,Passenger Cars_CNG Bifuel ~ Petrol_Large-SUV-Executive_Euro 4,0.0107
+PCCNG_11,Passenger Cars_CNG Bifuel ~ CNG_Large-SUV-Executive_Euro 5,0.0107
+PCB_35,Passenger Cars_CNG Bifuel ~ Petrol_Large-SUV-Executive_Euro 5,0.0107
+PCCNG_12,Passenger Cars_CNG Bifuel ~ CNG_Large-SUV-Executive_Euro 6,0.0107
+PCB_36,Passenger Cars_CNG Bifuel ~ Petrol_Large-SUV-Executive_Euro 6,0.0107
+LDVG_1,Light Commercial Vehicles_Petrol_N1-I_Conventional,0.0169
+LDVG_2,Light Commercial Vehicles_Petrol_N1-I_Euro 1,0.0169
+LDVG_3,Light Commercial Vehicles_Petrol_N1-I_Euro 2,0.0169
+LDVG_4,Light Commercial Vehicles_Petrol_N1-I_Euro 3,0.0169
+LDVG_5,Light Commercial Vehicles_Petrol_N1-I_Euro 4,0.0169
+LDVG_6,Light Commercial Vehicles_Petrol_N1-I_Euro 5,0.0169
+LDVG_7,Light Commercial Vehicles_Petrol_N1-I_Euro 6 up to 2016,0.0169
+LDVG_8,Light Commercial Vehicles_Petrol_N1-I_Euro 6 2017-2019,0.0169
+LDVG_9,Light Commercial Vehicles_Petrol_N1-I_Euro 6 2020+,0.0169
+LDVG_10,Light Commercial Vehicles_Petrol_N1-II_Conventional,0.0169
+LDVG_11,Light Commercial Vehicles_Petrol_N1-II_Euro 1,0.0169
+LDVG_12,Light Commercial Vehicles_Petrol_N1-II_Euro 2,0.0169
+LDVG_13,Light Commercial Vehicles_Petrol_N1-II_Euro 3,0.0169
+LDVG_14,Light Commercial Vehicles_Petrol_N1-II_Euro 4,0.0169
+LDVG_15,Light Commercial Vehicles_Petrol_N1-II_Euro 5,0.0169
+LDVG_16,Light Commercial Vehicles_Petrol_N1-II_Euro 6 up to 2017,0.0169
+LDVG_17,Light Commercial Vehicles_Petrol_N1-II_Euro 6 2018-2020,0.0169
+LDVG_18,Light Commercial Vehicles_Petrol_N1-II_Euro 6 2021+,0.0169
+LDVG_19,Light Commercial Vehicles_Petrol_N1-III_Conventional,0.0169
+LDVG_20,Light Commercial Vehicles_Petrol_N1-III_Euro 1,0.0169
+LDVG_21,Light Commercial Vehicles_Petrol_N1-III_Euro 2,0.0169
+LDVG_22,Light Commercial Vehicles_Petrol_N1-III_Euro 3,0.0169
+LDVG_23,Light Commercial Vehicles_Petrol_N1-III_Euro 4,0.0169
+LDVG_24,Light Commercial Vehicles_Petrol_N1-III_Euro 5,0.0169
+LDVG_25,Light Commercial Vehicles_Petrol_N1-III_Euro 6 up to 2017,0.0169
+LDVG_26,Light Commercial Vehicles_Petrol_N1-III_Euro 6 2018-2020,0.0169
+LDVG_27,Light Commercial Vehicles_Petrol_N1-III_Euro 6 2021+,0.0169
+LDVD_1,Light Commercial Vehicles_Diesel_N1-I_Conventional,0.0169
+LDVD_2,Light Commercial Vehicles_Diesel_N1-I_Euro 1,0.0169
+LDVD_3,Light Commercial Vehicles_Diesel_N1-I_Euro 2,0.0169
+LDVD_4,Light Commercial Vehicles_Diesel_N1-I_Euro 3,0.0169
+LDVD_5,Light Commercial Vehicles_Diesel_N1-I_Euro 4,0.0169
+LDVD_6,Light Commercial Vehicles_Diesel_N1-I_Euro 5,0.0169
+LDVD_7,Light Commercial Vehicles_Diesel_N1-I_Euro 6 up to 2016,0.0169
+LDVD_8,Light Commercial Vehicles_Diesel_N1-I_Euro 6 2017-2019,0.0169
+LDVD_9,Light Commercial Vehicles_Diesel_N1-I_Euro 6 2020+,0.0169
+LDVD_10,Light Commercial Vehicles_Diesel_N1-II_Conventional,0.0169
+LDVD_11,Light Commercial Vehicles_Diesel_N1-II_Euro 1,0.0169
+LDVD_12,Light Commercial Vehicles_Diesel_N1-II_Euro 2,0.0169
+LDVD_13,Light Commercial Vehicles_Diesel_N1-II_Euro 3,0.0169
+LDVD_14,Light Commercial Vehicles_Diesel_N1-II_Euro 4,0.0169
+LDVD_15,Light Commercial Vehicles_Diesel_N1-II_Euro 5,0.0169
+LDVD_16,Light Commercial Vehicles_Diesel_N1-II_Euro 6 up to 2017,0.0169
+LDVD_17,Light Commercial Vehicles_Diesel_N1-II_Euro 6 2018-2020,0.0169
+LDVD_18,Light Commercial Vehicles_Diesel_N1-II_Euro 6 2021+,0.0169
+LDVD_19,Light Commercial Vehicles_Diesel_N1-III_Conventional,0.0169
+LDVD_20,Light Commercial Vehicles_Diesel_N1-III_Euro 1,0.0169
+LDVD_21,Light Commercial Vehicles_Diesel_N1-III_Euro 2,0.0169
+LDVD_22,Light Commercial Vehicles_Diesel_N1-III_Euro 3,0.0169
+LDVD_23,Light Commercial Vehicles_Diesel_N1-III_Euro 4,0.0169
+LDVD_24,Light Commercial Vehicles_Diesel_N1-III_Euro 5,0.0169
+LDVD_25,Light Commercial Vehicles_Diesel_N1-III_Euro 6 up to 2017,0.0169
+LDVD_26,Light Commercial Vehicles_Diesel_N1-III_Euro 6 2018-2020,0.0169
+LDVD_27,Light Commercial Vehicles_Diesel_N1-III_Euro 6 2021+,0.0169
+HDVG_1,Heavy Duty Trucks_Petrol_>3.5 t_Conventional,0.02247
+HDVD_1,Heavy Duty Trucks_Diesel_Rigid <=7.5 t_Conventional,0.02247
+HDVD_2,Heavy Duty Trucks_Diesel_Rigid <=7.5 t_Euro I,0.02247
+HDVD_3,Heavy Duty Trucks_Diesel_Rigid <=7.5 t_Euro II,0.02247
+HDVD_4,Heavy Duty Trucks_Diesel_Rigid <=7.5 t_Euro III,0.02247
+HDVD_5,Heavy Duty Trucks_Diesel_Rigid <=7.5 t_Euro IV,0.02247
+HDVD_6,Heavy Duty Trucks_Diesel_Rigid <=7.5 t_Euro V,0.02247
+HDVD_7,Heavy Duty Trucks_Diesel_Rigid <=7.5 t_Euro VI,0.02247
+HDVD_8,Heavy Duty Trucks_Diesel_Rigid 7.5 - 12 t_Conventional,0.02247
+HDVD_9,Heavy Duty Trucks_Diesel_Rigid 7.5 - 12 t_Euro I,0.02247
+HDVD_10,Heavy Duty Trucks_Diesel_Rigid 7.5 - 12 t_Euro II,0.02247
+HDVD_11,Heavy Duty Trucks_Diesel_Rigid 7.5 - 12 t_Euro III,0.02247
+HDVD_12,Heavy Duty Trucks_Diesel_Rigid 7.5 - 12 t_Euro IV,0.02247
+HDVD_13,Heavy Duty Trucks_Diesel_Rigid 7.5 - 12 t_Euro V,0.02247
+HDVD_14,Heavy Duty Trucks_Diesel_Rigid 7.5 - 12 t_Euro VI,0.02247
+HDVD_15,Heavy Duty Trucks_Diesel_Rigid 12 - 14 t_Conventional,0.02247
+HDVD_16,Heavy Duty Trucks_Diesel_Rigid 12 - 14 t_Euro I,0.02247
+HDVD_17,Heavy Duty Trucks_Diesel_Rigid 12 - 14 t_Euro II,0.02247
+HDVD_18,Heavy Duty Trucks_Diesel_Rigid 12 - 14 t_Euro III,0.02247
+HDVD_19,Heavy Duty Trucks_Diesel_Rigid 12 - 14 t_Euro IV,0.02247
+HDVD_20,Heavy Duty Trucks_Diesel_Rigid 12 - 14 t_Euro V,0.02247
+HDVD_21,Heavy Duty Trucks_Diesel_Rigid 12 - 14 t_Euro VI,0.02247
+HDVD_22,Heavy Duty Trucks_Diesel_Rigid 14 - 20 t_Conventional,0.02247
+HDVD_23,Heavy Duty Trucks_Diesel_Rigid 14 - 20 t_Euro I,0.02247
+HDVD_24,Heavy Duty Trucks_Diesel_Rigid 14 - 20 t_Euro II,0.02247
+HDVD_25,Heavy Duty Trucks_Diesel_Rigid 14 - 20 t_Euro III,0.02247
+HDVD_26,Heavy Duty Trucks_Diesel_Rigid 14 - 20 t_Euro IV,0.02247
+HDVD_27,Heavy Duty Trucks_Diesel_Rigid 14 - 20 t_Euro V,0.02247
+HDVD_28,Heavy Duty Trucks_Diesel_Rigid 14 - 20 t_Euro VI,0.02247
+HDVD_29,Heavy Duty Trucks_Diesel_Rigid 20 - 26 t_Conventional,0.02247
+HDVD_30,Heavy Duty Trucks_Diesel_Rigid 20 - 26 t_Euro I,0.02247
+HDVD_31,Heavy Duty Trucks_Diesel_Rigid 20 - 26 t_Euro II,0.02247
+HDVD_32,Heavy Duty Trucks_Diesel_Rigid 20 - 26 t_Euro III,0.02247
+HDVD_33,Heavy Duty Trucks_Diesel_Rigid 20 - 26 t_Euro IV,0.02247
+HDVD_34,Heavy Duty Trucks_Diesel_Rigid 20 - 26 t_Euro V,0.02247
+HDVD_35,Heavy Duty Trucks_Diesel_Rigid 20 - 26 t_Euro VI,0.02247
+HDVD_36,Heavy Duty Trucks_Diesel_Rigid 26 - 28 t_Conventional,0.02247
+HDVD_37,Heavy Duty Trucks_Diesel_Rigid 26 - 28 t_Euro I,0.02247
+HDVD_38,Heavy Duty Trucks_Diesel_Rigid 26 - 28 t_Euro II,0.02247
+HDVD_39,Heavy Duty Trucks_Diesel_Rigid 26 - 28 t_Euro III,0.02247
+HDVD_40,Heavy Duty Trucks_Diesel_Rigid 26 - 28 t_Euro IV,0.02247
+HDVD_41,Heavy Duty Trucks_Diesel_Rigid 26 - 28 t_Euro V,0.02247
+HDVD_42,Heavy Duty Trucks_Diesel_Rigid 26 - 28 t_Euro VI,0.02247
+HDVD_43,Heavy Duty Trucks_Diesel_Rigid 28 - 32 t_Conventional,0.02247
+HDVD_44,Heavy Duty Trucks_Diesel_Rigid 28 - 32 t_Euro I,0.02247
+HDVD_45,Heavy Duty Trucks_Diesel_Rigid 28 - 32 t_Euro II,0.02247
+HDVD_46,Heavy Duty Trucks_Diesel_Rigid 28 - 32 t_Euro III,0.02247
+HDVD_47,Heavy Duty Trucks_Diesel_Rigid 28 - 32 t_Euro IV,0.02247
+HDVD_48,Heavy Duty Trucks_Diesel_Rigid 28 - 32 t_Euro V,0.02247
+HDVD_49,Heavy Duty Trucks_Diesel_Rigid 28 - 32 t_Euro VI,0.02247
+HDVD_50,Heavy Duty Trucks_Diesel_Rigid >32 t_Conventional,0.02247
+HDVD_51,Heavy Duty Trucks_Diesel_Rigid >32 t_Euro I,0.02247
+HDVD_52,Heavy Duty Trucks_Diesel_Rigid >32 t_Euro II,0.02247
+HDVD_53,Heavy Duty Trucks_Diesel_Rigid >32 t_Euro III,0.02247
+HDVD_54,Heavy Duty Trucks_Diesel_Rigid >32 t_Euro IV,0.02247
+HDVD_55,Heavy Duty Trucks_Diesel_Rigid >32 t_Euro V,0.02247
+HDVD_56,Heavy Duty Trucks_Diesel_Rigid >32 t_Euro VI,0.02247
+HDVD_57,Heavy Duty Trucks_Diesel_Articulated 14 - 20 t_Conventional,0.033705
+HDVD_58,Heavy Duty Trucks_Diesel_Articulated 14 - 20 t_Euro I,0.033705
+HDVD_59,Heavy Duty Trucks_Diesel_Articulated 14 - 20 t_Euro II,0.033705
+HDVD_60,Heavy Duty Trucks_Diesel_Articulated 14 - 20 t_Euro III,0.033705
+HDVD_61,Heavy Duty Trucks_Diesel_Articulated 14 - 20 t_Euro IV,0.033705
+HDVD_62,Heavy Duty Trucks_Diesel_Articulated 14 - 20 t_Euro V,0.033705
+HDVD_63,Heavy Duty Trucks_Diesel_Articulated 14 - 20 t_Euro VI,0.033705
+HDVD_64,Heavy Duty Trucks_Diesel_Articulated 20 - 28 t_Conventional,0.033705
+HDVD_65,Heavy Duty Trucks_Diesel_Articulated 20 - 28 t_Euro I,0.033705
+HDVD_66,Heavy Duty Trucks_Diesel_Articulated 20 - 28 t_Euro II,0.033705
+HDVD_67,Heavy Duty Trucks_Diesel_Articulated 20 - 28 t_Euro III,0.033705
+HDVD_68,Heavy Duty Trucks_Diesel_Articulated 20 - 28 t_Euro IV,0.033705
+HDVD_69,Heavy Duty Trucks_Diesel_Articulated 20 - 28 t_Euro V,0.033705
+HDVD_70,Heavy Duty Trucks_Diesel_Articulated 20 - 28 t_Euro VI,0.033705
+HDVD_71,Heavy Duty Trucks_Diesel_Articulated 28 - 34 t_Conventional,0.033705
+HDVD_72,Heavy Duty Trucks_Diesel_Articulated 28 - 34 t_Euro I,0.033705
+HDVD_73,Heavy Duty Trucks_Diesel_Articulated 28 - 34 t_Euro II,0.033705
+HDVD_74,Heavy Duty Trucks_Diesel_Articulated 28 - 34 t_Euro III,0.033705
+HDVD_75,Heavy Duty Trucks_Diesel_Articulated 28 - 34 t_Euro IV,0.033705
+HDVD_76,Heavy Duty Trucks_Diesel_Articulated 28 - 34 t_Euro V,0.033705
+HDVD_77,Heavy Duty Trucks_Diesel_Articulated 28 - 34 t_Euro VI,0.033705
+HDVD_78,Heavy Duty Trucks_Diesel_Articulated 34 - 40 t_Conventional,0.033705
+HDVD_79,Heavy Duty Trucks_Diesel_Articulated 34 - 40 t_Euro I,0.033705
+HDVD_80,Heavy Duty Trucks_Diesel_Articulated 34 - 40 t_Euro II,0.033705
+HDVD_81,Heavy Duty Trucks_Diesel_Articulated 34 - 40 t_Euro III,0.033705
+HDVD_82,Heavy Duty Trucks_Diesel_Articulated 34 - 40 t_Euro IV,0.033705
+HDVD_83,Heavy Duty Trucks_Diesel_Articulated 34 - 40 t_Euro V,0.033705
+HDVD_84,Heavy Duty Trucks_Diesel_Articulated 34 - 40 t_Euro VI,0.033705
+HDVD_85,Heavy Duty Trucks_Diesel_Articulated 40 - 50 t_Conventional,0.033705
+HDVD_86,Heavy Duty Trucks_Diesel_Articulated 40 - 50 t_Euro I,0.033705
+HDVD_87,Heavy Duty Trucks_Diesel_Articulated 40 - 50 t_Euro II,0.033705
+HDVD_88,Heavy Duty Trucks_Diesel_Articulated 40 - 50 t_Euro III,0.033705
+HDVD_89,Heavy Duty Trucks_Diesel_Articulated 40 - 50 t_Euro IV,0.033705
+HDVD_90,Heavy Duty Trucks_Diesel_Articulated 40 - 50 t_Euro V,0.033705
+HDVD_91,Heavy Duty Trucks_Diesel_Articulated 40 - 50 t_Euro VI,0.033705
+HDVD_92,Heavy Duty Trucks_Diesel_Articulated 50 - 60 t_Conventional,0.033705
+HDVD_93,Heavy Duty Trucks_Diesel_Articulated 50 - 60 t_Euro I,0.033705
+HDVD_94,Heavy Duty Trucks_Diesel_Articulated 50 - 60 t_Euro II,0.033705
+HDVD_95,Heavy Duty Trucks_Diesel_Articulated 50 - 60 t_Euro III,0.033705
+HDVD_96,Heavy Duty Trucks_Diesel_Articulated 50 - 60 t_Euro IV,0.033705
+HDVD_97,Heavy Duty Trucks_Diesel_Articulated 50 - 60 t_Euro V,0.033705
+HDVD_98,Heavy Duty Trucks_Diesel_Articulated 50 - 60 t_Euro VI,0.033705
+BD_1,Buses_Diesel_Urban Buses Midi <=15 t_Conventional,0.02247
+BD_2,Buses_Diesel_Urban Buses Midi <=15 t_Euro I,0.02247
+BD_3,Buses_Diesel_Urban Buses Midi <=15 t_Euro II,0.02247
+BD_4,Buses_Diesel_Urban Buses Midi <=15 t_Euro III,0.02247
+BD_5,Buses_Diesel_Urban Buses Midi <=15 t_Euro IV,0.02247
+BD_6,Buses_Diesel_Urban Buses Midi <=15 t_Euro V,0.02247
+BD_7,Buses_Diesel_Urban Buses Midi <=15 t_Euro VI,0.02247
+BD_8,Buses_Diesel_Urban Buses Standard 15 - 18 t_Conventional,0.02247
+BD_9,Buses_Diesel_Urban Buses Standard 15 - 18 t_Euro I,0.02247
+BD_10,Buses_Diesel_Urban Buses Standard 15 - 18 t_Euro II,0.02247
+BD_11,Buses_Diesel_Urban Buses Standard 15 - 18 t_Euro III,0.02247
+BD_12,Buses_Diesel_Urban Buses Standard 15 - 18 t_Euro IV,0.02247
+BD_13,Buses_Diesel_Urban Buses Standard 15 - 18 t_Euro V,0.02247
+BD_14,Buses_Diesel_Urban Buses Standard 15 - 18 t_Euro VI,0.02247
+BD_15,Buses_Diesel_Urban Buses Articulated >18 t_Conventional,0.033705
+BD_16,Buses_Diesel_Urban Buses Articulated >18 t_Euro I,0.033705
+BD_17,Buses_Diesel_Urban Buses Articulated >18 t_Euro II,0.033705
+BD_18,Buses_Diesel_Urban Buses Articulated >18 t_Euro III,0.033705
+BD_19,Buses_Diesel_Urban Buses Articulated >18 t_Euro IV,0.033705
+BD_20,Buses_Diesel_Urban Buses Articulated >18 t_Euro V,0.033705
+BD_21,Buses_Diesel_Urban Buses Articulated >18 t_Euro VI,0.033705
+BD_22,Buses_Diesel_Coaches Standard <=18 t_Conventional,0.02247
+BD_23,Buses_Diesel_Coaches Standard <=18 t_Euro I,0.02247
+BD_24,Buses_Diesel_Coaches Standard <=18 t_Euro II,0.02247
+BD_25,Buses_Diesel_Coaches Standard <=18 t_Euro III,0.02247
+BD_26,Buses_Diesel_Coaches Standard <=18 t_Euro IV,0.02247
+BD_27,Buses_Diesel_Coaches Standard <=18 t_Euro V,0.02247
+BD_28,Buses_Diesel_Coaches Standard <=18 t_Euro VI,0.02247
+BD_29,Buses_Diesel_Coaches Articulated >18 t_Conventional,0.033705
+BD_30,Buses_Diesel_Coaches Articulated >18 t_Euro I,0.033705
+BD_31,Buses_Diesel_Coaches Articulated >18 t_Euro II,0.033705
+BD_32,Buses_Diesel_Coaches Articulated >18 t_Euro III,0.033705
+BD_33,Buses_Diesel_Coaches Articulated >18 t_Euro IV,0.033705
+BD_34,Buses_Diesel_Coaches Articulated >18 t_Euro V,0.033705
+BD_35,Buses_Diesel_Coaches Articulated >18 t_Euro VI,0.033705
+BCNG_1,Buses_CNG_Urban CNG Buses_Euro I,0.02247
+BCNG_2,Buses_CNG_Urban CNG Buses_Euro II,0.02247
+BCNG_3,Buses_CNG_Urban CNG Buses_Euro III,0.02247
+BCNG_4,Buses_CNG_Urban CNG Buses_EEV,0.02247
+BCNG_5,Buses_CNG_Urban CNG Buses_Euro VI,0.02247
+BBIO_1,Buses_Biodiesel_Urban Biodiesel Buses_Conventional,0.02247
+BBIO_2,Buses_Biodiesel_Urban Biodiesel Buses_Euro I,0.02247
+BBIO_3,Buses_Biodiesel_Urban Biodiesel Buses_Euro II,0.02247
+BBIO_4,Buses_Biodiesel_Urban Biodiesel Buses_Euro III,0.02247
+BBIO_5,Buses_Biodiesel_Urban Biodiesel Buses_Euro IV,0.02247
+BBIO_6,Buses_Biodiesel_Urban Biodiesel Buses_Euro V,0.02247
+BBIO_7,Buses_Biodiesel_Urban Biodiesel Buses_Euro VI,0.02247
+M_1,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Conventional,0.0046
+M_2,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 1,0.0046
+M_3,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 2,0.0046
+M_4,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 3,0.0046
+M_5,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 4,0.0046
+M_6,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 5,0.0046
+M_7,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Conventional,0.0046
+M_8,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 1,0.0046
+M_9,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 2,0.0046
+M_10,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 3,0.0046
+M_11,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 4,0.0046
+M_12,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 5,0.0046
+M_13,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Conventional,0.0053
+M_14,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 1,0.0053
+M_15,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 2,0.0053
+M_16,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 3,0.0053
+M_17,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 4,0.0053
+M_18,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 5,0.0053
+M_19,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Conventional,0.0053
+M_20,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 1,0.0053
+M_21,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 2,0.0053
+M_22,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 3,0.0053
+M_23,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 4,0.0053
+M_24,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 5,0.0053
+M_25,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Conventional,0.0053
+M_26,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 1,0.0053
+M_27,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 2,0.0053
+M_28,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 3,0.0053
+M_29,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 4,0.0053
+M_30,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 5,0.0053
+M_31,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Conventional,0.0053
+M_32,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 1,0.0053
+M_33,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 2,0.0053
+M_34,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 3,0.0053
+M_35,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 4,0.0053
+M_36,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 5,0.0053
+HDVE_001,Heavy Duty Trucks_Electric,0.02651
+ME_001,L-Category_Electric_Mopeds,0.00543
+ME_002,L-Category_Electric_Motorcycles,0.00625
+PCE_001,Passenger Cars_Electric,0.01263
+LDVE_001,Light Commercial Vehicles_Electric,0.01994
+BE_001,Buses_Electric_Urban,0.02651
+BH_1,Buses_Hybrid_Urban Buses Articulated >18 t_Euro V,0.033705
+BH_2,Buses_Hybrid_Urban Buses Articulated >18 t_Euro VI,0.033705

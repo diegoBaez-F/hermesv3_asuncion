@@ -1,0 +1,168 @@
+Code,Copert_V_name,Mode,EFbase,a,b,Cmileage,TF,bc,ltrip
+PCG_44,Passenger Cars_Petrol_Mini_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,83545.4,1,1,6.47
+PCG_45,Passenger Cars_Petrol_Mini_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCG_46,Passenger Cars_Petrol_Mini_Euro 6 up to 2016,Urban Off Peak,67,0,1,0,1,1,6.47
+PCG_47,Passenger Cars_Petrol_Mini_Euro 6 2017-2019,Urban Off Peak,67,0,1,0,1,1,6.47
+PCG_48,Passenger Cars_Petrol_Mini_Euro 6 2020+,Urban Off Peak,67,0,1,0,1,1,6.47
+PCG_1,Passenger Cars_Petrol_Small_PRE ECE,Urban Off Peak,2,0,1,95561.0,1,1,6.47
+PCG_2,Passenger Cars_Petrol_Small_ECE 15/00-01,Urban Off Peak,2,0,1,95561.0,1,1,6.47
+PCG_3,Passenger Cars_Petrol_Small_ECE 15/02,Urban Off Peak,2,0,1,95561.0,1,1,6.47
+PCG_4,Passenger Cars_Petrol_Small_ECE 15/03,Urban Off Peak,2,0,1,95561.0,1,1,6.47
+PCG_5,Passenger Cars_Petrol_Small_ECE 15/04,Urban Off Peak,2,0,1,95561.0,1,1,6.47
+PCG_6,Passenger Cars_Petrol_Small_Improved Conventional,Urban Off Peak,2,0,1,95561.0,1,1,6.47
+PCG_7,Passenger Cars_Petrol_Small_Open Loop,Urban Off Peak,2,0,1,95561.0,1,1,6.47
+PCG_8,Passenger Cars_Petrol_Small_Euro 1,Urban Off Peak,50,1.52E-06,0.765,124084.5,1,1,6.47
+PCG_9,Passenger Cars_Petrol_Small_Euro 2,Urban Off Peak,51,1.70E-06,0.853,128796.0,1,1,6.47
+PCG_10,Passenger Cars_Petrol_Small_Euro 3,Urban Off Peak,5.4,1.77E-06,0.819,116174.2,1,1,6.47
+PCG_11,Passenger Cars_Petrol_Small_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,83545.4,1,1,6.47
+PCG_12,Passenger Cars_Petrol_Small_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCG_13,Passenger Cars_Petrol_Small_Euro 6 up to 2016,Urban Off Peak,67,0,1,0,1,1,6.47
+PCG_14,Passenger Cars_Petrol_Small_Euro 6 2017-2019,Urban Off Peak,67,0,1,0,1,1,6.47
+PCG_15,Passenger Cars_Petrol_Small_Euro 6 2020+,Urban Off Peak,67,0,1,0,1,1,6.47
+PCG_16,Passenger Cars_Petrol_Medium_PRE ECE,Urban Off Peak,2,0,1,113669.4,1,1,6.47
+PCG_17,Passenger Cars_Petrol_Medium_ECE 15/00-01,Urban Off Peak,2,0,1,113669.4,1,1,6.47
+PCG_18,Passenger Cars_Petrol_Medium_ECE 15/02,Urban Off Peak,2,0,1,113669.4,1,1,6.47
+PCG_19,Passenger Cars_Petrol_Medium_ECE 15/03,Urban Off Peak,2,0,1,113669.4,1,1,6.47
+PCG_20,Passenger Cars_Petrol_Medium_ECE 15/04,Urban Off Peak,2,0,1,113669.4,1,1,6.47
+PCG_21,Passenger Cars_Petrol_Medium_Improved Conventional,Urban Off Peak,2,0,1,113669.4,1,1,6.47
+PCG_22,Passenger Cars_Petrol_Medium_Open Loop,Urban Off Peak,2,0,1,113669.4,1,1,6.47
+PCG_23,Passenger Cars_Petrol_Medium_Euro 1,Urban Off Peak,50,1.52E-06,0.765,156930.2,1,1,6.47
+PCG_24,Passenger Cars_Petrol_Medium_Euro 2,Urban Off Peak,51,1.70E-06,0.853,165057.7,1,1,6.47
+PCG_25,Passenger Cars_Petrol_Medium_Euro 3,Urban Off Peak,5.4,1.77E-06,0.819,150506.1,1,1,6.47
+PCG_26,Passenger Cars_Petrol_Medium_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,110328.0,1,1,6.47
+PCG_27,Passenger Cars_Petrol_Medium_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,48651.5,1,1,6.47
+PCG_28,Passenger Cars_Petrol_Medium_Euro 6 up to 2016,Urban Off Peak,67,0,1,0,1,1,6.47
+PCG_29,Passenger Cars_Petrol_Medium_Euro 6 2017-2019,Urban Off Peak,67,0,1,0,1,1,6.47
+PCG_30,Passenger Cars_Petrol_Medium_Euro 6 2020+,Urban Off Peak,67,0,1,0,1,1,6.47
+PCG_31,Passenger Cars_Petrol_Large-SUV-Executive_PRE ECE,Urban Off Peak,2,0,1,131251.7,1,1,6.47
+PCG_32,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/00-01,Urban Off Peak,2,0,1,131251.7,1,1,6.47
+PCG_33,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/02,Urban Off Peak,2,0,1,131251.7,1,1,6.47
+PCG_34,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/03,Urban Off Peak,2,0,1,131251.7,1,1,6.47
+PCG_35,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/04,Urban Off Peak,2,0,1,131251.7,1,1,6.47
+PCG_36,Passenger Cars_Petrol_Large-SUV-Executive_Euro 1,Urban Off Peak,50,1.52E-06,0.765,175689.9,1,1,6.47
+PCG_37,Passenger Cars_Petrol_Large-SUV-Executive_Euro 2,Urban Off Peak,51,1.70E-06,0.853,185204.2,1,1,6.47
+PCG_38,Passenger Cars_Petrol_Large-SUV-Executive_Euro 3,Urban Off Peak,5.4,1.77E-06,0.819,167701.7,1,1,6.47
+PCG_39,Passenger Cars_Petrol_Large-SUV-Executive_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,122021.3,1,1,6.47
+PCG_40,Passenger Cars_Petrol_Large-SUV-Executive_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,54694.4,1,1,6.47
+PCG_41,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 up to 2016,Urban Off Peak,67,0,1,0,1,1,6.47
+PCG_42,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 2017-2019,Urban Off Peak,67,0,1,0,1,1,6.47
+PCG_43,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 2020+,Urban Off Peak,67,0,1,0,1,1,6.47
+PCH_1,Passenger Cars_Petrol Hybrid_Mini_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,83545.4,1,1,6.47
+PCH_2,Passenger Cars_Petrol Hybrid_Mini_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCH_3,Passenger Cars_Petrol Hybrid_Mini_Euro 6 up to 2016,Urban Off Peak,67,0,1,0,1,1,6.47
+PCH_4,Passenger Cars_Petrol Hybrid_Mini_Euro 6 2017-2019,Urban Off Peak,67,0,1,0,1,1,6.47
+PCH_5,Passenger Cars_Petrol Hybrid_Mini_Euro 6 2020+,Urban Off Peak,67,0,1,0,1,1,6.47
+PCH_6,Passenger Cars_Petrol Hybrid_Small_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,83545.4,1,1,6.47
+PCH_7,Passenger Cars_Petrol Hybrid_Small_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCH_8,Passenger Cars_Petrol Hybrid_Small_Euro 6 up to 2016,Urban Off Peak,67,0,1,0,1,1,6.47
+PCH_9,Passenger Cars_Petrol Hybrid_Small_Euro 6 2017-2019,Urban Off Peak,67,0,1,0,1,1,6.47
+PCH_10,Passenger Cars_Petrol Hybrid_Small_Euro 6 2020+,Urban Off Peak,67,0,1,0,1,1,6.47
+PCH_11,Passenger Cars_Petrol Hybrid_Medium_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,110328.0,1,1,6.47
+PCH_12,Passenger Cars_Petrol Hybrid_Medium_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,48651.5,1,1,6.47
+PCH_13,Passenger Cars_Petrol Hybrid_Medium_Euro 6 up to 2016,Urban Off Peak,67,0,1,0,1,1,6.47
+PCH_14,Passenger Cars_Petrol Hybrid_Medium_Euro 6 2017-2019,Urban Off Peak,67,0,1,0,1,1,6.47
+PCH_15,Passenger Cars_Petrol Hybrid_Medium_Euro 6 2020+,Urban Off Peak,67,0,1,0,1,1,6.47
+PCH_16,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,122021.3,1,1,6.47
+PCH_17,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,54694.4,1,1,6.47
+PCH_18,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 up to 2016,Urban Off Peak,67,0,1,0,1,1,6.47
+PCH_19,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 2017-2019,Urban Off Peak,67,0,1,0,1,1,6.47
+PCH_20,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 2020+,Urban Off Peak,67,0,1,0,1,1,6.47
+PCLPG_1,Passenger Cars_LPG Bifuel ~ LPG_Mini_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,83545.4,1,1,6.47
+PCB_1,Passenger Cars_LPG Bifuel ~ Petrol_Mini_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,83545.4,1,1,6.47
+PCLPG_2,Passenger Cars_LPG Bifuel ~ LPG_Mini_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCB_2,Passenger Cars_LPG Bifuel ~ Petrol_Mini_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCLPG_3,Passenger Cars_LPG Bifuel ~ LPG_Mini_Euro 6,Urban Off Peak,67,0,1,0,1,1,6.47
+PCB_3,Passenger Cars_LPG Bifuel ~ Petrol_Mini_Euro 6,Urban Off Peak,67,0,1,0,1,1,6.47
+PCLPG_4,Passenger Cars_LPG Bifuel ~ LPG_Small_Conventional,Urban Off Peak,2,0,1,95561.0,1,1,6.47
+PCB_4,Passenger Cars_LPG Bifuel ~ Petrol_Small_Conventional,Urban Off Peak,2,0,1,95561.0,1,1,6.47
+PCLPG_5,Passenger Cars_LPG Bifuel ~ LPG_Small_Euro 1,Urban Off Peak,50,1.52E-06,0.765,124084.5,1,1,6.47
+PCB_5,Passenger Cars_LPG Bifuel ~ Petrol_Small_Euro 1,Urban Off Peak,50,1.52E-06,0.765,124084.5,1,1,6.47
+PCLPG_6,Passenger Cars_LPG Bifuel ~ LPG_Small_Euro 2,Urban Off Peak,51,1.70E-06,0.853,128796.0,1,1,6.47
+PCB_6,Passenger Cars_LPG Bifuel ~ Petrol_Small_Euro 2,Urban Off Peak,51,1.70E-06,0.853,128796.0,1,1,6.47
+PCLPG_7,Passenger Cars_LPG Bifuel ~ LPG_Small_Euro 3,Urban Off Peak,5.4,1.77E-06,0.819,116174.2,1,1,6.47
+PCB_7,Passenger Cars_LPG Bifuel ~ Petrol_Small_Euro 3,Urban Off Peak,5.4,1.77E-06,0.819,116174.2,1,1,6.47
+PCLPG_8,Passenger Cars_LPG Bifuel ~ LPG_Small_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,116174.2,1,1,6.47
+PCB_8,Passenger Cars_LPG Bifuel ~ Petrol_Small_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,116174.2,1,1,6.47
+PCLPG_9,Passenger Cars_LPG Bifuel ~ LPG_Small_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCB_9,Passenger Cars_LPG Bifuel ~ Petrol_Small_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCLPG_10,Passenger Cars_LPG Bifuel ~ LPG_Small_Euro 6,Urban Off Peak,67,0,1,0,1,1,6.47
+PCB_10,Passenger Cars_LPG Bifuel ~ Petrol_Small_Euro 6,Urban Off Peak,67,0,1,0,1,1,6.47
+PCLPG_11,Passenger Cars_LPG Bifuel ~ LPG_Medium_Conventional,Urban Off Peak,2,0,1,95561.0,1,1,6.47
+PCB_11,Passenger Cars_LPG Bifuel ~ Petrol_Medium_Conventional,Urban Off Peak,2,0,1,95561.0,1,1,6.47
+PCLPG_12,Passenger Cars_LPG Bifuel ~ LPG_Medium_Euro 1,Urban Off Peak,50,1.52E-06,0.765,124084.5,1,1,6.47
+PCB_12,Passenger Cars_LPG Bifuel ~ Petrol_Medium_Euro 1,Urban Off Peak,50,1.52E-06,0.765,124084.5,1,1,6.47
+PCLPG_13,Passenger Cars_LPG Bifuel ~ LPG_Medium_Euro 2,Urban Off Peak,51,1.70E-06,0.853,128796.0,1,1,6.47
+PCB_13,Passenger Cars_LPG Bifuel ~ Petrol_Medium_Euro 2,Urban Off Peak,51,1.70E-06,0.853,128796.0,1,1,6.47
+PCLPG_14,Passenger Cars_LPG Bifuel ~ LPG_Medium_Euro 3,Urban Off Peak,5.4,1.77E-06,0.819,116174.2,1,1,6.47
+PCB_14,Passenger Cars_LPG Bifuel ~ Petrol_Medium_Euro 3,Urban Off Peak,5.4,1.77E-06,0.819,116174.2,1,1,6.47
+PCLPG_15,Passenger Cars_LPG Bifuel ~ LPG_Medium_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,116174.2,1,1,6.47
+PCB_15,Passenger Cars_LPG Bifuel ~ Petrol_Medium_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,116174.2,1,1,6.47
+PCLPG_16,Passenger Cars_LPG Bifuel ~ LPG_Medium_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCB_16,Passenger Cars_LPG Bifuel ~ Petrol_Medium_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCLPG_17,Passenger Cars_LPG Bifuel ~ LPG_Medium_Euro 6,Urban Off Peak,67,0,1,0,1,1,6.47
+PCB_17,Passenger Cars_LPG Bifuel ~ Petrol_Medium_Euro 6,Urban Off Peak,67,0,1,0,1,1,6.47
+PCLPG_18,Passenger Cars_LPG Bifuel ~ LPG_Large-SUV-Executive_Conventional,Urban Off Peak,2,0,1,95561.0,1,1,6.47
+PCB_18,Passenger Cars_LPG Bifuel ~ Petrol_Large-SUV-Executive_Conventional,Urban Off Peak,2,0,1,95561.0,1,1,6.47
+PCLPG_19,Passenger Cars_LPG Bifuel ~ LPG_Large-SUV-Executive_Euro 1,Urban Off Peak,50,1.52E-06,0.765,124084.5,1,1,6.47
+PCB_19,Passenger Cars_LPG Bifuel ~ Petrol_Large-SUV-Executive_Euro 1,Urban Off Peak,50,1.52E-06,0.765,124084.5,1,1,6.47
+PCLPG_20,Passenger Cars_LPG Bifuel ~ LPG_Large-SUV-Executive_Euro 2,Urban Off Peak,51,1.70E-06,0.853,128796.0,1,1,6.47
+PCB_20,Passenger Cars_LPG Bifuel ~ Petrol_Large-SUV-Executive_Euro 2,Urban Off Peak,51,1.70E-06,0.853,128796.0,1,1,6.47
+PCLPG_21,Passenger Cars_LPG Bifuel ~ LPG_Large-SUV-Executive_Euro 3,Urban Off Peak,5.4,1.77E-06,0.819,116174.2,1,1,6.47
+PCB_21,Passenger Cars_LPG Bifuel ~ Petrol_Large-SUV-Executive_Euro 3,Urban Off Peak,5.4,1.77E-06,0.819,116174.2,1,1,6.47
+PCLPG_22,Passenger Cars_LPG Bifuel ~ LPG_Large-SUV-Executive_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,116174.2,1,1,6.47
+PCB_22,Passenger Cars_LPG Bifuel ~ Petrol_Large-SUV-Executive_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,116174.2,1,1,6.47
+PCLPG_23,Passenger Cars_LPG Bifuel ~ LPG_Large-SUV-Executive_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCB_23,Passenger Cars_LPG Bifuel ~ Petrol_Large-SUV-Executive_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCLPG_24,Passenger Cars_LPG Bifuel ~ LPG_Large-SUV-Executive_Euro 6,Urban Off Peak,67,0,1,0,1,1,6.47
+PCB_24,Passenger Cars_LPG Bifuel ~ Petrol_Large-SUV-Executive_Euro 6,Urban Off Peak,67,0,1,0,1,1,6.47
+PCCNG_1,Passenger Cars_CNG Bifuel ~ CNG_Mini_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,83545.4,1,1,6.47
+PCB_25,Passenger Cars_CNG Bifuel ~ Petrol_Mini_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,83545.4,1,1,6.47
+PCCNG_2,Passenger Cars_CNG Bifuel ~ CNG_Mini_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCB_26,Passenger Cars_CNG Bifuel ~ Petrol_Mini_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCCNG_3,Passenger Cars_CNG Bifuel ~ CNG_Mini_Euro 6,Urban Off Peak,67,0,1,0,1,1,6.47
+PCB_27,Passenger Cars_CNG Bifuel ~ Petrol_Mini_Euro 6,Urban Off Peak,67,0,1,0,1,1,6.47
+PCCNG_4,Passenger Cars_CNG Bifuel ~ CNG_Small_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,83545.4,1,1,6.47
+PCB_28,Passenger Cars_CNG Bifuel ~ Petrol_Small_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,83545.4,1,1,6.47
+PCCNG_5,Passenger Cars_CNG Bifuel ~ CNG_Small_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCB_29,Passenger Cars_CNG Bifuel ~ Petrol_Small_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,36954.9,1,1,6.47
+PCCNG_6,Passenger Cars_CNG Bifuel ~ CNG_Small_Euro 6,Urban Off Peak,67,0,1,0,1,1,6.47
+PCB_30,Passenger Cars_CNG Bifuel ~ Petrol_Small_Euro 6,Urban Off Peak,67,0,1,0,1,1,6.47
+PCCNG_7,Passenger Cars_CNG Bifuel ~ CNG_Medium_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,110328.0,1,1,6.47
+PCB_31,Passenger Cars_CNG Bifuel ~ Petrol_Medium_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,110328.0,1,1,6.47
+PCCNG_8,Passenger Cars_CNG Bifuel ~ CNG_Medium_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,48651.5,1,1,6.47
+PCB_32,Passenger Cars_CNG Bifuel ~ Petrol_Medium_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,48651.5,1,1,6.47
+PCCNG_9,Passenger Cars_CNG Bifuel ~ CNG_Medium_Euro 6,Urban Off Peak,67,0,1,0,1,1,6.47
+PCB_33,Passenger Cars_CNG Bifuel ~ Petrol_Medium_Euro 6,Urban Off Peak,67,0,1,0,1,1,6.47
+PCCNG_10,Passenger Cars_CNG Bifuel ~ CNG_Large-SUV-Executive_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,122021.3,1,1,6.47
+PCB_34,Passenger Cars_CNG Bifuel ~ Petrol_Large-SUV-Executive_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,122021.3,1,1,6.47
+PCCNG_11,Passenger Cars_CNG Bifuel ~ CNG_Large-SUV-Executive_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,54694.4,1,1,6.47
+PCB_35,Passenger Cars_CNG Bifuel ~ Petrol_Large-SUV-Executive_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,54694.4,1,1,6.47
+PCCNG_12,Passenger Cars_CNG Bifuel ~ CNG_Large-SUV-Executive_Euro 6,Urban Off Peak,13.8,3.23E-06,0.917,0,1,1,6.47
+PCB_36,Passenger Cars_CNG Bifuel ~ Petrol_Large-SUV-Executive_Euro 6,Urban Off Peak,13.8,3.23E-06,0.917,0,1,1,6.47
+LDVG_1,Light Commercial Vehicles_Petrol_N1-I_Conventional,Urban Off Peak,2,0,1,112358.4,1,1,6.47
+LDVG_2,Light Commercial Vehicles_Petrol_N1-I_Euro 1,Urban Off Peak,50,1.52E-06,0.765,112358.4,1,1,6.47
+LDVG_3,Light Commercial Vehicles_Petrol_N1-I_Euro 2,Urban Off Peak,51,1.70E-06,0.853,112358.4,1,1,6.47
+LDVG_4,Light Commercial Vehicles_Petrol_N1-I_Euro 3,Urban Off Peak,5.4,1.77E-06,0.819,144674.8,1,1,6.47
+LDVG_5,Light Commercial Vehicles_Petrol_N1-I_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,143831.2,1,1,6.47
+LDVG_6,Light Commercial Vehicles_Petrol_N1-I_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,71731.0,1,1,6.47
+LDVG_7,Light Commercial Vehicles_Petrol_N1-I_Euro 6 up to 2016,Urban Off Peak,13.8,3.23E-06,0.917,0,1,1,6.47
+LDVG_8,Light Commercial Vehicles_Petrol_N1-I_Euro 6 2017-2019,Urban Off Peak,13.8,3.23E-06,0.917,0,1,1,6.47
+LDVG_9,Light Commercial Vehicles_Petrol_N1-I_Euro 6 2020+,Urban Off Peak,13.8,3.23E-06,0.917,0,1,1,6.47
+LDVG_10,Light Commercial Vehicles_Petrol_N1-II_Conventional,Urban Off Peak,2,0,1,112358.4,1,1,6.47
+LDVG_11,Light Commercial Vehicles_Petrol_N1-II_Euro 1,Urban Off Peak,50,1.52E-06,0.765,112358.4,1,1,6.47
+LDVG_12,Light Commercial Vehicles_Petrol_N1-II_Euro 2,Urban Off Peak,51,1.70E-06,0.853,112358.4,1,1,6.47
+LDVG_13,Light Commercial Vehicles_Petrol_N1-II_Euro 3,Urban Off Peak,5.4,1.77E-06,0.819,150898.6,1,1,6.47
+LDVG_14,Light Commercial Vehicles_Petrol_N1-II_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,132144.3,1,1,6.47
+LDVG_15,Light Commercial Vehicles_Petrol_N1-II_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,60649.6,1,1,6.47
+LDVG_16,Light Commercial Vehicles_Petrol_N1-II_Euro 6 up to 2017,Urban Off Peak,13.8,3.23E-06,0.917,0,1,1,6.47
+LDVG_17,Light Commercial Vehicles_Petrol_N1-II_Euro 6 2018-2020,Urban Off Peak,13.8,3.23E-06,0.917,0,1,1,6.47
+LDVG_18,Light Commercial Vehicles_Petrol_N1-II_Euro 6 2021+,Urban Off Peak,13.8,3.23E-06,0.917,0,1,1,6.47
+LDVG_19,Light Commercial Vehicles_Petrol_N1-III_Conventional,Urban Off Peak,2,0,1,112358.4,1,1,6.47
+LDVG_20,Light Commercial Vehicles_Petrol_N1-III_Euro 1,Urban Off Peak,50,1.52E-06,0.765,112358.4,1,1,6.47
+LDVG_21,Light Commercial Vehicles_Petrol_N1-III_Euro 2,Urban Off Peak,51,1.70E-06,0.853,112358.4,1,1,6.47
+LDVG_22,Light Commercial Vehicles_Petrol_N1-III_Euro 3,Urban Off Peak,5.4,1.77E-06,0.819,150898.6,1,1,6.47
+LDVG_23,Light Commercial Vehicles_Petrol_N1-III_Euro 4,Urban Off Peak,5.4,1.77E-06,0.819,132144.3,1,1,6.47
+LDVG_24,Light Commercial Vehicles_Petrol_N1-III_Euro 5,Urban Off Peak,13.8,3.23E-06,0.917,60649.6,1,1,6.47
+LDVG_25,Light Commercial Vehicles_Petrol_N1-III_Euro 6 up to 2017,Urban Off Peak,13.8,3.23E-06,0.917,0,1,1,6.47
+LDVG_26,Light Commercial Vehicles_Petrol_N1-III_Euro 6 2018-2020,Urban Off Peak,13.8,3.23E-06,0.917,0,1,1,6.47
+LDVG_27,Light Commercial Vehicles_Petrol_N1-III_Euro 6 2021+,Urban Off Peak,13.8,3.23E-06,0.917,0,1,1,6.47

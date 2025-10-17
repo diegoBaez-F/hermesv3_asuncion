@@ -1,0 +1,12 @@
+dst,src,description,units
+NOx,nox_no2,desc_no,mol.h-1
+NOx,nox_no,desc_no,mol.h-1
+NH3,nh3,desc_nh3,mol.h-1
+SOx,so2,desc_so2,mol.h-1
+CO,co,desc_co,mol.h-1
+CH4,ch4,desc_ch4,mol.h-1
+CO2,co2,desc_co2,mol.h-1
+NMVOC,nmvoc,desc_nmvoc,g.h-1
+PM10,pm10,desc_pm10,g.h-1
+PM25,pm25,desc_pm25,g.h-1
+PMC,,desc_pmc,g.h-1

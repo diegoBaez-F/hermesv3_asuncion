@@ -1,0 +1,51 @@
+Code,Copert_V_name,A_urban,B_urban,A_road,B_road,M
+PCG_44,Passenger Cars_Petrol_Mini_Euro 4,0.00E+00,1.00,0.00E+00,1.00,83545.4
+PCG_8,Passenger Cars_Petrol_Small_Euro 1,0.00E+00,2.20E+00,0.00E+00,1.89E+00,124084.5
+PCG_9,Passenger Cars_Petrol_Small_Euro 2,0.00E+00,2.20E+00,0.00E+00,1.89E+00,128796.0
+PCG_10,Passenger Cars_Petrol_Small_Euro 3,0.00E+00,1.00,0.00E+00,1.00,116174.2
+PCG_11,Passenger Cars_Petrol_Small_Euro 4,0.00E+00,1.00,0.00E+00,1.00,83545.4
+PCG_23,Passenger Cars_Petrol_Medium_Euro 1,0.00E+00,2.20E+00,0.00E+00,1.89E+00,156930.2461
+PCG_24,Passenger Cars_Petrol_Medium_Euro 2,0.00E+00,2.20E+00,0.00E+00,1.89E+00,165057.661
+PCG_25,Passenger Cars_Petrol_Medium_Euro 3,3.99E-06,0.932,0.00E+00,1.00,150506.0927
+PCG_26,Passenger Cars_Petrol_Medium_Euro 4,3.99E-06,0.932,0.00E+00,1.00,110327.9795
+PCG_36,Passenger Cars_Petrol_Large-SUV-Executive_Euro 1,0.00E+00,2.20E+00,0.00E+00,1.89E+00,175689.9281
+PCG_37,Passenger Cars_Petrol_Large-SUV-Executive_Euro 2,0.00E+00,2.20E+00,0.00E+00,1.89E+00,185204.2146
+PCG_38,Passenger Cars_Petrol_Large-SUV-Executive_Euro 3,0.00E+00,1.57,0.00E+00,1.00,167701.7169
+PCG_39,Passenger Cars_Petrol_Large-SUV-Executive_Euro 4,3.99E-06,0.932,0.00E+00,1.00,122021.2613
+PCD_28,Passenger Cars_Diesel_Mini_Euro 4,0,1,0,1,80348.51497
+PCD_2,Passenger Cars_Diesel_Small_Euro 1,0,1,0,1,188075.7494
+PCD_3,Passenger Cars_Diesel_Small_Euro 2,0,1.22,0,1.22,172042.0853
+PCD_4,Passenger Cars_Diesel_Small_Euro 3,0,1.1,0,1.1,155999.1564
+PCD_5,Passenger Cars_Diesel_Small_Euro 4,0,1,0,1,80348.51497
+PCD_11,Passenger Cars_Diesel_Medium_Euro 1,0,1,0,1,190636.4304
+PCD_12,Passenger Cars_Diesel_Medium_Euro 2,0,1.22,0,1.22,199163.636
+PCD_13,Passenger Cars_Diesel_Medium_Euro 3,0,1.1,0,1.1,183176.827
+PCD_14,Passenger Cars_Diesel_Medium_Euro 4,0,1,0,1,129571.7169
+PCD_20,Passenger Cars_Diesel_Large-SUV-Executive_Euro 1,0,1,0,1,199929.202
+PCD_21,Passenger Cars_Diesel_Large-SUV-Executive_Euro 2,0,1.22,0,1.22,208278.7467
+PCD_22,Passenger Cars_Diesel_Large-SUV-Executive_Euro 3,0,1.1,0,1.1,190715.9428
+PCD_23,Passenger Cars_Diesel_Large-SUV-Executive_Euro 4,0,1,0,1,133260.4827
+LDVG_2,Light Commercial Vehicles_Petrol_N1-I_Euro 1,1.60E-05,2.82E-01,1.22E-05,0.42,112358.4
+LDVG_3,Light Commercial Vehicles_Petrol_N1-I_Euro 2,1.60E-05,2.82E-01,1.22E-05,0.42,112358.4
+LDVG_4,Light Commercial Vehicles_Petrol_N1-I_Euro 3,3.99E-06,0.932,0.00E+00,1.00,144674.8453
+LDVG_5,Light Commercial Vehicles_Petrol_N1-I_Euro 4,3.99E-06,0.932,0.00E+00,1.00,143831.1597
+LDVG_11,Light Commercial Vehicles_Petrol_N1-II_Euro 1,1.60E-05,2.82E-01,1.22E-05,0.42,112358.4
+LDVG_12,Light Commercial Vehicles_Petrol_N1-II_Euro 2,1.60E-05,2.82E-01,1.22E-05,0.42,112358.4
+LDVG_13,Light Commercial Vehicles_Petrol_N1-II_Euro 3,3.99E-06,0.932,0.00E+00,1.00,150898.6123
+LDVG_14,Light Commercial Vehicles_Petrol_N1-II_Euro 4,3.99E-06,0.932,0.00E+00,1.00,132144.35
+LDVG_20,Light Commercial Vehicles_Petrol_N1-III_Euro 1,1.60E-05,2.82E-01,1.22E-05,0.42,112358.4
+LDVG_21,Light Commercial Vehicles_Petrol_N1-III_Euro 2,1.60E-05,2.82E-01,1.22E-05,0.42,112358.4
+LDVG_22,Light Commercial Vehicles_Petrol_N1-III_Euro 3,3.99E-06,0.932,0.00E+00,1.00,150898.6123
+LDVG_23,Light Commercial Vehicles_Petrol_N1-III_Euro 4,3.99E-06,0.932,0.00E+00,1.00,132144.35
+LDVD_2,Light Commercial Vehicles_Diesel_N1-I_Euro 1,0,1,0,1,154132.7
+LDVD_3,Light Commercial Vehicles_Diesel_N1-I_Euro 2,0,1.21,0,1.21,154132.7
+LDVD_4,Light Commercial Vehicles_Diesel_N1-I_Euro 3,0,1.05,0,1.05,213924.2437
+LDVD_5,Light Commercial Vehicles_Diesel_N1-I_Euro 4,0,1,0,1,185508.6439
+LDVD_11,Light Commercial Vehicles_Diesel_N1-II_Euro 1,0,1,0,1,154132.7
+LDVD_12,Light Commercial Vehicles_Diesel_N1-II_Euro 2,0,1.21,0,1.21,154132.7
+LDVD_13,Light Commercial Vehicles_Diesel_N1-II_Euro 3,0,1.05,0,1.05,221726.5141
+LDVD_14,Light Commercial Vehicles_Diesel_N1-II_Euro 4,0,1,0,1,162140.427
+LDVD_20,Light Commercial Vehicles_Diesel_N1-III_Euro 1,0,1,0,1,154132.7
+LDVD_21,Light Commercial Vehicles_Diesel_N1-III_Euro 2,0,1.21,0,1.21,154132.7
+LDVD_22,Light Commercial Vehicles_Diesel_N1-III_Euro 3,0,1.05,0,1.05,221726.5141
+LDVD_23,Light Commercial Vehicles_Diesel_N1-III_Euro 4,0,1,0,1,162140.427

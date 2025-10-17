@@ -1,0 +1,6 @@
+Code,Class,F001,F002,F003
+PCG_25,Passenger_Cars_Gasoline,0.45,0.0,0.0
+PCD_13,Passenger_Cars_Diesel,0.45,0.0,0.0
+LCV_15,Light_Commercial_Diesel,0.05,0.0,0.0
+HDV_20,Heavy_Diesel,0.05,0.0,0.0
+# Editar según estadísticas MADES / observaciones locales

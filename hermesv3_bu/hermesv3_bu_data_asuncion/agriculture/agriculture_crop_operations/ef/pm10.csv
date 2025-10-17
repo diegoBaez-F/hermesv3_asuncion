@@ -1,0 +1,9 @@
+crop,operation,EF_pm10
+wheat,soil_cultivation,2.25
+wheat,harvesting,2.45
+rye,soil_cultivation,2.25
+rye,harvesting,1.85
+barley,soil_cultivation,2.25
+barley,harvesting,2.05
+oats,soil_cultivation,2.25
+oats,harvesting,3.10

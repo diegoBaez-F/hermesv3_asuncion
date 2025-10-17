@@ -1,0 +1,27 @@
+code,fuel_type,engine_type,vessel_type,engine,technology_layer,number,nominal_power,Ann_hours,LF
+YB_001,Gas,2S,Yawls and cabin boats,Outboard,2003,3363,20,50,0.5
+YB_002,Gas,2S,Yawls and cabin boats,Outboard,CONV,1767,20,50,0.5
+SB_001,Gas,2S,Sailing boats (< 26 ft),Outboard,2003,1449,10,5,0.5
+SB_002,Gas,2S,Sailing boats (< 26 ft),Outboard,CONV,805,10,5,0.5
+SP_001,Gas,2S,Speed boats,Outboard,2003,1323,50,50,0.5
+SP_002,Gas,2S,Speed boats,Outboard,CONV,745,50,50,0.5
+OB_001,Gas,2S,Other boats (< 20 ft),Outboard,2003,4377,8,30,0.5
+OB_002,Gas,2S,Other boats (< 20 ft),Outboard,CONV,2285,8,30,0.5
+WS_001,Gas,2S,Water scooters,Built-In,2003,999,45,10,0.5
+WS_002,Gas,2S,Water scooters,Built-In,CONV,581,45,10,0.5
+YB_003,Gas,4S,Yawls and cabin boats,Outboard,2003,10834,20,50,0.5
+SB_003,Gas,4S,Sailing boats (< 26 ft),Outboard,2003,4461,10,5,0.5
+SP_003,Gas,4S,Speed boats,Inboard,2003,1755,50,75,0.5
+SP_004,Gas,4S,Speed boats,Outboard,2003,1246,90,50,0.5
+OB_003,Gas,4S,Other boats (< 20 ft),Outboard,2003,1302,8,30,0.5
+WS_003,Gas,4S,Water scooters,Built-In,2003,384,45,10,0.5
+MB_001,Diesel,,Motor boats (27-34 ft),Inboard,2003,7217,150,150,0.5
+MB_002,Diesel,,Motor boats (27-34 ft),Inboard,CONV,5592,150,150,0.5
+MB_003,Diesel,,Motor boats (> 34 ft),Inboard,2003,3291,250,100,0.5
+MB_004,Diesel,,Motor boats (> 34 ft),Inboard,CONV,2569,250,100,0.5
+MB_005,Diesel,,Motor boats (< 27 ft),Inboard,2003,4251,40,75,0.5
+MB_006,Diesel,,Motor boats (< 27 ft),Inboard,CONV,3309,40,75,0.5
+MS_001,Diesel,,Motor sailors,Inboard,2003,155,30,75,0.5
+MS_002,Diesel,,Motor sailors,Inboard,CONV,155,30,75,0.5
+SB_004,Diesel,,Sailing boats (> 26 ft),Inboard,2003,21342,30,25,0.5
+SB_005,Diesel,,Sailing boats (> 26 ft),Inboard,CONV,16467,30,25,0.5

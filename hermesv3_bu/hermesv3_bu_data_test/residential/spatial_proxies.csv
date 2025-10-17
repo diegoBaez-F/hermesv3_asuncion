@@ -1,0 +1,9 @@
+fuel_type,nuts_level,proxy
+HD_res,3,all
+LPG_res,3,all
+NG_res,3,all
+HD_com,3,all
+LPG_com,3,all
+NG_com,3,all
+B_res,2,rural
+B_com,2,rural

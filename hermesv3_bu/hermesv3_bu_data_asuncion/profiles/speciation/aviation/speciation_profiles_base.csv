@@ -1,0 +1,3 @@
+ID,NOx,SOx,CO,NMVOC,PM10,PM25,PMC,CO2
+default,1,1,1,1,1,1,1,1
+landing_wear,1,1,1,1,1,1,1,1

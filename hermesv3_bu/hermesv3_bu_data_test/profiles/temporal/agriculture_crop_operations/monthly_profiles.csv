@@ -1,0 +1,9 @@
+P_month,operation,January,February,March,April,May,June,July,August,September,October,November,December
+wheat,soil_cultivation,0,0,0,0,0,0,0,0,0,0,0.5,0.5
+wheat,harvesting,0,0,0,0,0,0.5,0.5,0,0,0,0,0
+rye,soil_cultivation,0,0,0,0,0,0,0,0,0.5,0.5,0,0
+rye,harvesting,0,0,0,0,0,0.5,0.5,0,0,0,0,0
+oats,soil_cultivation,0,0,0,0,0,0,0,0,0,0.5,0.5,0
+oats,harvesting,0,0,0,0,0.5,0.5,0,0,0,0,0,0
+barley,soil_cultivation,0,0,0,0,0,0,0,0,0,0,0.5,0.5
+barley,harvesting,0,0,0,0,0,0.5,0.5,0,0,0,0,0

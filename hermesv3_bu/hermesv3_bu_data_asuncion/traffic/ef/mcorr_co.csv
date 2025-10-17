@@ -1,0 +1,26 @@
+Code,Copert_V_name,A_urban,B_urban,A_road,B_road,M
+PCG_44,Passenger Cars_Petrol_Mini_Euro 4,7.13E-06,0.769,1.50E-06,0.955,83545.4
+PCG_8,Passenger Cars_Petrol_Small_Euro 1,0.00E+00,2.39,0.00E+00,2.540,124084.5
+PCG_9,Passenger Cars_Petrol_Small_Euro 2,0.00E+00,2.39,0.00E+00,2.540,128796.0
+PCG_10,Passenger Cars_Petrol_Small_Euro 3,7.13E-06,0.769,1.50E-06,0.955,116174.2
+PCG_11,Passenger Cars_Petrol_Small_Euro 4,7.13E-06,0.769,1.50E-06,0.955,83545.4
+PCG_23,Passenger Cars_Petrol_Medium_Euro 1,0.00E+00,1.92,0.00E+00,1.770,156930.2
+PCG_24,Passenger Cars_Petrol_Medium_Euro 2,0.00E+00,1.92,0.00E+00,1.770,165057.7
+PCG_25,Passenger Cars_Petrol_Medium_Euro 3,2.67E-06,9.55E-01,0,1,150506.1
+PCG_26,Passenger Cars_Petrol_Medium_Euro 4,2.67E-06,9.55E-01,0.00E+00,1,110328.0
+PCG_36,Passenger Cars_Petrol_Large-SUV-Executive_Euro 1,0.00E+00,1.67E+00,0.00E+00,1.200,175689.9
+PCG_37,Passenger Cars_Petrol_Large-SUV-Executive_Euro 2,0.00E+00,1.67E+00,0.00E+00,1.200,185204.2
+PCG_38,Passenger Cars_Petrol_Large-SUV-Executive_Euro 3,2.67E-06,9.55E-01,0,1,167701.7
+PCG_39,Passenger Cars_Petrol_Large-SUV-Executive_Euro 4,2.67E-06,9.55E-01,0.00E+00,1,122021.3
+LDVG_2,Light Commercial Vehicles_Petrol_N1-I_Euro 1,1.15E-05,0.543,9.61E-06,0.617,112358.4
+LDVG_3,Light Commercial Vehicles_Petrol_N1-I_Euro 2,1.15E-05,0.543,9.61E-06,0.617,112358.4
+LDVG_4,Light Commercial Vehicles_Petrol_N1-I_Euro 3,2.67E-06,9.55E-01,0,1,144674.8
+LDVG_5,Light Commercial Vehicles_Petrol_N1-I_Euro 4,2.67E-06,9.55E-01,0.00E+00,1,143831.2
+LDVG_11,Light Commercial Vehicles_Petrol_N1-II_Euro 1,1.15E-05,0.543,9.61E-06,0.617,112358.4
+LDVG_12,Light Commercial Vehicles_Petrol_N1-II_Euro 2,1.15E-05,0.543,9.61E-06,0.617,112358.4
+LDVG_13,Light Commercial Vehicles_Petrol_N1-II_Euro 3,2.67E-06,9.55E-01,0,1,150898.6
+LDVG_14,Light Commercial Vehicles_Petrol_N1-II_Euro 4,2.67E-06,9.55E-01,0.00E+00,1,132144.3
+LDVG_20,Light Commercial Vehicles_Petrol_N1-III_Euro 1,1.15E-05,0.543,9.61E-06,0.617,112358.4
+LDVG_21,Light Commercial Vehicles_Petrol_N1-III_Euro 2,1.15E-05,0.543,9.61E-06,0.617,112358.4
+LDVG_22,Light Commercial Vehicles_Petrol_N1-III_Euro 3,2.67E-06,9.55E-01,0,1,150898.6
+LDVG_23,Light Commercial Vehicles_Petrol_N1-III_Euro 4,2.67E-06,9.55E-01,0.00E+00,1,132144.3

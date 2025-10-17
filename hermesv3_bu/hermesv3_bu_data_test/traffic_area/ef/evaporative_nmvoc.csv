@@ -1,0 +1,525 @@
+Code,Copert_V_name,canister,Tmin,Tmax,EFbase,TF
+LDVG_1,Light Commercial Vehicles_Petrol_N1-I_Conventional,,,10.0,9.6,1
+LDVG_1,Light Commercial Vehicles_Petrol_N1-I_Conventional,,10.0,15.0,13.7,1
+LDVG_1,Light Commercial Vehicles_Petrol_N1-I_Conventional,,15.0,25.0,18.6,1
+LDVG_1,Light Commercial Vehicles_Petrol_N1-I_Conventional,,25.0,,31.1,1
+LDVG_10,Light Commercial Vehicles_Petrol_N1-II_Conventional,,,10.0,9.6,1
+LDVG_10,Light Commercial Vehicles_Petrol_N1-II_Conventional,,10.0,15.0,13.7,1
+LDVG_10,Light Commercial Vehicles_Petrol_N1-II_Conventional,,15.0,25.0,18.6,1
+LDVG_10,Light Commercial Vehicles_Petrol_N1-II_Conventional,,25.0,,31.1,1
+LDVG_11,Light Commercial Vehicles_Petrol_N1-II_Euro 1,0.67,,10.0,0.59,1
+LDVG_11,Light Commercial Vehicles_Petrol_N1-II_Euro 1,0.67,10.0,15.0,0.68,1
+LDVG_11,Light Commercial Vehicles_Petrol_N1-II_Euro 1,0.67,15.0,25.0,0.85,1
+LDVG_11,Light Commercial Vehicles_Petrol_N1-II_Euro 1,0.67,25.0,,1.55,1
+LDVG_12,Light Commercial Vehicles_Petrol_N1-II_Euro 2,0.67,,10.0,0.59,1
+LDVG_12,Light Commercial Vehicles_Petrol_N1-II_Euro 2,0.67,10.0,15.0,0.68,1
+LDVG_12,Light Commercial Vehicles_Petrol_N1-II_Euro 2,0.67,15.0,25.0,0.85,1
+LDVG_12,Light Commercial Vehicles_Petrol_N1-II_Euro 2,0.67,25.0,,1.55,1
+LDVG_13,Light Commercial Vehicles_Petrol_N1-II_Euro 3,1,,10.0,0.62,1
+LDVG_13,Light Commercial Vehicles_Petrol_N1-II_Euro 3,1,10.0,15.0,0.77,1
+LDVG_13,Light Commercial Vehicles_Petrol_N1-II_Euro 3,1,15.0,25.0,1.06,1
+LDVG_13,Light Commercial Vehicles_Petrol_N1-II_Euro 3,1,25.0,,2.67,1
+LDVG_14,Light Commercial Vehicles_Petrol_N1-II_Euro 4,1,,10.0,0.62,1
+LDVG_14,Light Commercial Vehicles_Petrol_N1-II_Euro 4,1,10.0,15.0,0.77,1
+LDVG_14,Light Commercial Vehicles_Petrol_N1-II_Euro 4,1,15.0,25.0,1.06,1
+LDVG_14,Light Commercial Vehicles_Petrol_N1-II_Euro 4,1,25.0,,2.67,1
+LDVG_15,Light Commercial Vehicles_Petrol_N1-II_Euro 5,1,,10.0,0.62,1
+LDVG_15,Light Commercial Vehicles_Petrol_N1-II_Euro 5,1,10.0,15.0,0.77,1
+LDVG_15,Light Commercial Vehicles_Petrol_N1-II_Euro 5,1,15.0,25.0,1.06,1
+LDVG_15,Light Commercial Vehicles_Petrol_N1-II_Euro 5,1,25.0,,2.67,1
+LDVG_16,Light Commercial Vehicles_Petrol_N1-II_Euro 6 up to 2017,1,,10.0,0.62,1
+LDVG_16,Light Commercial Vehicles_Petrol_N1-II_Euro 6 up to 2017,1,10.0,15.0,0.77,1
+LDVG_16,Light Commercial Vehicles_Petrol_N1-II_Euro 6 up to 2017,1,15.0,25.0,1.06,1
+LDVG_16,Light Commercial Vehicles_Petrol_N1-II_Euro 6 up to 2017,1,25.0,,2.67,1
+LDVG_17,Light Commercial Vehicles_Petrol_N1-II_Euro 6 2018-2020,1,,10.0,0.62,1
+LDVG_17,Light Commercial Vehicles_Petrol_N1-II_Euro 6 2018-2020,1,10.0,15.0,0.77,1
+LDVG_17,Light Commercial Vehicles_Petrol_N1-II_Euro 6 2018-2020,1,15.0,25.0,1.06,1
+LDVG_17,Light Commercial Vehicles_Petrol_N1-II_Euro 6 2018-2020,1,25.0,,2.67,1
+LDVG_18,Light Commercial Vehicles_Petrol_N1-II_Euro 6 2021+,1,,10.0,0.62,1
+LDVG_18,Light Commercial Vehicles_Petrol_N1-II_Euro 6 2021+,1,10.0,15.0,0.77,1
+LDVG_18,Light Commercial Vehicles_Petrol_N1-II_Euro 6 2021+,1,15.0,25.0,1.06,1
+LDVG_18,Light Commercial Vehicles_Petrol_N1-II_Euro 6 2021+,1,25.0,,2.67,1
+LDVG_19,Light Commercial Vehicles_Petrol_N1-III_Conventional,,,10.0,9.6,1
+LDVG_19,Light Commercial Vehicles_Petrol_N1-III_Conventional,,10.0,15.0,13.7,1
+LDVG_19,Light Commercial Vehicles_Petrol_N1-III_Conventional,,15.0,25.0,18.6,1
+LDVG_19,Light Commercial Vehicles_Petrol_N1-III_Conventional,,25.0,,31.1,1
+LDVG_2,Light Commercial Vehicles_Petrol_N1-I_Euro 1,0.67,,10.0,0.59,1
+LDVG_2,Light Commercial Vehicles_Petrol_N1-I_Euro 1,0.67,10.0,15.0,0.68,1
+LDVG_2,Light Commercial Vehicles_Petrol_N1-I_Euro 1,0.67,15.0,25.0,0.85,1
+LDVG_2,Light Commercial Vehicles_Petrol_N1-I_Euro 1,0.67,25.0,,1.55,1
+LDVG_20,Light Commercial Vehicles_Petrol_N1-III_Euro 1,0.67,,10.0,0.59,1
+LDVG_20,Light Commercial Vehicles_Petrol_N1-III_Euro 1,0.67,10.0,15.0,0.68,1
+LDVG_20,Light Commercial Vehicles_Petrol_N1-III_Euro 1,0.67,15.0,25.0,0.85,1
+LDVG_20,Light Commercial Vehicles_Petrol_N1-III_Euro 1,0.67,25.0,,1.55,1
+LDVG_21,Light Commercial Vehicles_Petrol_N1-III_Euro 2,0.67,,10.0,0.59,1
+LDVG_21,Light Commercial Vehicles_Petrol_N1-III_Euro 2,0.67,10.0,15.0,0.68,1
+LDVG_21,Light Commercial Vehicles_Petrol_N1-III_Euro 2,0.67,15.0,25.0,0.85,1
+LDVG_21,Light Commercial Vehicles_Petrol_N1-III_Euro 2,0.67,25.0,,1.55,1
+LDVG_22,Light Commercial Vehicles_Petrol_N1-III_Euro 3,1,,10.0,0.62,1
+LDVG_22,Light Commercial Vehicles_Petrol_N1-III_Euro 3,1,10.0,15.0,0.77,1
+LDVG_22,Light Commercial Vehicles_Petrol_N1-III_Euro 3,1,15.0,25.0,1.06,1
+LDVG_22,Light Commercial Vehicles_Petrol_N1-III_Euro 3,1,25.0,,2.67,1
+LDVG_23,Light Commercial Vehicles_Petrol_N1-III_Euro 4,1,,10.0,0.62,1
+LDVG_23,Light Commercial Vehicles_Petrol_N1-III_Euro 4,1,10.0,15.0,0.77,1
+LDVG_23,Light Commercial Vehicles_Petrol_N1-III_Euro 4,1,15.0,25.0,1.06,1
+LDVG_23,Light Commercial Vehicles_Petrol_N1-III_Euro 4,1,25.0,,2.67,1
+LDVG_24,Light Commercial Vehicles_Petrol_N1-III_Euro 5,1,,10.0,0.62,1
+LDVG_24,Light Commercial Vehicles_Petrol_N1-III_Euro 5,1,10.0,15.0,0.77,1
+LDVG_24,Light Commercial Vehicles_Petrol_N1-III_Euro 5,1,15.0,25.0,1.06,1
+LDVG_24,Light Commercial Vehicles_Petrol_N1-III_Euro 5,1,25.0,,2.67,1
+LDVG_25,Light Commercial Vehicles_Petrol_N1-III_Euro 6 up to 2017,1,,10.0,0.62,1
+LDVG_25,Light Commercial Vehicles_Petrol_N1-III_Euro 6 up to 2017,1,10.0,15.0,0.77,1
+LDVG_25,Light Commercial Vehicles_Petrol_N1-III_Euro 6 up to 2017,1,15.0,25.0,1.06,1
+LDVG_25,Light Commercial Vehicles_Petrol_N1-III_Euro 6 up to 2017,1,25.0,,2.67,1
+LDVG_26,Light Commercial Vehicles_Petrol_N1-III_Euro 6 2018-2020,1,,10.0,0.62,1
+LDVG_26,Light Commercial Vehicles_Petrol_N1-III_Euro 6 2018-2020,1,10.0,15.0,0.77,1
+LDVG_26,Light Commercial Vehicles_Petrol_N1-III_Euro 6 2018-2020,1,15.0,25.0,1.06,1
+LDVG_26,Light Commercial Vehicles_Petrol_N1-III_Euro 6 2018-2020,1,25.0,,2.67,1
+LDVG_27,Light Commercial Vehicles_Petrol_N1-III_Euro 6 2021+,1,,10.0,0.62,1
+LDVG_27,Light Commercial Vehicles_Petrol_N1-III_Euro 6 2021+,1,10.0,15.0,0.77,1
+LDVG_27,Light Commercial Vehicles_Petrol_N1-III_Euro 6 2021+,1,15.0,25.0,1.06,1
+LDVG_27,Light Commercial Vehicles_Petrol_N1-III_Euro 6 2021+,1,25.0,,2.67,1
+LDVG_3,Light Commercial Vehicles_Petrol_N1-I_Euro 2,0.67,,10.0,0.59,1
+LDVG_3,Light Commercial Vehicles_Petrol_N1-I_Euro 2,0.67,10.0,15.0,0.68,1
+LDVG_3,Light Commercial Vehicles_Petrol_N1-I_Euro 2,0.67,15.0,25.0,0.85,1
+LDVG_3,Light Commercial Vehicles_Petrol_N1-I_Euro 2,0.67,25.0,,1.55,1
+LDVG_4,Light Commercial Vehicles_Petrol_N1-I_Euro 3,1,,10.0,0.62,1
+LDVG_4,Light Commercial Vehicles_Petrol_N1-I_Euro 3,1,10.0,15.0,0.77,1
+LDVG_4,Light Commercial Vehicles_Petrol_N1-I_Euro 3,1,15.0,25.0,1.06,1
+LDVG_4,Light Commercial Vehicles_Petrol_N1-I_Euro 3,1,25.0,,2.67,1
+LDVG_5,Light Commercial Vehicles_Petrol_N1-I_Euro 4,1,,10.0,0.62,1
+LDVG_5,Light Commercial Vehicles_Petrol_N1-I_Euro 4,1,10.0,15.0,0.77,1
+LDVG_5,Light Commercial Vehicles_Petrol_N1-I_Euro 4,1,15.0,25.0,1.06,1
+LDVG_5,Light Commercial Vehicles_Petrol_N1-I_Euro 4,1,25.0,,2.67,1
+LDVG_6,Light Commercial Vehicles_Petrol_N1-I_Euro 5,1,,10.0,0.62,1
+LDVG_6,Light Commercial Vehicles_Petrol_N1-I_Euro 5,1,10.0,15.0,0.77,1
+LDVG_6,Light Commercial Vehicles_Petrol_N1-I_Euro 5,1,15.0,25.0,1.06,1
+LDVG_6,Light Commercial Vehicles_Petrol_N1-I_Euro 5,1,25.0,,2.67,1
+LDVG_7,Light Commercial Vehicles_Petrol_N1-I_Euro 6 up to 2016,1,,10.0,0.62,1
+LDVG_7,Light Commercial Vehicles_Petrol_N1-I_Euro 6 up to 2016,1,10.0,15.0,0.77,1
+LDVG_7,Light Commercial Vehicles_Petrol_N1-I_Euro 6 up to 2016,1,15.0,25.0,1.06,1
+LDVG_7,Light Commercial Vehicles_Petrol_N1-I_Euro 6 up to 2016,1,25.0,,2.67,1
+LDVG_8,Light Commercial Vehicles_Petrol_N1-I_Euro 6 2017-2019,1,,10.0,0.62,1
+LDVG_8,Light Commercial Vehicles_Petrol_N1-I_Euro 6 2017-2019,1,10.0,15.0,0.77,1
+LDVG_8,Light Commercial Vehicles_Petrol_N1-I_Euro 6 2017-2019,1,15.0,25.0,1.06,1
+LDVG_8,Light Commercial Vehicles_Petrol_N1-I_Euro 6 2017-2019,1,25.0,,2.67,1
+LDVG_9,Light Commercial Vehicles_Petrol_N1-I_Euro 6 2020+,1,,10.0,0.62,1
+LDVG_9,Light Commercial Vehicles_Petrol_N1-I_Euro 6 2020+,1,10.0,15.0,0.77,1
+LDVG_9,Light Commercial Vehicles_Petrol_N1-I_Euro 6 2020+,1,15.0,25.0,1.06,1
+LDVG_9,Light Commercial Vehicles_Petrol_N1-I_Euro 6 2020+,1,25.0,,2.67,1
+M_1,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Conventional,,,10.0,0.64,1
+M_1,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Conventional,,10.0,15.0,0.91,1
+M_1,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Conventional,,15.0,25.0,1.24,1
+M_1,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Conventional,,25.0,,2.07,1
+M_10,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 3,,,10.0,0.64,1
+M_10,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 3,,10.0,15.0,0.91,1
+M_10,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 3,,15.0,25.0,1.24,1
+M_10,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 3,,25.0,,2.07,1
+M_11,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 4,,,10.0,0.64,1
+M_11,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 4,,10.0,15.0,0.91,1
+M_11,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 4,,15.0,25.0,1.24,1
+M_11,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 4,,25.0,,2.07,1
+M_12,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 5,,,10.0,0.64,1
+M_12,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 5,,10.0,15.0,0.91,1
+M_12,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 5,,15.0,25.0,1.24,1
+M_12,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 5,,25.0,,2.07,1
+M_13,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Conventional,,,10.0,1.02,1
+M_13,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Conventional,,10.0,15.0,1.46,1
+M_13,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Conventional,,15.0,25.0,1.99,1
+M_13,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Conventional,,25.0,,3.31,1
+M_14,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 1,,,10.0,1.02,1
+M_14,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 1,,10.0,15.0,1.46,1
+M_14,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 1,,15.0,25.0,1.99,1
+M_14,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 1,,25.0,,3.31,1
+M_15,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 2,,,10.0,1.02,1
+M_15,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 2,,10.0,15.0,1.46,1
+M_15,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 2,,15.0,25.0,1.99,1
+M_15,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 2,,25.0,,3.31,1
+M_16,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 3,0.5,,10.0,1.02,1
+M_16,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 3,0.5,10.0,15.0,1.46,1
+M_16,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 3,0.5,15.0,25.0,1.99,1
+M_16,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 3,0.5,25.0,,3.31,1
+M_17,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 4,0.5,,10.0,1.02,1
+M_17,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 4,0.5,10.0,15.0,1.46,1
+M_17,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 4,0.5,15.0,25.0,1.99,1
+M_17,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 4,0.5,25.0,,3.31,1
+M_18,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 5,0.5,,10.0,1.02,1
+M_18,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 5,0.5,10.0,15.0,1.46,1
+M_18,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 5,0.5,15.0,25.0,1.99,1
+M_18,L-Category_Petrol_Motorcycles 2-stroke >50 cm³_Euro 5,0.5,25.0,,3.31,1
+M_19,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Conventional,,,10.0,1.28,1
+M_19,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Conventional,,10.0,15.0,1.83,1
+M_19,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Conventional,,15.0,25.0,2.48,1
+M_19,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Conventional,,25.0,,4.14,1
+M_2,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 1,,,10.0,0.64,1
+M_2,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 1,,10.0,15.0,0.91,1
+M_2,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 1,,15.0,25.0,1.24,1
+M_2,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 1,,25.0,,2.07,1
+M_20,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 1,,,10.0,1.28,1
+M_20,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 1,,10.0,15.0,1.83,1
+M_20,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 1,,15.0,25.0,2.48,1
+M_20,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 1,,25.0,,4.14,1
+M_21,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 2,,,10.0,1.28,1
+M_21,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 2,,10.0,15.0,1.83,1
+M_21,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 2,,15.0,25.0,2.48,1
+M_21,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 2,,25.0,,4.14,1
+M_22,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 3,0.5,,10.0,1.28,1
+M_22,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 3,0.5,10.0,15.0,1.83,1
+M_22,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 3,0.5,15.0,25.0,2.48,1
+M_22,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 3,0.5,25.0,,4.14,1
+M_23,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 4,0.5,,10.0,1.28,1
+M_23,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 4,0.5,10.0,15.0,1.83,1
+M_23,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 4,0.5,15.0,25.0,2.48,1
+M_23,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 4,0.5,25.0,,4.14,1
+M_24,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 5,0.5,,10.0,1.28,1
+M_24,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 5,0.5,10.0,15.0,1.83,1
+M_24,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 5,0.5,15.0,25.0,2.48,1
+M_24,L-Category_Petrol_Motorcycles 4-stroke <250 cm³_Euro 5,0.5,25.0,,4.14,1
+M_25,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Conventional,,,10.0,2.30,1
+M_25,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Conventional,,10.0,15.0,3.29,1
+M_25,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Conventional,,15.0,25.0,4.47,1
+M_25,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Conventional,,25.0,,7.45,1
+M_26,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 1,,,10.0,2.30,1
+M_26,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 1,,10.0,15.0,3.29,1
+M_26,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 1,,15.0,25.0,4.47,1
+M_26,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 1,,25.0,,7.45,1
+M_27,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 2,,,10.0,2.30,1
+M_27,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 2,,10.0,15.0,3.29,1
+M_27,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 2,,15.0,25.0,4.47,1
+M_27,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 2,,25.0,,7.45,1
+M_28,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 3,0.5,,10.0,2.30,1
+M_28,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 3,0.5,10.0,15.0,3.29,1
+M_28,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 3,0.5,15.0,25.0,4.47,1
+M_28,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 3,0.5,25.0,,7.45,1
+M_29,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 4,0.5,,10.0,2.30,1
+M_29,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 4,0.5,10.0,15.0,3.29,1
+M_29,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 4,0.5,15.0,25.0,4.47,1
+M_29,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 4,0.5,25.0,,7.45,1
+M_3,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 2,,,10.0,0.64,1
+M_3,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 2,,10.0,15.0,0.91,1
+M_3,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 2,,15.0,25.0,1.24,1
+M_3,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 2,,25.0,,2.07,1
+M_30,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 5,0.5,,10.0,2.30,1
+M_30,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 5,0.5,10.0,15.0,3.29,1
+M_30,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 5,0.5,15.0,25.0,4.47,1
+M_30,L-Category_Petrol_Motorcycles 4-stroke 250 - 750 cm³_Euro 5,0.5,25.0,,7.45,1
+M_31,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Conventional,0.5,,10.0,0.79,1
+M_31,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Conventional,0.5,10.0,15.0,0.85,1
+M_31,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Conventional,0.5,15.0,25.0,0.99,1
+M_31,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Conventional,0.5,25.0,,1.56,1
+M_32,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 1,0.5,,10.0,0.79,1
+M_32,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 1,0.5,10.0,15.0,0.85,1
+M_32,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 1,0.5,15.0,25.0,0.99,1
+M_32,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 1,0.5,25.0,,1.56,1
+M_33,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 2,0.5,,10.0,0.79,1
+M_33,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 2,0.5,10.0,15.0,0.85,1
+M_33,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 2,0.5,15.0,25.0,0.99,1
+M_33,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 2,0.5,25.0,,1.56,1
+M_34,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 3,0.5,,10.0,0.79,1
+M_34,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 3,0.5,10.0,15.0,0.85,1
+M_34,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 3,0.5,15.0,25.0,0.99,1
+M_34,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 3,0.5,25.0,,1.56,1
+M_35,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 4,0.5,,10.0,0.79,1
+M_35,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 4,0.5,10.0,15.0,0.85,1
+M_35,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 4,0.5,15.0,25.0,0.99,1
+M_35,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 4,0.5,25.0,,1.56,1
+M_36,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 5,0.5,,10.0,0.79,1
+M_36,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 5,0.5,10.0,15.0,0.85,1
+M_36,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 5,0.5,15.0,25.0,0.99,1
+M_36,L-Category_Petrol_Motorcycles 4-stroke >750 cm³_Euro 5,0.5,25.0,,1.56,1
+M_4,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 3,,,10.0,0.64,1
+M_4,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 3,,10.0,15.0,0.91,1
+M_4,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 3,,15.0,25.0,1.24,1
+M_4,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 3,,25.0,,2.07,1
+M_5,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 4,,,10.0,0.64,1
+M_5,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 4,,10.0,15.0,0.91,1
+M_5,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 4,,15.0,25.0,1.24,1
+M_5,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 4,,25.0,,2.07,1
+M_6,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 5,,,10.0,0.64,1
+M_6,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 5,,10.0,15.0,0.91,1
+M_6,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 5,,15.0,25.0,1.24,1
+M_6,L-Category_Petrol_Mopeds 2-stroke <50 cm³_Euro 5,,25.0,,2.07,1
+M_7,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Conventional,,,10.0,0.64,1
+M_7,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Conventional,,10.0,15.0,0.91,1
+M_7,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Conventional,,15.0,25.0,1.24,1
+M_7,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Conventional,,25.0,,2.07,1
+M_8,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 1,,,10.0,0.64,1
+M_8,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 1,,10.0,15.0,0.91,1
+M_8,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 1,,15.0,25.0,1.24,1
+M_8,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 1,,25.0,,2.07,1
+M_9,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 2,,,10.0,0.64,1
+M_9,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 2,,10.0,15.0,0.91,1
+M_9,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 2,,15.0,25.0,1.24,1
+M_9,L-Category_Petrol_Mopeds 4-stroke <50 cm³_Euro 2,,25.0,,2.07,1
+PCG_1,Passenger Cars_Petrol_Small_PRE ECE,,,10.0,6.4,1
+PCG_1,Passenger Cars_Petrol_Small_PRE ECE,,10.0,15.0,9.1,1
+PCG_1,Passenger Cars_Petrol_Small_PRE ECE,,15.0,25.0,12.4,1
+PCG_1,Passenger Cars_Petrol_Small_PRE ECE,,25.0,,20.7,1
+PCG_10,Passenger Cars_Petrol_Small_Euro 3,0.8,,10.0,0.73,1
+PCG_10,Passenger Cars_Petrol_Small_Euro 3,0.8,10.0,15.0,0.89,1
+PCG_10,Passenger Cars_Petrol_Small_Euro 3,0.8,15.0,25.0,1.17,1
+PCG_10,Passenger Cars_Petrol_Small_Euro 3,0.8,25.0,,2.25,1
+PCG_11,Passenger Cars_Petrol_Small_Euro 4,0.8,,10.0,0.73,1
+PCG_11,Passenger Cars_Petrol_Small_Euro 4,0.8,10.0,15.0,0.89,1
+PCG_11,Passenger Cars_Petrol_Small_Euro 4,0.8,15.0,25.0,1.17,1
+PCG_11,Passenger Cars_Petrol_Small_Euro 4,0.8,25.0,,2.25,1
+PCG_12,Passenger Cars_Petrol_Small_Euro 5,0.8,,10.0,0.73,1
+PCG_12,Passenger Cars_Petrol_Small_Euro 5,0.8,10.0,15.0,0.89,1
+PCG_12,Passenger Cars_Petrol_Small_Euro 5,0.8,15.0,25.0,1.17,1
+PCG_12,Passenger Cars_Petrol_Small_Euro 5,0.8,25.0,,2.25,1
+PCG_13,Passenger Cars_Petrol_Small_Euro 6 up to 2016,0.8,,10.0,0.73,1
+PCG_13,Passenger Cars_Petrol_Small_Euro 6 up to 2016,0.8,10.0,15.0,0.89,1
+PCG_13,Passenger Cars_Petrol_Small_Euro 6 up to 2016,0.8,15.0,25.0,1.17,1
+PCG_13,Passenger Cars_Petrol_Small_Euro 6 up to 2016,0.8,25.0,,2.25,1
+PCG_14,Passenger Cars_Petrol_Small_Euro 6 2017-2019,0.8,,10.0,0.73,1
+PCG_14,Passenger Cars_Petrol_Small_Euro 6 2017-2019,0.8,10.0,15.0,0.89,1
+PCG_14,Passenger Cars_Petrol_Small_Euro 6 2017-2019,0.8,15.0,25.0,1.17,1
+PCG_14,Passenger Cars_Petrol_Small_Euro 6 2017-2019,0.8,25.0,,2.25,1
+PCG_15,Passenger Cars_Petrol_Small_Euro 6 2020+,0.8,,10.0,0.73,1
+PCG_15,Passenger Cars_Petrol_Small_Euro 6 2020+,0.8,10.0,15.0,0.89,1
+PCG_15,Passenger Cars_Petrol_Small_Euro 6 2020+,0.8,15.0,25.0,1.17,1
+PCG_15,Passenger Cars_Petrol_Small_Euro 6 2020+,0.8,25.0,,2.25,1
+PCG_16,Passenger Cars_Petrol_Medium_PRE ECE,,,10.0,7.7,1
+PCG_16,Passenger Cars_Petrol_Medium_PRE ECE,,10.0,15.0,11.0,1
+PCG_16,Passenger Cars_Petrol_Medium_PRE ECE,,15.0,25.0,14.9,1
+PCG_16,Passenger Cars_Petrol_Medium_PRE ECE,,25.0,,24.8,1
+PCG_17,Passenger Cars_Petrol_Medium_ECE 15/00-01,,,10.0,7.7,1
+PCG_17,Passenger Cars_Petrol_Medium_ECE 15/00-01,,10.0,15.0,11.0,1
+PCG_17,Passenger Cars_Petrol_Medium_ECE 15/00-01,,15.0,25.0,14.9,1
+PCG_17,Passenger Cars_Petrol_Medium_ECE 15/00-01,,25.0,,24.8,1
+PCG_18,Passenger Cars_Petrol_Medium_ECE 15/02,,,10.0,7.7,1
+PCG_18,Passenger Cars_Petrol_Medium_ECE 15/02,,10.0,15.0,11.0,1
+PCG_18,Passenger Cars_Petrol_Medium_ECE 15/02,,15.0,25.0,14.9,1
+PCG_18,Passenger Cars_Petrol_Medium_ECE 15/02,,25.0,,24.8,1
+PCG_19,Passenger Cars_Petrol_Medium_ECE 15/03,,,10.0,7.7,1
+PCG_19,Passenger Cars_Petrol_Medium_ECE 15/03,,10.0,15.0,11.0,1
+PCG_19,Passenger Cars_Petrol_Medium_ECE 15/03,,15.0,25.0,14.9,1
+PCG_19,Passenger Cars_Petrol_Medium_ECE 15/03,,25.0,,24.8,1
+PCG_2,Passenger Cars_Petrol_Small_ECE 15/00-01,,,10.0,6.4,1
+PCG_2,Passenger Cars_Petrol_Small_ECE 15/00-01,,10.0,15.0,9.1,1
+PCG_2,Passenger Cars_Petrol_Small_ECE 15/00-01,,15.0,25.0,12.4,1
+PCG_2,Passenger Cars_Petrol_Small_ECE 15/00-01,,25.0,,20.7,1
+PCG_20,Passenger Cars_Petrol_Medium_ECE 15/04,,,10.0,7.7,1
+PCG_20,Passenger Cars_Petrol_Medium_ECE 15/04,,10.0,15.0,11.0,1
+PCG_20,Passenger Cars_Petrol_Medium_ECE 15/04,,15.0,25.0,14.9,1
+PCG_20,Passenger Cars_Petrol_Medium_ECE 15/04,,25.0,,24.8,1
+PCG_21,Passenger Cars_Petrol_Medium_Improved Conventional,,,10.0,7.7,1
+PCG_21,Passenger Cars_Petrol_Medium_Improved Conventional,,10.0,15.0,11.0,1
+PCG_21,Passenger Cars_Petrol_Medium_Improved Conventional,,15.0,25.0,14.9,1
+PCG_21,Passenger Cars_Petrol_Medium_Improved Conventional,,25.0,,24.8,1
+PCG_22,Passenger Cars_Petrol_Medium_Open Loop,,,10.0,7.7,1
+PCG_22,Passenger Cars_Petrol_Medium_Open Loop,,10.0,15.0,11.0,1
+PCG_22,Passenger Cars_Petrol_Medium_Open Loop,,15.0,25.0,14.9,1
+PCG_22,Passenger Cars_Petrol_Medium_Open Loop,,25.0,,24.8,1
+PCG_23,Passenger Cars_Petrol_Medium_Euro 1,0.67,,10.0,0.55,1
+PCG_23,Passenger Cars_Petrol_Medium_Euro 1,0.67,10.0,15.0,0.63,1
+PCG_23,Passenger Cars_Petrol_Medium_Euro 1,0.67,15.0,25.0,0.76,1
+PCG_23,Passenger Cars_Petrol_Medium_Euro 1,0.67,25.0,,1.24,1
+PCG_24,Passenger Cars_Petrol_Medium_Euro 2,0.67,,10.0,0.55,1
+PCG_24,Passenger Cars_Petrol_Medium_Euro 2,0.67,10.0,15.0,0.63,1
+PCG_24,Passenger Cars_Petrol_Medium_Euro 2,0.67,15.0,25.0,0.76,1
+PCG_24,Passenger Cars_Petrol_Medium_Euro 2,0.67,25.0,,1.24,1
+PCG_25,Passenger Cars_Petrol_Medium_Euro 3,1,,10.0,0.58,1
+PCG_25,Passenger Cars_Petrol_Medium_Euro 3,1,10.0,15.0,0.68,1
+PCG_25,Passenger Cars_Petrol_Medium_Euro 3,1,15.0,25.0,0.89,1
+PCG_25,Passenger Cars_Petrol_Medium_Euro 3,1,25.0,,1.83,1
+PCG_26,Passenger Cars_Petrol_Medium_Euro 4,1,,10.0,0.58,1
+PCG_26,Passenger Cars_Petrol_Medium_Euro 4,1,10.0,15.0,0.68,1
+PCG_26,Passenger Cars_Petrol_Medium_Euro 4,1,15.0,25.0,0.89,1
+PCG_26,Passenger Cars_Petrol_Medium_Euro 4,1,25.0,,1.83,1
+PCG_27,Passenger Cars_Petrol_Medium_Euro 5,1,,10.0,0.58,1
+PCG_27,Passenger Cars_Petrol_Medium_Euro 5,1,10.0,15.0,0.68,1
+PCG_27,Passenger Cars_Petrol_Medium_Euro 5,1,15.0,25.0,0.89,1
+PCG_27,Passenger Cars_Petrol_Medium_Euro 5,1,25.0,,1.83,1
+PCG_28,Passenger Cars_Petrol_Medium_Euro 6 up to 2016,1,,10.0,0.58,1
+PCG_28,Passenger Cars_Petrol_Medium_Euro 6 up to 2016,1,10.0,15.0,0.68,1
+PCG_28,Passenger Cars_Petrol_Medium_Euro 6 up to 2016,1,15.0,25.0,0.89,1
+PCG_28,Passenger Cars_Petrol_Medium_Euro 6 up to 2016,1,25.0,,1.83,1
+PCG_29,Passenger Cars_Petrol_Medium_Euro 6 2017-2019,1,,10.0,0.58,1
+PCG_29,Passenger Cars_Petrol_Medium_Euro 6 2017-2019,1,10.0,15.0,0.68,1
+PCG_29,Passenger Cars_Petrol_Medium_Euro 6 2017-2019,1,15.0,25.0,0.89,1
+PCG_29,Passenger Cars_Petrol_Medium_Euro 6 2017-2019,1,25.0,,1.83,1
+PCG_3,Passenger Cars_Petrol_Small_ECE 15/02,,,10.0,6.4,1
+PCG_3,Passenger Cars_Petrol_Small_ECE 15/02,,10.0,15.0,9.1,1
+PCG_3,Passenger Cars_Petrol_Small_ECE 15/02,,15.0,25.0,12.4,1
+PCG_3,Passenger Cars_Petrol_Small_ECE 15/02,,25.0,,20.7,1
+PCG_30,Passenger Cars_Petrol_Medium_Euro 6 2020+,1,,10.0,0.58,1
+PCG_30,Passenger Cars_Petrol_Medium_Euro 6 2020+,1,10.0,15.0,0.68,1
+PCG_30,Passenger Cars_Petrol_Medium_Euro 6 2020+,1,15.0,25.0,0.89,1
+PCG_30,Passenger Cars_Petrol_Medium_Euro 6 2020+,1,25.0,,1.83,1
+PCG_31,Passenger Cars_Petrol_Large-SUV-Executive_PRE ECE,,,10.0,9.6,1
+PCG_31,Passenger Cars_Petrol_Large-SUV-Executive_PRE ECE,,10.0,15.0,13.7,1
+PCG_31,Passenger Cars_Petrol_Large-SUV-Executive_PRE ECE,,15.0,25.0,18.6,1
+PCG_31,Passenger Cars_Petrol_Large-SUV-Executive_PRE ECE,,25.0,,31.1,1
+PCG_32,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/00-01,,,10.0,9.6,1
+PCG_32,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/00-01,,10.0,15.0,13.7,1
+PCG_32,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/00-01,,15.0,25.0,18.6,1
+PCG_32,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/00-01,,25.0,,31.1,1
+PCG_33,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/02,,,10.0,9.6,1
+PCG_33,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/02,,10.0,15.0,13.7,1
+PCG_33,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/02,,15.0,25.0,18.6,1
+PCG_33,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/02,,25.0,,31.1,1
+PCG_34,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/03,,,10.0,9.6,1
+PCG_34,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/03,,10.0,15.0,13.7,1
+PCG_34,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/03,,15.0,25.0,18.6,1
+PCG_34,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/03,,25.0,,31.1,1
+PCG_35,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/04,,,10.0,9.6,1
+PCG_35,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/04,,10.0,15.0,13.7,1
+PCG_35,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/04,,15.0,25.0,18.6,1
+PCG_35,Passenger Cars_Petrol_Large-SUV-Executive_ECE 15/04,,25.0,,31.1,1
+PCG_36,Passenger Cars_Petrol_Large-SUV-Executive_Euro 1,1,,10.0,0.6,1
+PCG_36,Passenger Cars_Petrol_Large-SUV-Executive_Euro 1,1,10.0,15.0,0.8,1
+PCG_36,Passenger Cars_Petrol_Large-SUV-Executive_Euro 1,1,15.0,25.0,1.1,1
+PCG_36,Passenger Cars_Petrol_Large-SUV-Executive_Euro 1,1,25.0,,2.7,1
+PCG_37,Passenger Cars_Petrol_Large-SUV-Executive_Euro 2,1,,10.0,0.6,1
+PCG_37,Passenger Cars_Petrol_Large-SUV-Executive_Euro 2,1,10.0,15.0,0.8,1
+PCG_37,Passenger Cars_Petrol_Large-SUV-Executive_Euro 2,1,15.0,25.0,1.1,1
+PCG_37,Passenger Cars_Petrol_Large-SUV-Executive_Euro 2,1,25.0,,2.7,1
+PCG_38,Passenger Cars_Petrol_Large-SUV-Executive_Euro 3,1.5,,10.0,0.7,1
+PCG_38,Passenger Cars_Petrol_Large-SUV-Executive_Euro 3,1.5,10.0,15.0,0.9,1
+PCG_38,Passenger Cars_Petrol_Large-SUV-Executive_Euro 3,1.5,15.0,25.0,1.3,1
+PCG_38,Passenger Cars_Petrol_Large-SUV-Executive_Euro 3,1.5,25.0,,4.4,1
+PCG_39,Passenger Cars_Petrol_Large-SUV-Executive_Euro 4,1.5,,10.0,0.7,1
+PCG_39,Passenger Cars_Petrol_Large-SUV-Executive_Euro 4,1.5,10.0,15.0,0.9,1
+PCG_39,Passenger Cars_Petrol_Large-SUV-Executive_Euro 4,1.5,15.0,25.0,1.3,1
+PCG_39,Passenger Cars_Petrol_Large-SUV-Executive_Euro 4,1.5,25.0,,4.4,1
+PCG_4,Passenger Cars_Petrol_Small_ECE 15/03,,,10.0,6.4,1
+PCG_4,Passenger Cars_Petrol_Small_ECE 15/03,,10.0,15.0,9.1,1
+PCG_4,Passenger Cars_Petrol_Small_ECE 15/03,,15.0,25.0,12.4,1
+PCG_4,Passenger Cars_Petrol_Small_ECE 15/03,,25.0,,20.7,1
+PCG_40,Passenger Cars_Petrol_Large-SUV-Executive_Euro 5,1.5,,10.0,0.7,1
+PCG_40,Passenger Cars_Petrol_Large-SUV-Executive_Euro 5,1.5,10.0,15.0,0.9,1
+PCG_40,Passenger Cars_Petrol_Large-SUV-Executive_Euro 5,1.5,15.0,25.0,1.3,1
+PCG_40,Passenger Cars_Petrol_Large-SUV-Executive_Euro 5,1.5,25.0,,4.4,1
+PCG_41,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 up to 2016,1.5,,10.0,0.7,1
+PCG_41,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 up to 2016,1.5,10.0,15.0,0.9,1
+PCG_41,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 up to 2016,1.5,15.0,25.0,1.3,1
+PCG_41,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 up to 2016,1.5,25.0,,4.4,1
+PCG_42,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 2017-2019,1.5,,10.0,0.7,1
+PCG_42,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 2017-2019,1.5,10.0,15.0,0.9,1
+PCG_42,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 2017-2019,1.5,15.0,25.0,1.3,1
+PCG_42,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 2017-2019,1.5,25.0,,4.4,1
+PCG_43,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 2020+,1.5,,10.0,0.7,1
+PCG_43,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 2020+,1.5,10.0,15.0,0.9,1
+PCG_43,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 2020+,1.5,15.0,25.0,1.3,1
+PCG_43,Passenger Cars_Petrol_Large-SUV-Executive_Euro 6 2020+,1.5,25.0,,4.4,1
+PCG_44,Passenger Cars_Petrol_Mini_Euro 4,0.8,,10.0,0.7,1
+PCG_44,Passenger Cars_Petrol_Mini_Euro 4,0.8,10.0,15.0,0.9,1
+PCG_44,Passenger Cars_Petrol_Mini_Euro 4,0.8,15.0,25.0,1.2,1
+PCG_44,Passenger Cars_Petrol_Mini_Euro 4,0.8,25.0,,2.3,1
+PCG_45,Passenger Cars_Petrol_Mini_Euro 5,0.8,,10.0,0.7,1
+PCG_45,Passenger Cars_Petrol_Mini_Euro 5,0.8,10.0,15.0,0.9,1
+PCG_45,Passenger Cars_Petrol_Mini_Euro 5,0.8,15.0,25.0,1.2,1
+PCG_45,Passenger Cars_Petrol_Mini_Euro 5,0.8,25.0,,2.3,1
+PCG_46,Passenger Cars_Petrol_Mini_Euro 6 up to 2016,0.8,,10.0,0.7,1
+PCG_46,Passenger Cars_Petrol_Mini_Euro 6 up to 2016,0.8,10.0,15.0,0.9,1
+PCG_46,Passenger Cars_Petrol_Mini_Euro 6 up to 2016,0.8,15.0,25.0,1.2,1
+PCG_46,Passenger Cars_Petrol_Mini_Euro 6 up to 2016,0.8,25.0,,2.3,1
+PCG_47,Passenger Cars_Petrol_Mini_Euro 6 2017-2019,0.8,,10.0,0.7,1
+PCG_47,Passenger Cars_Petrol_Mini_Euro 6 2017-2019,0.8,10.0,15.0,0.9,1
+PCG_47,Passenger Cars_Petrol_Mini_Euro 6 2017-2019,0.8,15.0,25.0,1.2,1
+PCG_47,Passenger Cars_Petrol_Mini_Euro 6 2017-2019,0.8,25.0,,2.3,1
+PCG_48,Passenger Cars_Petrol_Mini_Euro 6 2020+,0.8,,10.0,0.7,1
+PCG_48,Passenger Cars_Petrol_Mini_Euro 6 2020+,0.8,10.0,15.0,0.9,1
+PCG_48,Passenger Cars_Petrol_Mini_Euro 6 2020+,0.8,15.0,25.0,1.2,1
+PCG_48,Passenger Cars_Petrol_Mini_Euro 6 2020+,0.8,25.0,,2.3,1
+PCG_5,Passenger Cars_Petrol_Small_ECE 15/04,,,10.0,6.4,1
+PCG_5,Passenger Cars_Petrol_Small_ECE 15/04,,10.0,15.0,9.1,1
+PCG_5,Passenger Cars_Petrol_Small_ECE 15/04,,15.0,25.0,12.4,1
+PCG_5,Passenger Cars_Petrol_Small_ECE 15/04,,25.0,,20.7,1
+PCG_6,Passenger Cars_Petrol_Small_Improved Conventional,,,10.0,6.4,1
+PCG_6,Passenger Cars_Petrol_Small_Improved Conventional,,10.0,15.0,9.1,1
+PCG_6,Passenger Cars_Petrol_Small_Improved Conventional,,15.0,25.0,12.4,1
+PCG_6,Passenger Cars_Petrol_Small_Improved Conventional,,25.0,,20.7,1
+PCG_7,Passenger Cars_Petrol_Small_Open Loop,,,10.0,6.4,1
+PCG_7,Passenger Cars_Petrol_Small_Open Loop,,10.0,15.0,9.1,1
+PCG_7,Passenger Cars_Petrol_Small_Open Loop,,15.0,25.0,12.4,1
+PCG_7,Passenger Cars_Petrol_Small_Open Loop,,25.0,,20.7,1
+PCG_8,Passenger Cars_Petrol_Small_Euro 1,0.5,,10.0,0.7,1
+PCG_8,Passenger Cars_Petrol_Small_Euro 1,0.5,10.0,15.0,0.8,1
+PCG_8,Passenger Cars_Petrol_Small_Euro 1,0.5,15.0,25.0,1.0,1
+PCG_8,Passenger Cars_Petrol_Small_Euro 1,0.5,25.0,,1.7,1
+PCG_9,Passenger Cars_Petrol_Small_Euro 2,0.5,,10.0,0.7,1
+PCG_9,Passenger Cars_Petrol_Small_Euro 2,0.5,10.0,15.0,0.8,1
+PCG_9,Passenger Cars_Petrol_Small_Euro 2,0.5,15.0,25.0,1.0,1
+PCG_9,Passenger Cars_Petrol_Small_Euro 2,0.5,25.0,,1.7,1
+PCH_1,Passenger Cars_Petrol Hybrid_Mini_Euro 4,0.8,,10.0,0.7,1
+PCH_1,Passenger Cars_Petrol Hybrid_Mini_Euro 4,0.8,10.0,15.0,0.9,1
+PCH_1,Passenger Cars_Petrol Hybrid_Mini_Euro 4,0.8,15.0,25.0,1.2,1
+PCH_1,Passenger Cars_Petrol Hybrid_Mini_Euro 4,0.8,25.0,,2.3,1
+PCH_10,Passenger Cars_Petrol Hybrid_Small_Euro 6 2020+,0.8,,10.0,0.7,1
+PCH_10,Passenger Cars_Petrol Hybrid_Small_Euro 6 2020+,0.8,10.0,15.0,0.9,1
+PCH_10,Passenger Cars_Petrol Hybrid_Small_Euro 6 2020+,0.8,15.0,25.0,1.2,1
+PCH_10,Passenger Cars_Petrol Hybrid_Small_Euro 6 2020+,0.8,25.0,,2.3,1
+PCH_11,Passenger Cars_Petrol Hybrid_Medium_Euro 4,1,,10.0,0.58,1
+PCH_11,Passenger Cars_Petrol Hybrid_Medium_Euro 4,1,10.0,15.0,0.68,1
+PCH_11,Passenger Cars_Petrol Hybrid_Medium_Euro 4,1,15.0,25.0,0.89,1
+PCH_11,Passenger Cars_Petrol Hybrid_Medium_Euro 4,1,25.0,,1.83,1
+PCH_12,Passenger Cars_Petrol Hybrid_Medium_Euro 5,1,,10.0,0.58,1
+PCH_12,Passenger Cars_Petrol Hybrid_Medium_Euro 5,1,10.0,15.0,0.68,1
+PCH_12,Passenger Cars_Petrol Hybrid_Medium_Euro 5,1,15.0,25.0,0.89,1
+PCH_12,Passenger Cars_Petrol Hybrid_Medium_Euro 5,1,25.0,,1.83,1
+PCH_13,Passenger Cars_Petrol Hybrid_Medium_Euro 6 up to 2016,1,,10.0,0.58,1
+PCH_13,Passenger Cars_Petrol Hybrid_Medium_Euro 6 up to 2016,1,10.0,15.0,0.68,1
+PCH_13,Passenger Cars_Petrol Hybrid_Medium_Euro 6 up to 2016,1,15.0,25.0,0.89,1
+PCH_13,Passenger Cars_Petrol Hybrid_Medium_Euro 6 up to 2016,1,25.0,,1.83,1
+PCH_14,Passenger Cars_Petrol Hybrid_Medium_Euro 6 2017-2019,1,,10.0,0.58,1
+PCH_14,Passenger Cars_Petrol Hybrid_Medium_Euro 6 2017-2019,1,10.0,15.0,0.68,1
+PCH_14,Passenger Cars_Petrol Hybrid_Medium_Euro 6 2017-2019,1,15.0,25.0,0.89,1
+PCH_14,Passenger Cars_Petrol Hybrid_Medium_Euro 6 2017-2019,1,25.0,,1.83,1
+PCH_15,Passenger Cars_Petrol Hybrid_Medium_Euro 6 2020+,1,,10.0,0.58,1
+PCH_15,Passenger Cars_Petrol Hybrid_Medium_Euro 6 2020+,1,10.0,15.0,0.68,1
+PCH_15,Passenger Cars_Petrol Hybrid_Medium_Euro 6 2020+,1,15.0,25.0,0.89,1
+PCH_15,Passenger Cars_Petrol Hybrid_Medium_Euro 6 2020+,1,25.0,,1.83,1
+PCH_16,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 4,1.5,,10.0,0.7,1
+PCH_16,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 4,1.5,10.0,15.0,0.9,1
+PCH_16,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 4,1.5,15.0,25.0,1.3,1
+PCH_16,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 4,1.5,25.0,,4.4,1
+PCH_17,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 5,1.5,,10.0,0.7,1
+PCH_17,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 5,1.5,10.0,15.0,0.9,1
+PCH_17,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 5,1.5,15.0,25.0,1.3,1
+PCH_17,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 5,1.5,25.0,,4.4,1
+PCH_18,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 up to 2016,1.5,,10.0,0.7,1
+PCH_18,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 up to 2016,1.5,10.0,15.0,0.9,1
+PCH_18,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 up to 2016,1.5,15.0,25.0,1.3,1
+PCH_18,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 up to 2016,1.5,25.0,,4.4,1
+PCH_19,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 2017-2019,1.5,,10.0,0.7,1
+PCH_19,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 2017-2019,1.5,10.0,15.0,0.9,1
+PCH_19,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 2017-2019,1.5,15.0,25.0,1.3,1
+PCH_19,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 2017-2019,1.5,25.0,,4.4,1
+PCH_2,Passenger Cars_Petrol Hybrid_Mini_Euro 5,0.8,,10.0,0.7,1
+PCH_2,Passenger Cars_Petrol Hybrid_Mini_Euro 5,0.8,10.0,15.0,0.9,1
+PCH_2,Passenger Cars_Petrol Hybrid_Mini_Euro 5,0.8,15.0,25.0,1.2,1
+PCH_2,Passenger Cars_Petrol Hybrid_Mini_Euro 5,0.8,25.0,,2.3,1
+PCH_20,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 2020+,1.5,,10.0,0.7,1
+PCH_20,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 2020+,1.5,10.0,15.0,0.9,1
+PCH_20,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 2020+,1.5,15.0,25.0,1.3,1
+PCH_20,Passenger Cars_Petrol Hybrid_Large-SUV-Executive_Euro 6 2020+,1.5,25.0,,4.4,1
+PCH_3,Passenger Cars_Petrol Hybrid_Mini_Euro 6 up to 2016,0.8,,10.0,0.7,1
+PCH_3,Passenger Cars_Petrol Hybrid_Mini_Euro 6 up to 2016,0.8,10.0,15.0,0.9,1
+PCH_3,Passenger Cars_Petrol Hybrid_Mini_Euro 6 up to 2016,0.8,15.0,25.0,1.2,1
+PCH_3,Passenger Cars_Petrol Hybrid_Mini_Euro 6 up to 2016,0.8,25.0,,2.3,1
+PCH_4,Passenger Cars_Petrol Hybrid_Mini_Euro 6 2017-2019,0.8,,10.0,0.7,1
+PCH_4,Passenger Cars_Petrol Hybrid_Mini_Euro 6 2017-2019,0.8,10.0,15.0,0.9,1
+PCH_4,Passenger Cars_Petrol Hybrid_Mini_Euro 6 2017-2019,0.8,15.0,25.0,1.2,1
+PCH_4,Passenger Cars_Petrol Hybrid_Mini_Euro 6 2017-2019,0.8,25.0,,2.3,1
+PCH_5,Passenger Cars_Petrol Hybrid_Mini_Euro 6 2020+,0.8,,10.0,0.7,1
+PCH_5,Passenger Cars_Petrol Hybrid_Mini_Euro 6 2020+,0.8,10.0,15.0,0.9,1
+PCH_5,Passenger Cars_Petrol Hybrid_Mini_Euro 6 2020+,0.8,15.0,25.0,1.2,1
+PCH_5,Passenger Cars_Petrol Hybrid_Mini_Euro 6 2020+,0.8,25.0,,2.3,1
+PCH_6,Passenger Cars_Petrol Hybrid_Small_Euro 4,0.8,,10.0,0.7,1
+PCH_6,Passenger Cars_Petrol Hybrid_Small_Euro 4,0.8,10.0,15.0,0.9,1
+PCH_6,Passenger Cars_Petrol Hybrid_Small_Euro 4,0.8,15.0,25.0,1.2,1
+PCH_6,Passenger Cars_Petrol Hybrid_Small_Euro 4,0.8,25.0,,2.3,1
+PCH_7,Passenger Cars_Petrol Hybrid_Small_Euro 5,0.8,,10.0,0.7,1
+PCH_7,Passenger Cars_Petrol Hybrid_Small_Euro 5,0.8,10.0,15.0,0.9,1
+PCH_7,Passenger Cars_Petrol Hybrid_Small_Euro 5,0.8,15.0,25.0,1.2,1
+PCH_7,Passenger Cars_Petrol Hybrid_Small_Euro 5,0.8,25.0,,2.3,1
+PCH_8,Passenger Cars_Petrol Hybrid_Small_Euro 6 up to 2016,0.8,,10.0,0.7,1
+PCH_8,Passenger Cars_Petrol Hybrid_Small_Euro 6 up to 2016,0.8,10.0,15.0,0.9,1
+PCH_8,Passenger Cars_Petrol Hybrid_Small_Euro 6 up to 2016,0.8,15.0,25.0,1.2,1
+PCH_8,Passenger Cars_Petrol Hybrid_Small_Euro 6 up to 2016,0.8,25.0,,2.3,1
+PCH_9,Passenger Cars_Petrol Hybrid_Small_Euro 6 2017-2019,0.8,,10.0,0.7,1
+PCH_9,Passenger Cars_Petrol Hybrid_Small_Euro 6 2017-2019,0.8,10.0,15.0,0.9,1
+PCH_9,Passenger Cars_Petrol Hybrid_Small_Euro 6 2017-2019,0.8,15.0,25.0,1.2,1
+PCH_9,Passenger Cars_Petrol Hybrid_Small_Euro 6 2017-2019,0.8,25.0,,2.3,1
