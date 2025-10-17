@@ -119,14 +119,14 @@ class PointSourceSector(Sector):
 
         if self.comm.Get_rank() == 0:
             if self.plume_rise:
-                columns = {"Code": np.str, "Cons": np.bool, "SNAP": np.str, "Lon": np.float64,
+                columns = {"Code": str, "Cons": bool, "SNAP": str, "Lon": np.float64,
                            "Lat": np.float64, "Height": np.float64, "Diameter": np.float64,
                            "Speed": np.float64, "Temp": np.float64, "AF": np.float64,
-                           "P_month": np.str, "P_week": np.str, "P_hour": np.str, "P_spec": np.str}
+                           "P_month": str, "P_week": str, "P_hour": str, "P_spec": str}
             else:
-                columns = {"Code": np.str, "Cons": np.bool, "SNAP": np.str, "Lon": np.float64,
+                columns = {"Code": str, "Cons": bool, "SNAP": str, "Lon": np.float64,
                            "Lat": np.float64, "Height": np.float64, "AF": np.float64,
-                           "P_month": np.str, "P_week": np.str, "P_hour": np.str, "P_spec": np.str}
+                           "P_month": str, "P_week": str, "P_hour": str, "P_spec": str}
             for pollutant in self.source_pollutants:
                 # EF in Kg / Activity factor
                 columns['EF_{0}'.format(pollutant)] = np.float64
@@ -174,12 +174,12 @@ class PointSourceSector(Sector):
 
         if self.comm.Get_rank() == 0:
             if self.plume_rise:
-                columns = {"Code": np.str, "Cons": np.bool, "SNAP": np.str, "Height": np.float64,
+                columns = {"Code": str, "Cons": bool, "SNAP": str, "Height": np.float64,
                            "Diameter": np.float64, "Speed": np.float64, "Temp": np.float64, "AF": np.float64,
-                           "P_month": np.str, "P_week": np.str, "P_hour": np.str, "P_spec": np.str}
+                           "P_month": str, "P_week": str, "P_hour": str, "P_spec": str}
             else:
-                columns = {"Code": np.str, "Cons": np.bool, "SNAP": np.str, "Height": np.float64, "AF": np.float64,
-                           "P_month": np.str, "P_week": np.str, "P_hour": np.str, "P_spec": np.str}
+                columns = {"Code": str, "Cons": bool, "SNAP": str, "Height": np.float64, "AF": np.float64,
+                           "P_month": str, "P_week": str, "P_hour": str, "P_spec": str}
             for pollutant in self.source_pollutants:
                 # EF in Kg / Activity factor
                 columns['EF_{0}'.format(pollutant)] = np.float64
@@ -231,12 +231,12 @@ class PointSourceSector(Sector):
         spent_time = timeit.default_timer()
 
         if self.plume_rise:
-            columns = {"Code": np.str, "Cons": np.bool, "SNAP": np.str, "Lon": np.float64, "Lat": np.float64,
+            columns = {"Code": str, "Cons": bool, "SNAP": str, "Lon": np.float64, "Lat": np.float64,
                        "Height": np.float64, "Diameter": np.float64, "Speed": np.float64, "Temp": np.float64,
-                       "AF": np.float64, "P_spec": np.str}
+                       "AF": np.float64, "P_spec": str}
         else:
-            columns = {"Code": np.str, "Cons": np.bool, "SNAP": np.str, "Lon": np.float64, "Lat": np.float64,
-                       "Height": np.float64, "AF": np.float64, "P_spec": np.str}
+            columns = {"Code": str, "Cons": bool, "SNAP": str, "Lon": np.float64, "Lat": np.float64,
+                       "Height": np.float64, "AF": np.float64, "P_spec": str}
         # for pollutant in self.pollutant_list:
         #     columns['EF_{0}'.format(pollutant)] = settings.precision
 
@@ -275,12 +275,12 @@ class PointSourceSector(Sector):
         spent_time = timeit.default_timer()
 
         if self.plume_rise:
-            columns = {"Code": np.str, "Cons": np.bool, "SNAP": np.str, "Lon": np.float64, "Lat": np.float64,
+            columns = {"Code": str, "Cons": bool, "SNAP": str, "Lon": np.float64, "Lat": np.float64,
                        "Height": np.float64, "Diameter": np.float64, "Speed": np.float64, "Temp": np.float64,
-                       "AF": np.float64, "P_spec": np.str}
+                       "AF": np.float64, "P_spec": str}
         else:
-            columns = {"Code": np.str, "Cons": np.bool, "SNAP": np.str, "Lon": np.float64, "Lat": np.float64,
-                       "Height": np.float64, "AF": np.float64, "P_spec": np.str}
+            columns = {"Code": str, "Cons": bool, "SNAP": str, "Lon": np.float64, "Lat": np.float64,
+                       "Height": np.float64, "AF": np.float64, "P_spec": str}
         # for pollutant in self.pollutant_list:
         #     columns['EF_{0}'.format(pollutant)] = settings.precision
 
@@ -434,7 +434,7 @@ class PointSourceSector(Sector):
             # Find the geometry that is closest
             nearest = df2[geom2_col] == nearest_points(row[geom1_col], geom_union)[1]
             # Get the corresponding value from df2 (matching is based on the geometry)
-            value = df2[nearest][src_column].get_values()[0]
+            value = df2[nearest][src_column].to_numpy()[0]
             return value
         from netCDF4 import Dataset
         from shapely.geometry import Point
@@ -944,7 +944,7 @@ class PointSourceSector(Sector):
         catalog.reset_index(inplace=True)
         catalog = catalog.to_crs(self.grid.shapefile.crs)
 
-        catalog = gpd.sjoin(catalog, self.grid.shapefile.reset_index(), how="inner", op='intersects')
+        catalog = gpd.sjoin(catalog, self.grid.shapefile.reset_index(), how="inner", predicate='intersects')
 
         # Drops duplicates when the point source is on the boundary of the cell
         catalog = catalog[~catalog.index.duplicated(keep='first')]

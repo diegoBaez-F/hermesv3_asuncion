@@ -427,7 +427,7 @@ class TrafficSector(Sector):
             except KeyError as e:
                 error_exit(str(e).replace('axis', 'the road links shapefile'))
             libc.malloc_trim(0)
-            df = gpd.sjoin(df, self.clip.shapefile.to_crs(df.crs), how="inner", op='intersects')
+            df = gpd.sjoin(df, self.clip.shapefile.to_crs(df.crs), how="inner", predicate='intersects')
             df.drop(columns=['index_right'], inplace=True)
             libc.malloc_trim(0)
 
@@ -478,7 +478,7 @@ class TrafficSector(Sector):
         df['road_grad'] = df['road_grad'].astype(np.float32)
 
         # Check if percents are ok
-        if len(df[df['PcLight'] < 0]) is not 0:
+        if len(df[df['PcLight'] < 0]) != 0:
             error_exit('PcLight < 0')
 
         if self.write_rline:
@@ -731,7 +731,7 @@ class TrafficSector(Sector):
             x.drop(columns=range(0, 7), inplace=True)
 
             # Hourly factor
-            x.fillna(value=pd.np.nan, inplace=True)
+            x.fillna(value=np.nan, inplace=True)
             x['hourly_profile'] = x.groupby('weekday').apply(lambda y: x[[get_hourly_id_from_weekday(y.name)]])
             x['hourly_profile'].fillna(x['aadt_h_mn'], inplace=True)
 
@@ -808,7 +808,7 @@ class TrafficSector(Sector):
         try:
             fleet = self.fleet_compo[['Code', 'Class', zone]]
         except KeyError as e:
-            error_exit(e.message + ' of the fleet_compo file')
+            error_exit(f"{e} of the fleet_compo file")
         fleet.columns = ['Fleet_Code', 'Fleet_Class', 'Fleet_value']
 
         fleet = fleet[fleet['Fleet_value'] > 0]
@@ -1486,7 +1486,7 @@ class TrafficSector(Sector):
 
             link_emissions_aux = link_emissions_aux.to_crs(grid_aux.crs)
 
-            link_emissions_aux = gpd.sjoin(link_emissions_aux, grid_aux.reset_index(), how="inner", op='intersects')
+            link_emissions_aux = gpd.sjoin(link_emissions_aux, grid_aux.reset_index(), how="inner", predicate='intersects')
 
             link_emissions_aux = link_emissions_aux.loc[:, ['Link_ID', 'geometry', 'FID']]
 
