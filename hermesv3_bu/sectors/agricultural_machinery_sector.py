@@ -59,11 +59,10 @@ class AgriculturalMachinerySector(AgriculturalSector):
         spent_time = timeit.default_timer()
 
         def get_fraction(dataframe):
-            total_crop_sum = self.crop_machinery_nuts3.loc[self.crop_machinery_nuts3[nut_code] == int(dataframe.name),
-                                                           self.crop_list].values.sum()
-            dataframe['fraction'] = dataframe[self.crop_list].sum(axis=1) / total_crop_sum
-
-            return dataframe.loc[:, ['fraction']]
+            total_crop_sum = self.crop_machinery_nuts3.loc[
+                self.crop_machinery_nuts3[nut_code] == int(dataframe.name), self.crop_list
+            ].values.sum()
+            return dataframe[self.crop_list].sum(axis=1) / total_crop_sum
 
         crop_distribution.reset_index(inplace=True)
 
@@ -88,7 +87,7 @@ class AgriculturalMachinerySector(AgriculturalSector):
             if write_crop_by_nut:
                 crop_distribution.loc[:, self.crop_list + [nut_code]].groupby(nut_code).sum().reset_index().to_csv(
                     self.crop_machinery_nuts3)
-            crop_distribution['fraction'] = crop_distribution.groupby(nut_code).apply(get_fraction)
+            crop_distribution['fraction'] = crop_distribution.groupby(nut_code, group_keys=False).apply(get_fraction)
             crop_distribution.drop(columns=self.crop_list, inplace=True)
             crop_distribution.rename(columns={nut_code: 'NUT_code'}, inplace=True)
 
@@ -119,99 +118,112 @@ class AgriculturalMachinerySector(AgriculturalSector):
 
         def get_n(df):
             try:
-                df['N'] = self.vehicle_units.loc[self.vehicle_units['nuts3_id'] == df.name[0], df.name[1]].values[0]
+                value = self.vehicle_units.loc[
+                    self.vehicle_units['nuts3_id'] == df.name[0], df.name[1]
+                ].values[0]
             except IndexError:
                 warn("*WARNING*: NUT3_ID {0} not found in the {1} file".format(
                     df.name[0], 'crop_machinery_vehicle_units_path'))
-                df['N'] = 0.0
-            return df.loc[:, ['N']]
+                value = 0.0
+            return pd.Series(value, index=df.index)
 
         def get_s(df):
             try:
-                df['S'] = self.vehicle_ratio.loc[
+                value = self.vehicle_ratio.loc[
                     (self.vehicle_ratio['nuts3_id'] == df.name[0]) & (self.vehicle_ratio['technology'] == df.name[2]),
-                    df.name[1]].values[0]
+                    df.name[1]
+                ].values[0]
             except IndexError:
                 warn("*WARNING*: NUT3_ID {0} not found in the {1} file".format(
                     df.name[0], 'crop_machinery_vehicle_ratio_path'))
-                df['S'] = 0.0
-            return df.loc[:, ['S']]
+                value = 0.0
+            return pd.Series(value, index=df.index)
 
         def get_t(df):
-
             try:
-                df['T'] = self.vehicle_workhours.loc[(self.vehicle_workhours['nuts3_id'] == df.name[0]) &
-                                                     (self.vehicle_workhours['technology'] == df.name[2]),
-                                                     df.name[1]].values[0]
+                value = self.vehicle_workhours.loc[
+                    (self.vehicle_workhours['nuts3_id'] == df.name[0]) &
+                    (self.vehicle_workhours['technology'] == df.name[2]),
+                    df.name[1]
+                ].values[0]
             except IndexError:
-                df['T'] = np.nan
+                value = np.nan
             try:
-                df.loc[df['T'].isna(), 'T'] = self.vehicle_workhours.loc[
-                    (self.vehicle_workhours['nuts3_id'] == df.name[0]) & (self.vehicle_workhours['technology'] ==
-                                                                          'default'), df.name[1]].values[0]
+                if np.isnan(value):
+                    value = self.vehicle_workhours.loc[
+                        (self.vehicle_workhours['nuts3_id'] == df.name[0]) &
+                        (self.vehicle_workhours['technology'] == 'default'),
+                        df.name[1]
+                    ].values[0]
             except IndexError:
                 warn("*WARNING*: NUT3_ID {0} not found in the {1} file".format(
                     df.name[0], 'crop_machinery_vehicle_workhours_path'))
-                df.loc[df['T'].isna(), 'T'] = 0.0
-            return df.loc[:, ['T']]
+                value = 0.0
+            return pd.Series(value, index=df.index)
 
         def get_p(df):
             try:
-                df['P'] = self.vehicle_power.loc[self.vehicle_power['nuts3_id'] == df.name[0], df.name[1]].values[0]
+                value = self.vehicle_power.loc[
+                    self.vehicle_power['nuts3_id'] == df.name[0], df.name[1]
+                ].values[0]
             except IndexError:
                 warn("*WARNING*: NUT3_ID {0} not found in the {1} file".format(
                     df.name[0], 'crop_machinery_vehicle_power_path'))
-                df['P'] = 0.0
-            return df.loc[:, ['P']]
+                value = 0.0
+            return pd.Series(value, index=df.index)
 
         def get_lf(df):
-            df['LF'] = self.load_factor.loc[self.load_factor['vehicle'] == df.name, 'LF'].values[0]
-            return df.loc[:, ['LF']]
+            value = self.load_factor.loc[self.load_factor['vehicle'] == df.name, 'LF'].values[0]
+            return pd.Series(value, index=df.index)
 
         def get_df(df):
             try:
-                df['DF_{0}'.format(in_p)] = 1 + self.deterioration_factor.loc[
-                    (self.deterioration_factor['vehicle'] == df.name[0]) & (
-                            self.deterioration_factor['technology'] == df.name[1]), 'DF_{0}'.format(in_p)].values[0]
+                value = 1 + self.deterioration_factor.loc[
+                    (self.deterioration_factor['vehicle'] == df.name[0]) &
+                    (self.deterioration_factor['technology'] == df.name[1]),
+                    'DF_{0}'.format(in_p)
+                ].values[0]
             except (KeyError, IndexError):
-                df['DF_{0}'.format(in_p)] = 1
-            return df.loc[:, ['DF_{0}'.format(in_p)]]
+                value = 1
+            return pd.Series(value, index=df.index)
 
         def get_ef(df):
             emission_factors = self.emission_factors.loc[(self.emission_factors['vehicle'] == df.name[0]) &
                                                          (self.emission_factors['technology'] == df.name[1]),
                                                          ['power_min', 'power_max', 'EF_{0}'.format(in_p)]]
-            df['EF_{0}'.format(in_p)] = None
+            ef_series = pd.Series(index=df.index, dtype=float)
             for i, emission_factor in emission_factors.iterrows():
                 if np.isnan(emission_factor['power_min']) and not np.isnan(emission_factor['power_max']):
-                    df.loc[df['P'] < emission_factor['power_max'], 'EF_{0}'.format(in_p)] = emission_factor[
-                        'EF_{0}'.format(in_p)]
+                    mask = df['P'] < emission_factor['power_max']
+                    ef_series.loc[mask] = emission_factor['EF_{0}'.format(in_p)]
                 elif not np.isnan(emission_factor['power_min']) and not np.isnan(emission_factor['power_max']):
-                    df.loc[(df['P'] >= emission_factor['power_min']) & (df['P'] < emission_factor['power_max']),
-                           'EF_{0}'.format(in_p)] = emission_factor['EF_{0}'.format(in_p)]
+                    mask = (df['P'] >= emission_factor['power_min']) & (df['P'] < emission_factor['power_max'])
+                    ef_series.loc[mask] = emission_factor['EF_{0}'.format(in_p)]
                 elif not np.isnan(emission_factor['power_min']) and np.isnan(emission_factor['power_max']):
-                    df.loc[df['P'] >= emission_factor['power_min'], 'EF_{0}'.format(in_p)] = emission_factor[
-                        'EF_{0}'.format(in_p)]
+                    mask = df['P'] >= emission_factor['power_min']
+                    ef_series.loc[mask] = emission_factor['EF_{0}'.format(in_p)]
                 else:
-                    df['EF_{0}'.format(in_p)] = emission_factor['EF_{0}'.format(in_p)]
+                    ef_series.loc[:] = emission_factor['EF_{0}'.format(in_p)]
 
-            return df.loc[:, ['EF_{0}'.format(in_p)]]
+            return ef_series
 
         nut_codes = np.unique(self.crop_distribution['NUT_code'].values.astype(np.int16))
         tech = np.unique(self.vehicle_ratio['technology'].values)
 
         database = pd.DataFrame(None, pd.MultiIndex.from_product(
             [nut_codes, self.machinery_list, tech], names=['NUT_code', 'vehicle', 'technology']))
-        database['N'] = database.groupby(['NUT_code', 'vehicle']).apply(get_n)
-        database['S'] = database.groupby(['NUT_code', 'vehicle', 'technology']).apply(get_s)
+        database['N'] = database.groupby(['NUT_code', 'vehicle'], group_keys=False).apply(get_n)
+        database['S'] = database.groupby(['NUT_code', 'vehicle', 'technology'], group_keys=False).apply(get_s)
         database.dropna(inplace=True)
-        database['T'] = database.groupby(['NUT_code', 'vehicle', 'technology']).apply(get_t)
-        database['P'] = database.groupby(['NUT_code', 'vehicle']).apply(get_p)
-        database['LF'] = database.groupby('vehicle').apply(get_lf)
+        database['T'] = database.groupby(['NUT_code', 'vehicle', 'technology'], group_keys=False).apply(get_t)
+        database['P'] = database.groupby(['NUT_code', 'vehicle'], group_keys=False).apply(get_p)
+        database['LF'] = database.groupby('vehicle', group_keys=False).apply(get_lf)
         for in_p in self.source_pollutants:
-            database['DF_{0}'.format(in_p)] = database.groupby(['vehicle', 'technology']).apply(get_df)
+            database['DF_{0}'.format(in_p)] = database.groupby(['vehicle', 'technology'], group_keys=False).apply(get_df)
 
-            database['EF_{0}'.format(in_p)] = database.groupby(['vehicle', 'technology'])[['P']].apply(get_ef)
+            database['EF_{0}'.format(in_p)] = database.groupby(
+                ['vehicle', 'technology'], group_keys=False
+            )[['P']].apply(get_ef)
 
             database[in_p] = database['N'] * database['S'] * database['T'] * database['P'] * database['LF'] * \
                 database['DF_{0}'.format(in_p)] * database['EF_{0}'.format(in_p)]
@@ -229,12 +241,12 @@ class AgriculturalMachinerySector(AgriculturalSector):
         spent_time = timeit.default_timer()
 
         def get_mf(df, month_num):
-            df['MF'] = self.monthly_profiles.loc[df.name, month_num]
-            return df.loc[:, ['MF']]
+            value = self.monthly_profiles.loc[df.name, month_num]
+            return pd.Series(value, index=df.index)
         # month_distribution = self.crop_distribution.loc[:, ['FID', 'timezone', 'geometry']].copy()
         dataframe = self.calcualte_yearly_emissions_by_nut_vehicle().reset_index()
 
-        dataframe['MF'] = dataframe.groupby('vehicle').apply(
+        dataframe['MF'] = dataframe.groupby('vehicle', group_keys=False).apply(
             lambda x: get_mf(x, month)
         )
         dataframe[self.source_pollutants] = dataframe[self.source_pollutants].multiply(dataframe['MF'], axis=0)
@@ -255,7 +267,7 @@ class AgriculturalMachinerySector(AgriculturalSector):
             return aux.loc[:, self.source_pollutants]
 
         crop_distribution = self.crop_distribution.reset_index().copy()
-        crop_distribution[self.source_pollutants] = crop_distribution.groupby('NUT_code')['fraction'].apply(
+        crop_distribution[self.source_pollutants] = crop_distribution.groupby('NUT_code', group_keys=False)['fraction'].apply(
             lambda x: distribute_by_nut(x, dataframe.loc[int(x.name), self.source_pollutants])
         )
         crop_distribution.drop(columns=['fraction', 'NUT_code'], inplace=True)
@@ -300,8 +312,8 @@ class AgriculturalMachinerySector(AgriculturalSector):
             """
             weekly_profile = self.calculate_rebalanced_weekly_profile(self.weekly_profiles.loc['default', :].to_dict(),
                                                                       df.name)
-            df['WF'] = weekly_profile[df.name.weekday()]
-            return df.loc[:, ['WF']]
+            value = weekly_profile[df.name.weekday()]
+            return pd.Series(value, index=df.index)
 
         def get_hf(df):
             """
@@ -316,8 +328,7 @@ class AgriculturalMachinerySector(AgriculturalSector):
             hourly_profile = self.hourly_profiles.loc['default', :].to_dict()
             hour_factor = hourly_profile[df.name]
 
-            df['HF'] = hour_factor
-            return df.loc[:, ['HF']]
+            return pd.Series(hour_factor, index=df.index)
 
         self.crop_distribution['date_as_date'] = self.crop_distribution['date'].dt.date
         self.crop_distribution['month'] = self.crop_distribution['date'].dt.weekday
@@ -325,9 +336,9 @@ class AgriculturalMachinerySector(AgriculturalSector):
         self.crop_distribution['hour'] = self.crop_distribution['date'].dt.hour
 
         for pollutant in self.source_pollutants:
-            self.crop_distribution['WF'] = self.crop_distribution.groupby(['date_as_date']).apply(get_wf)
+            self.crop_distribution['WF'] = self.crop_distribution.groupby('date_as_date', group_keys=False).apply(get_wf)
 
-            self.crop_distribution['HF'] = self.crop_distribution.groupby('hour').apply(get_hf)
+            self.crop_distribution['HF'] = self.crop_distribution.groupby('hour', group_keys=False).apply(get_hf)
             self.crop_distribution[pollutant] = self.crop_distribution[pollutant].multiply(
                 self.crop_distribution['HF'] * self.crop_distribution['WF'], axis=0)
 
