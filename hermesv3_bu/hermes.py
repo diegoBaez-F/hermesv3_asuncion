@@ -13,7 +13,7 @@ from hermesv3_bu.sectors.sector_manager import SectorManager
 from hermesv3_bu.logger.log import Log
 
 
-class HermesBu(object):
+class HermesBu:
     """
     Interface class for HERMESv3_BU.
     """
@@ -42,7 +42,7 @@ class HermesBu(object):
 
         self.logger.write_log('Dates to simulate:', message_level=3)
         for aux_date in self.date_array:
-            self.logger.write_log('\t{0}'.format(aux_date.strftime("%Y/%m/%d, %H:%M:%S")), message_level=3)
+            self.logger.write_log(f"\t{aux_date.strftime('%Y/%m/%d, %H:%M:%S')}", message_level=3)
 
         self.sector_manager = SectorManager(
             self.comm, self.logger, self.grid, self.clip, self.date_array, self.arguments)
@@ -55,7 +55,6 @@ class HermesBu(object):
         """
         Main functionality of the model.
         """
-        from datetime import timedelta
 
         if self.arguments.first_time:
             self.logger.write_log('***** HERMESv3_BU First Time finished successfully *****')
