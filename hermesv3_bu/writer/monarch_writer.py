@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import numpy as np
+import pandas as pd
 from netCDF4 import Dataset, date2num
 from hermesv3_bu.writer.writer import Writer
 from mpi4py import MPI
@@ -95,7 +96,12 @@ class MonarchWriter(Writer):
 
         emissions = emissions.reset_index().groupby(['FID', 'layer', 'tstep']).sum()
         # From mol/h g/h to mol/m2.s g/m2.s
-        emissions = emissions.divide(cell_area['cell_area'].mul(3600), axis=0, level='FID')
+        cell_area_series = cell_area['cell_area'].mul(3600)
+        aligned_cell_area = cell_area_series.reindex(
+            emissions.index.get_level_values('FID')
+        ).copy()
+        aligned_cell_area.index = emissions.index
+        emissions = emissions.divide(aligned_cell_area, axis=0)
         for pollutant, info in self.pollutant_info.iterrows():
             if info.get('units') == "kg.s-1.m-2":
                 try:

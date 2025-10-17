@@ -246,17 +246,17 @@ class CmaqWriter(Writer):
             global_attributes['GDTYP'] = np.int32(2)
             global_attributes['NCOLS'] = np.int32(self.grid.attributes['nx'])
             global_attributes['NROWS'] = np.int32(self.grid.attributes['ny'])
-            global_attributes['P_ALP'] = np.float(self.grid.attributes['lat_1'])
-            global_attributes['P_BET'] = np.float(self.grid.attributes['lat_2'])
-            global_attributes['P_GAM'] = np.float(self.grid.attributes['lon_0'])
-            global_attributes['XCENT'] = np.float(self.grid.attributes['lon_0'])
-            global_attributes['YCENT'] = np.float(self.grid.attributes['lat_0'])
-            global_attributes['XORIG'] = np.float(self.grid.attributes['x_0']) - np.float(
+            global_attributes['P_ALP'] = float(self.grid.attributes['lat_1'])
+            global_attributes['P_BET'] = float(self.grid.attributes['lat_2'])
+            global_attributes['P_GAM'] = float(self.grid.attributes['lon_0'])
+            global_attributes['XCENT'] = float(self.grid.attributes['lon_0'])
+            global_attributes['YCENT'] = float(self.grid.attributes['lat_0'])
+            global_attributes['XORIG'] = float(self.grid.attributes['x_0']) - float(
                 self.grid.attributes['inc_x']) / 2
-            global_attributes['YORIG'] = np.float(self.grid.attributes['y_0']) - np.float(
+            global_attributes['YORIG'] = float(self.grid.attributes['y_0']) - float(
                 self.grid.attributes['inc_y']) / 2
-            global_attributes['XCELL'] = np.float(self.grid.attributes['inc_x'])
-            global_attributes['YCELL'] = np.float(self.grid.attributes['inc_y'])
+            global_attributes['XCELL'] = float(self.grid.attributes['inc_x'])
+            global_attributes['YCELL'] = float(self.grid.attributes['inc_y'])
 
         self.logger.write_time_log('CmaqWriter', 'create_global_attributes', timeit.default_timer() - spent_time)
         return global_attributes
