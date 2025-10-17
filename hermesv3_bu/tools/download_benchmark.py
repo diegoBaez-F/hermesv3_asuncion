@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 import os
@@ -51,13 +51,11 @@ def check_args(args, exe_str):
 def download_files(parent_path):
     from ftplib import FTP
 
-    ftp = FTP('bscesftp.bsc.es')
-    ftp.login()
     dst_file = os.path.join(parent_path, 'HERMESv3_BU_Benchmark.zip')
 
-    ftp.retrbinary('RETR HERMESv3_BU_Benchmark.zip', open(dst_file, 'wb').write)
-
-    ftp.quit()
+    with FTP('bscesftp.bsc.es') as ftp, open(dst_file, 'wb') as destination:
+        ftp.login()
+        ftp.retrbinary('RETR HERMESv3_BU_Benchmark.zip', destination.write)
 
     return dst_file
 
@@ -65,9 +63,8 @@ def download_files(parent_path):
 def unzip_files(zippath, parent_path):
     import zipfile
 
-    zip_file = zipfile.ZipFile(zippath, 'r')
-    zip_file.extractall(parent_path)
-    zip_file.close()
+    with zipfile.ZipFile(zippath, 'r') as zip_file:
+        zip_file.extractall(parent_path)
     os.remove(zippath)
 
 
