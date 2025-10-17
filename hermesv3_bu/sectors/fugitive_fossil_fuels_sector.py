@@ -361,9 +361,12 @@ class FugitiveFossilFuelsSector(Sector):
         shapefile = IoShapefile(self.comm).balance(shapefile)
 
         shapefile = shapefile.to_crs(self.grid.shapefile.crs)
-        shapefile = gpd.sjoin(shapefile,
-                                self.clip.shapefile.to_crs(self.grid.shapefile.crs).reset_index(), how='inner',
-                                op='intersects')
+        shapefile = gpd.sjoin(
+            shapefile,
+            self.clip.shapefile.to_crs(self.grid.shapefile.crs).reset_index(),
+            how='inner',
+            predicate='intersects'
+        )
         shapefile.drop(columns=['index', 'index_right', 'proxy_code'], inplace=True)
         if 'FID' in shapefile.columns:
             shapefile.drop(columns=['FID'], inplace=True)

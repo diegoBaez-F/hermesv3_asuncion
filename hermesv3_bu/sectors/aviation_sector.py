@@ -371,9 +371,12 @@ class AviationSector(Sector):
         spent_time = timeit.default_timer()
         if self.comm.Get_rank() == 0:
             airport_shapefile = airport_shapefile.reset_index()
-            airport_shapefile = gpd.sjoin(airport_shapefile.to_crs(self.grid.shapefile.crs),
-                                          self.clip.shapefile.to_crs(self.grid.shapefile.crs), how='inner',
-                                          op='intersects')
+            airport_shapefile = gpd.sjoin(
+                airport_shapefile.to_crs(self.grid.shapefile.crs),
+                self.clip.shapefile.to_crs(self.grid.shapefile.crs),
+                how='inner',
+                predicate='intersects'
+            )
 
             shp_airport_list = list(np.unique(airport_shapefile['airport_id'].values))
 
@@ -494,8 +497,12 @@ class AviationSector(Sector):
                 runway_shapefile.to_crs(self.grid.shapefile.crs, inplace=True)
                 runway_shapefile['length'] = runway_shapefile.length
                 # duplicating each runway by involved cell
-                runway_shapefile = gpd.sjoin(runway_shapefile.reset_index(), self.grid.shapefile.reset_index(),
-                                             how="inner", op='intersects')
+                runway_shapefile = gpd.sjoin(
+                    runway_shapefile.reset_index(),
+                    self.grid.shapefile.reset_index(),
+                    how="inner",
+                    predicate='intersects'
+                )
                 # Adding cell geometry
                 runway_shapefile = runway_shapefile.merge(self.grid.shapefile.reset_index(), on='FID',  how='left')
                 # Intersection between line (roadway) and polygon (cell)
@@ -606,7 +613,9 @@ class AviationSector(Sector):
                 aux_grid = self.grid.shapefile.to_crs(trajectories_distr.crs).reset_index()
                 # trajectories_distr.to_crs(self.grid.shapefile.crs, inplace=True)
                 # duplicating each runway by involved cell
-                trajectories_distr = gpd.sjoin(trajectories_distr, aux_grid, how="inner", op='intersects')
+                trajectories_distr = gpd.sjoin(
+                    trajectories_distr, aux_grid, how="inner", predicate='intersects'
+                )
                 # Adding cell geometry
                 trajectories_distr = trajectories_distr.merge(aux_grid.loc[:, ['FID', 'geometry']], on='FID',
                                                               how='left')

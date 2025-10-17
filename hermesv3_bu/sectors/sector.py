@@ -448,7 +448,9 @@ class Sector(object):
         """
         spent_time = timeit.default_timer()
         nut_shapefile = gpd.read_file(nut_shapefile_path).to_crs(shapefile.crs)
-        shapefile = gpd.sjoin(shapefile, nut_shapefile.loc[:, [nut_value, 'geometry']], how='left', op='intersects')
+        shapefile = gpd.sjoin(
+            shapefile, nut_shapefile.loc[:, [nut_value, 'geometry']], how='left', predicate='intersects'
+        )
         del nut_shapefile
         shapefile = shapefile[~shapefile.index.duplicated(keep='first')]
         shapefile.drop('index_right', axis=1, inplace=True)
@@ -558,7 +560,7 @@ class Sector(object):
         # Find the geometry that is closest
         nearest = df2[geom2_col] == nearest_points(row[geom1_col], geom_union)[1]
         # Get the corresponding value from df2 (matching is based on the geometry)
-        value = df2[nearest][src_column].get_values()[0]
+        value = df2[nearest][src_column].to_numpy()[0]
         self.logger.write_time_log('Sector', 'nearest', timeit.default_timer() - spent_time)
 
         return value
@@ -672,7 +674,7 @@ class Sector(object):
     def line_intersect(line_shape, poly_shape):
         if line_shape.crs != poly_shape.crs:
             line_shape = line_shape.to_crs(poly_shape.crs)
-        line_shape = gpd.sjoin(line_shape, poly_shape, how="inner", op='intersects')
+        line_shape = gpd.sjoin(line_shape, poly_shape, how="inner", predicate='intersects')
         geometry_list = []
         for i, row in line_shape.iterrows():
             geometry_list.append(row.geometry.intersection(poly_shape.loc[row.index_right, 'geometry']))

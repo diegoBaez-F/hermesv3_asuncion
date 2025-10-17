@@ -115,7 +115,9 @@ class ShippingPortSector(Sector):
             port_shp = IoShapefile(self.comm).read_shapefile_serial(self.maneuvering_shapefile_path)
             port_shp.drop(columns=['Name', 'Weight'], inplace=True)
 
-            port_shp = gpd.sjoin(port_shp, self.clip.shapefile.to_crs(port_shp.crs), how='inner', op='intersects')
+            port_shp = gpd.sjoin(
+                port_shp, self.clip.shapefile.to_crs(port_shp.crs), how='inner', predicate='intersects'
+            )
             port_list = np.unique(port_shp['code'].values)
             if len(port_list) < self.comm.Get_size():
                 error_exit("The chosen number of processors {0} exceeds the number of involved ports {1}.".format(
