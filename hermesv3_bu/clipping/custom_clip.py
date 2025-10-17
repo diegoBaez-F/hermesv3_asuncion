@@ -59,13 +59,13 @@ class CustomClip(Clip):
             geom = Polygon([[p.x, p.y] for p in [Point(xy) for xy in zip(lon_list, lat_list)]])
             clip = gpd.GeoDataFrame(
                 geometry=[geom],
-                crs={'init': 'epsg:4326'})
+                crs="EPSG:4326")
 
             border = gpd.GeoDataFrame(geometry=[self.grid.shapefile.unary_union], crs=self.grid.shapefile.crs)
             geom = gpd.overlay(clip, border.to_crs(clip.crs), how='intersection').unary_union
             clip = gpd.GeoDataFrame(
                 geometry=[geom],
-                crs={'init': 'epsg:4326'})
+                crs="EPSG:4326")
 
             clip.to_file(self.shapefile_path)
         else:
