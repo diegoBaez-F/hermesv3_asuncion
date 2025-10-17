@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 
-import sys
 import os
-from timeit import default_timer as gettime
-from warnings import warn
 import numpy as np
 import pandas as pd
 import geopandas as gpd
@@ -19,7 +16,7 @@ class IoShapefile(IoServer):
         if comm is None:
             comm = MPI.COMM_WORLD
 
-        super(IoShapefile, self).__init__(comm)
+        super().__init__(comm)
 
     def write_shapefile_serial(self, data, path):
         """
@@ -32,8 +29,9 @@ class IoShapefile(IoServer):
         :return: True when the writing is finished.
         :rtype: bool
         """
-        if not os.path.exists(os.path.dirname(path)):
-            os.makedirs(os.path.dirname(path))
+        directory = os.path.dirname(path)
+        if directory:
+            os.makedirs(directory, exist_ok=True)
         data.to_file(path)
 
         return True
@@ -51,8 +49,9 @@ class IoShapefile(IoServer):
         """
         data = self.comm.gather(data, root=rank)
         if self.comm.Get_rank() == rank:
-            if not os.path.exists(os.path.dirname(path)):
-                os.makedirs(os.path.dirname(path))
+            directory = os.path.dirname(path)
+            if directory:
+                os.makedirs(directory, exist_ok=True)
             data = pd.concat(data)
             data.to_file(path)
 
