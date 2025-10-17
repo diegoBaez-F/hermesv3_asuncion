@@ -1,15 +1,17 @@
 #!/usr/bin/env python
 
+from pathlib import Path
+
 from setuptools import find_packages
 from setuptools import setup
+
 from hermesv3_bu import __version__
 
 
 # Get the version number from the relevant file
 version = __version__
 
-with open("README.md", "r") as f:
-    long_description = f.read()
+long_description = Path("README.md").read_text(encoding="utf-8")
 
 setup(
     name='hermesv3_bu',
@@ -25,10 +27,10 @@ setup(
 
     keywords=['emissions', 'cmaq', 'monarch', 'wrf-chem', 'atmospheric composition', 'air quality', 'earth science'],
     install_requires=[
-        'numpy',
+        'numpy>=1.26',
         'netCDF4>=1.3.1',
         'cdo>=1.3.3',
-        'pandas',
+        'pandas>=2.0',
         'fiona',
         'Rtree',
         'geopandas',
@@ -42,8 +44,10 @@ setup(
         'rasterio',
     ],
     packages=find_packages(),
+    python_requires='>=3.11',
     classifiers=[
-        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.11",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: OS Independent",
         "Topic :: Scientific/Engineering :: Atmospheric Science"
