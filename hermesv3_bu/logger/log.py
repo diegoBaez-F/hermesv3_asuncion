@@ -117,8 +117,10 @@ class Log(object):
         :rtype: bool
         """
         if message_level <= self.log_level:
-            self.df_times = self.df_times.append(
-                {'Class': class_name, 'Function': function_name, comm.Get_rank(): spent_time}, ignore_index=True)
+            new_entry = pd.DataFrame([
+                {'Class': class_name, 'Function': function_name, comm.Get_rank(): spent_time}
+            ])
+            self.df_times = pd.concat([self.df_times, new_entry], ignore_index=True)
             # if self.time_log_refresh > 0:
             #     self.time_log_refresh -= 1
             # if self.time_log_refresh == 0:
