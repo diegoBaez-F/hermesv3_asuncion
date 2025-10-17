@@ -14,6 +14,19 @@ from hermesv3_bu.io_server.io_shapefile import IoShapefile
 from hermesv3_bu.tools.checker import check_files, error_exit
 
 
+def _crs_to_epsg(crs):
+    """Safely extract an EPSG code from different CRS representations."""
+    if not crs:
+        return None
+    to_epsg = getattr(crs, "to_epsg", None)
+    if callable(to_epsg):
+        try:
+            return to_epsg()
+        except TypeError:
+            return None
+    return None
+
+
 class IoRaster(IoServer):
     def __init__(self, comm=None):
         if comm is None:
@@ -52,7 +65,7 @@ class IoRaster(IoServer):
         geo = gpd.read_file(shape_path)
         if len(geo) > 1:
             geo = gpd.GeoDataFrame(geometry=[geo.geometry.unary_union], crs=geo.crs)
-        geo = geo.to_crs(crs=data.crs.data)
+        geo = geo.to_crs(data.crs)
         coords = getFeatures(geo)
 
         out_img, out_transform = mask(data, shapes=coords, crop=True, all_touched=True, nodata=nodata)
@@ -109,7 +122,7 @@ class IoRaster(IoServer):
 
         if len(geo) > 1:
             geo = gpd.GeoDataFrame(geometry=[geo.geometry.unary_union], crs=geo.crs)
-        geo = geo.to_crs(crs=data.crs.data)
+        geo = geo.to_crs(data.crs)
         coords = get_features(geo)
 
         out_img, out_transform = mask(data, shapes=coords, crop=True, all_touched=True, nodata=nodata)
@@ -296,10 +309,10 @@ class IoRaster(IoServer):
             gdf = gdf[gdf['data'] != nodata]
 
             # Error on to_crs function of geopandas that flip lat with lon in the non dict form
-            if src.crs == 'EPSG:4326':
-                gdf.crs = {'init': 'epsg:4326'}
-            else:
-                gdf.crs = src.crs
+            if _crs_to_epsg(src.crs) == 4326:
+                gdf = gdf.set_crs("EPSG:4326", allow_override=True)
+            elif src.crs:
+                gdf = gdf.set_crs(src.crs, allow_override=True)
 
             if crs is not None:
                 gdf = gdf.to_crs(crs)
@@ -350,8 +363,8 @@ class IoRaster(IoServer):
 
             gdf = gpd.GeoDataFrame(ds.read(1).flatten(), columns=['data'], index=range(b_lons.shape[0]), crs=ds.crs)
             # Error on to_crs function of geopandas that flip lat with lon in the non dict form
-            if gdf.crs == 'EPSG:4326':
-                gdf.crs = {'init': 'epsg:4326'}
+            if _crs_to_epsg(gdf.crs) == 4326:
+                gdf = gdf.set_crs("EPSG:4326", allow_override=True)
             gdf['geometry'] = None
         else:
             gdf = None

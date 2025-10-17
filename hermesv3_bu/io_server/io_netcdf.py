@@ -115,7 +115,7 @@ class IoNetcdf(IoServer):
             error_exit("{0} variable not found in {1} file.".format(str(e), netcdf_path))
         nc.close()
 
-        var_df = gpd.GeoDataFrame(var.flatten().T, columns=[var_name], crs={'init': 'epsg:4326'},
+        var_df = gpd.GeoDataFrame(var.flatten().T, columns=[var_name], crs="EPSG:4326",
                                   geometry=[Point(xy) for xy in zip(lon, lat)])
         var_df.loc[:, 'REC'] = var_df.index
 
@@ -471,7 +471,7 @@ def write_coords_netcdf(netcdf_path, center_latitudes, center_longitudes, data_l
         lev[:] = levels
 
     # All variables
-    if len(data_list) is 0:
+    if len(data_list) == 0:
         var = netcdf.createVariable('aux_var', 'f', ('time',) + var_dim, zlib=True)
         var[:] = 0
     for variable in data_list:
