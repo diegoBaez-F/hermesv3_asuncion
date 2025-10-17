@@ -50,7 +50,7 @@ class LatLonGrid(Grid):
         logger.write_log('Regular Lat-Lon grid selected.')
         self.grid_type = 'Regular Lat-Lon'
         attributes = {'inc_lat': inc_lat, 'inc_lon': inc_lon, 'lat_orig': lat_orig, 'lon_orig': lon_orig,
-                      'n_lat': n_lat, 'n_lon': n_lon, 'crs': {'init': 'epsg:4326'}}
+                      'n_lat': n_lat, 'n_lon': n_lon, 'crs': 'EPSG:4326'}
         # Initialize the class using parent
         super(LatLonGrid, self).__init__(logger, attributes, auxiliary_path, vertical_description_path)
 
@@ -67,14 +67,14 @@ class LatLonGrid(Grid):
         lat_c_orig = self.attributes['lat_orig'] + (self.attributes['inc_lat'] / 2)
         self.center_latitudes = np.linspace(
             lat_c_orig, lat_c_orig + (self.attributes['inc_lat'] * (self.attributes['n_lat'] - 1)),
-            self.attributes['n_lat'], dtype=np.float)
+            self.attributes['n_lat'], dtype=float)
         self.boundary_latitudes = self.create_bounds(self.center_latitudes, self.attributes['inc_lat'])
 
         # ===== Longitudes =====
         lon_c_orig = self.attributes['lon_orig'] + (self.attributes['inc_lon'] / 2)
         self.center_longitudes = np.linspace(
             lon_c_orig, lon_c_orig + (self.attributes['inc_lon'] * (self.attributes['n_lon'] - 1)),
-            self.attributes['n_lon'], dtype=np.float)
+            self.attributes['n_lon'], dtype=float)
 
         self.boundary_longitudes = self.create_bounds(self.center_longitudes, self.attributes['inc_lon'])
 
