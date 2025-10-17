@@ -244,7 +244,7 @@ class AgriculturalCropFertilizersSector(AgriculturalSector):
     def get_daily_inputs(self, yearly_emissions):
         spent_time = timeit.default_timer()
         daily_inputs = {}
-        geometry_shp = yearly_emissions.loc[:, ['geometry']].reset_index().to_crs({'init': 'epsg:4326'})
+        geometry_shp = yearly_emissions.loc[:, ['geometry']].reset_index().to_crs('EPSG:4326')
 
         geometry_shp['c_lat'] = geometry_shp.centroid.y
         geometry_shp['c_lon'] = geometry_shp.centroid.x
@@ -285,7 +285,7 @@ class AgriculturalCropFertilizersSector(AgriculturalSector):
                 self.crop_growing_degree_day_path.replace('<season>', 'spring').replace('<year>', str(day.year)),
                 'Tsum', 'yearly', day, geometry_shp).loc[:, 'Tsum'].astype(np.int16)
 
-            aux_df = aux_df.to_crs({'init': 'epsg:4326'})
+            aux_df = aux_df.to_crs('EPSG:4326')
             aux_df['centroid'] = aux_df.centroid
 
             aux_df['REC'] = aux_df.apply(self.nearest, geom_union=meteo_df.unary_union, df1=aux_df,
@@ -401,8 +401,8 @@ class AgriculturalCropFertilizersSector(AgriculturalSector):
         spent_time = timeit.default_timer()
         self.logger.write_log('Calculating hourly emissions')
         emissions['hour'] = emissions['date'].dt.hour
-        emissions['nh3'] = emissions.groupby('hour')['nh3'].apply(
-            lambda x: x.multiply(self.hourly_profiles.loc['nh3', x.name]))
+        emissions['nh3'] = emissions.groupby('hour')['nh3'].transform(
+            lambda x: x * self.hourly_profiles.loc['nh3', x.name])
 
         emissions['date'] = emissions['date_utc']
         emissions.drop(columns=['hour', 'date_utc'], axis=1, inplace=True)
