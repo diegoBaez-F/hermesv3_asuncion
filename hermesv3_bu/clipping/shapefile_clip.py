@@ -25,7 +25,7 @@ class ShapefileClip(Clip):
         """
         spent_time = timeit.default_timer()
         logger.write_log('Shapefile clip selected')
-        super(ShapefileClip, self).__init__(logger, auxiliary_path, grid)
+        super().__init__(logger, auxiliary_path, grid)
         self.clip_type = 'Shapefile clip'
         self.shapefile = self.create_clip(clip_input_path)
         self.logger.write_time_log('ShapefileClip', '__init__', timeit.default_timer() - spent_time)
@@ -43,8 +43,9 @@ class ShapefileClip(Clip):
         spent_time = timeit.default_timer()
         if not os.path.exists(self.shapefile_path):
             if os.path.exists(clip_path):
-                if not os.path.exists(os.path.dirname(self.shapefile_path)):
-                    os.makedirs(os.path.dirname(self.shapefile_path))
+                shapefile_dir = os.path.dirname(self.shapefile_path)
+                if shapefile_dir and not os.path.exists(shapefile_dir):
+                    os.makedirs(shapefile_dir, exist_ok=True)
                 clip = gpd.read_file(clip_path)
                 border = gpd.GeoDataFrame(geometry=[self.grid.shapefile.unary_union], crs=self.grid.shapefile.crs)
                 geom = gpd.overlay(clip, border.to_crs(clip.crs), how='intersection').unary_union

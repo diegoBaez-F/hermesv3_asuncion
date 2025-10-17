@@ -47,7 +47,7 @@ def select_clip(comm, logger, auxiliary_path, clipping, grid):
     return clip
 
 
-class Clip(object):
+class Clip:
 
     def __init__(self, logger, auxiliary_path, grid):
         spent_time = timeit.default_timer()
