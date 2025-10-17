@@ -338,7 +338,7 @@ class AgriculturalSector(Sector):
         spent_time = timeit.default_timer()
 
         if nuts is not None:
-            land_use_by_nut = land_use_by_nut.iloc[land_use_by_nut.index.get_level_values('nut_code').isin(nuts)]
+            land_use_by_nut = land_use_by_nut.loc[land_use_by_nut.index.get_level_values('nut_code').isin(nuts)]
 
         new_df = pd.DataFrame(index=np.unique(land_use_by_nut.index.get_level_values('nut_code')),
                               columns=self.crop_from_landuse.keys())
