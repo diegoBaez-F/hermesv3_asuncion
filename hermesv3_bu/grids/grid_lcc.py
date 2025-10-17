@@ -111,10 +111,10 @@ class LccGrid(Grid):
         # Create a regular grid in metres (Two 1D arrays)
         self.x = np.linspace(self.attributes['x_0'], self.attributes['x_0'] +
                              (self.attributes['inc_x'] * (self.attributes['nx'] - 1)), self.attributes['nx'],
-                             dtype=np.float)
+                             dtype=float)
         self.y = np.linspace(self.attributes['y_0'], self.attributes['y_0'] +
                              (self.attributes['inc_y'] * (self.attributes['ny'] - 1)), self.attributes['ny'],
-                             dtype=np.float)
+                             dtype=float)
 
         # 1D to 2D
         x = np.array([self.x] * len(self.y))

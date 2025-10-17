@@ -32,7 +32,7 @@ class RotatedNestedGrid(Grid):
 
         attributes = {'parent_grid_path': parent_grid_path, 'parent_ratio': parent_ratio,
                       'i_parent_start': i_parent_start, 'j_parent_start': j_parent_start,
-                      'n_rlat': n_rlat, 'n_rlon': n_rlon, 'crs': {'init': 'epsg:4326'}}
+                      'n_rlat': n_rlat, 'n_rlon': n_rlon, 'crs': 'EPSG:4326'}
         attributes = self.get_parent_attributes(attributes)
 
         # Initialises with parent class
@@ -76,10 +76,10 @@ class RotatedNestedGrid(Grid):
 
         center_latitudes = np.linspace(self.attributes['1st_rlat'], self.attributes['1st_rlat'] +
                                        (self.attributes['inc_rlat'] * (self.attributes['n_rlat'] - 1)),
-                                       self.attributes['n_rlat'], dtype=np.float)
+                                       self.attributes['n_rlat'], dtype=float)
         center_longitudes = np.linspace(self.attributes['1st_rlon'], self.attributes['1st_rlon'] +
                                         (self.attributes['inc_rlon'] * (self.attributes['n_rlon'] - 1)),
-                                        self.attributes['n_rlon'], dtype=np.float)
+                                        self.attributes['n_rlon'], dtype=float)
 
         corner_latitudes = self.create_bounds(center_latitudes, self.attributes['inc_rlat'], number_vertices=4,
                                               inverse=True)

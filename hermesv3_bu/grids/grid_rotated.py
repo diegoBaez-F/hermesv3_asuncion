@@ -38,7 +38,7 @@ class RotatedGrid(Grid):
                       'centre_lat': centre_lat, 'centre_lon': centre_lon, 'west_boundary': west_boundary,
                       'south_boundary': south_boundary, 'inc_rlat': inc_rlat, 'inc_rlon': inc_rlon,
                       'n_lat': int((abs(south_boundary) / inc_rlat) * 2 + 1),
-                      'n_lon': int((abs(west_boundary) / inc_rlon) * 2 + 1), 'crs': {'init': 'epsg:4326'}}
+                      'n_lon': int((abs(west_boundary) / inc_rlon) * 2 + 1), 'crs': 'EPSG:4326'}
 
         # Initialises with parent class
         super(RotatedGrid, self).__init__(logger, attributes, auxiliary_path, vertical_description_path)
@@ -57,10 +57,10 @@ class RotatedGrid(Grid):
 
         center_latitudes = np.linspace(self.attributes['south_boundary'], self.attributes['south_boundary'] +
                                        (self.attributes['inc_rlat'] * (self.attributes['n_lat'] - 1)),
-                                       self.attributes['n_lat'], dtype=np.float)
+                                       self.attributes['n_lat'], dtype=float)
         center_longitudes = np.linspace(self.attributes['west_boundary'], self.attributes['west_boundary'] +
                                         (self.attributes['inc_rlon'] * (self.attributes['n_lon'] - 1)),
-                                        self.attributes['n_lon'], dtype=np.float)
+                                        self.attributes['n_lon'], dtype=float)
 
         corner_latitudes = self.create_bounds(center_latitudes, self.attributes['inc_rlat'], number_vertices=4,
                                               inverse=True)

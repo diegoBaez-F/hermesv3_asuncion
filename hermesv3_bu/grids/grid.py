@@ -223,7 +223,7 @@ class Grid(object):
 
             aux_b_lats = y.reshape((y.shape[0] * y.shape[1], y.shape[2]))
             aux_b_lons = x.reshape((x.shape[0] * x.shape[1], x.shape[2]))
-            gdf = gpd.GeoDataFrame(index=range(aux_b_lons.shape[0]), crs={'init': 'epsg:4326'})
+            gdf = gpd.GeoDataFrame(index=range(aux_b_lons.shape[0]), crs='EPSG:4326')
             gdf['geometry'] = None
             # Create one dataframe with 8 columns, 4 points with two coordinates each one
             for i in range(aux_b_lons.shape[0]):
