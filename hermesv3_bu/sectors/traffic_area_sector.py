@@ -117,7 +117,7 @@ class TrafficAreaSector(Sector):
             # 2nd Raster to shapefile
             self.logger.write_log("\t\tRaster to shapefile", message_level=3)
             pop_shp = IoRaster(self.comm).to_shapefile_parallel(
-                pop_raster_path, gather=False, bcast=False, crs={'init': 'epsg:4326'})
+                pop_raster_path, gather=False, bcast=False, crs='EPSG:4326')
 
             # 3rd Add NUT code
             self.logger.write_log("\t\tAdding nut codes to the shapefile", message_level=3)
@@ -189,7 +189,7 @@ class TrafficAreaSector(Sector):
             # 2nd Raster to shapefile
             self.logger.write_log("\t\tRaster to shapefile", message_level=3)
             pop_shp = IoRaster(self.comm).to_shapefile_parallel(
-                pop_raster_path, gather=False, bcast=False, crs={'init': 'epsg:4326'})
+                pop_raster_path, gather=False, bcast=False, crs='EPSG:4326')
 
             # 3rd Add NUT code
             self.logger.write_log("\t\tAdding nut codes to the shapefile", message_level=3)
@@ -342,7 +342,7 @@ class TrafficAreaSector(Sector):
         geom = self.evaporative.geometry
 
         # get average daily temperature by cell
-        aux_df = self.evaporative.loc[:, 'geometry'].to_crs({'init': 'epsg:4326'})
+        aux_df = self.evaporative.to_crs('EPSG:4326')
         self.evaporative['c_lat'] = aux_df.centroid.y
         self.evaporative['c_lon'] = aux_df.centroid.x
         self.evaporative['centroid'] = aux_df.centroid
@@ -454,7 +454,7 @@ class TrafficAreaSector(Sector):
             grid['timezone'] = 'Europe/Madrid'
         else:
             tz = TimezoneFinder()
-            aux_grid = grid.to_crs({'init': 'epsg:4326'})
+            aux_grid = grid.to_crs('EPSG:4326')
             aux_grid['lats'] = aux_grid.geometry.centroid.y
             aux_grid['lons'] = aux_grid.geometry.centroid.x
             inc = 1

@@ -194,46 +194,26 @@ class AgriculturalCropOperationsSector(AgriculturalSector):
     def calculate_hourly_emissions(self):
         spent_time = timeit.default_timer()
 
-        def get_wf(df):
-            """
-            Get the Weekly Factor for the given dataframe depending on the date.
-
-            :param df: DataFrame where find the weekly factor. df.name is the date.
-            :type df: DataFrame
-
-            :return: DataFrame with only the WF column.
-            :rtype: DataFrame
-            """
-            weekly_profile = self.calculate_rebalanced_weekly_profile(self.weekly_profiles.loc[pollutant, :].to_dict(),
-                                                                      df.name)
-            df['WF'] = weekly_profile[df.name.weekday()]
-            return df.loc[:, ['WF']]
-
-        def get_hf(df):
-            """
-            Get the Hourly Factor for the given dataframe depending on the hour.
-
-            :param df: DataFrame where find the hourly factor. df.name is the hour.
-            :type df: DataFrame
-
-            :return: DataFrame with only the HF column.
-            :rtype: DataFrame
-            """
-            hourly_profile = self.hourly_profiles.loc[pollutant, :].to_dict()
-            hour_factor = hourly_profile[df.name]
-
-            df['HF'] = hour_factor
-            return df.loc[:, ['HF']]
-
         self.crop_distribution['date_as_date'] = self.crop_distribution['date'].dt.date
         self.crop_distribution['month'] = self.crop_distribution['date'].dt.weekday
         self.crop_distribution['weekday'] = self.crop_distribution['date'].dt.weekday
         self.crop_distribution['hour'] = self.crop_distribution['date'].dt.hour
 
         for pollutant in self.source_pollutants:
-            self.crop_distribution['WF'] = self.crop_distribution.groupby(['date_as_date']).apply(get_wf)
+            weekly_profile_cache = {}
 
-            self.crop_distribution['HF'] = self.crop_distribution.groupby('hour').apply(get_hf)
+            def compute_weekly_factor(date_value):
+                if date_value not in weekly_profile_cache:
+                    reference_date = pd.Timestamp(date_value)
+                    weekly_profile = self.calculate_rebalanced_weekly_profile(
+                        self.weekly_profiles.loc[pollutant, :].to_dict(), reference_date)
+                    weekly_profile_cache[date_value] = weekly_profile[reference_date.weekday()]
+                return weekly_profile_cache[date_value]
+
+            self.crop_distribution['WF'] = self.crop_distribution['date_as_date'].map(compute_weekly_factor)
+
+            hourly_profile = self.hourly_profiles.loc[pollutant, :].to_dict()
+            self.crop_distribution['HF'] = self.crop_distribution['hour'].map(hourly_profile)
             self.crop_distribution[pollutant] = self.crop_distribution[pollutant].multiply(
                 self.crop_distribution['HF'] * self.crop_distribution['WF'], axis=0)
 
