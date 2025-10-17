@@ -138,39 +138,32 @@ class RecreationalBoatsSector(Sector):
     def calculate_hourly_emissions(self, annual_distribution):
         spent_time = timeit.default_timer()
 
-        def get_mf(df):
-            month_factor = self.monthly_profiles.loc['default', df.name]
-
-            df['MF'] = month_factor
-            return df.loc[:, ['MF']]
-
-        def get_wf(df):
-            weekly_profile = self.calculate_rebalanced_weekly_profile(self.weekly_profiles.loc['default', :].to_dict(),
-                                                                      df.name)
-            df['WF'] = weekly_profile[df.name.weekday()]
-            return df.loc[:, ['WF']]
-
-        def get_hf(df):
-            hourly_profile = self.hourly_profiles.loc['default', :].to_dict()
-            hour_factor = hourly_profile[df.name]
-
-            df['HF'] = hour_factor
-            return df.loc[:, ['HF']]
-
         dataframe = self.add_dates(annual_distribution)
         dataframe = self.dates_to_month_weekday_hour(dataframe)
 
         dataframe['date_as_date'] = dataframe['date'].dt.date
 
-        dataframe['MF'] = dataframe.groupby('month').apply(get_mf)
+        monthly_profile = self.monthly_profiles.loc['default']
+        dataframe['MF'] = dataframe['month'].map(monthly_profile)
         dataframe[self.output_pollutants] = dataframe[self.output_pollutants].mul(dataframe['MF'], axis=0)
         dataframe.drop(columns=['month', 'MF'], inplace=True)
 
-        dataframe['WF'] = dataframe.groupby('date_as_date').apply(get_wf)
+        weekly_profile_template = self.weekly_profiles.loc['default', :].to_dict()
+        weekly_factor_cache = {}
+
+        def get_weekly_factor(date_value):
+            if date_value not in weekly_factor_cache:
+                rebalanced_profile = self.calculate_rebalanced_weekly_profile(dict(weekly_profile_template),
+                                                                              date_value)
+                weekly_factor_cache[date_value] = rebalanced_profile[date_value.weekday()]
+            return weekly_factor_cache[date_value]
+
+        dataframe['WF'] = dataframe['date_as_date'].map(get_weekly_factor)
         dataframe[self.output_pollutants] = dataframe[self.output_pollutants].mul(dataframe['WF'], axis=0)
         dataframe.drop(columns=['weekday', 'date', 'date_as_date', 'WF'], inplace=True)
 
-        dataframe['HF'] = dataframe.groupby('hour').apply(get_hf)
+        hourly_profile = self.hourly_profiles.loc['default']
+        dataframe['HF'] = dataframe['hour'].map(hourly_profile)
         dataframe[self.output_pollutants] = dataframe[self.output_pollutants].mul(dataframe['HF'], axis=0)
         dataframe.drop(columns=['hour', 'HF'], inplace=True)
 
